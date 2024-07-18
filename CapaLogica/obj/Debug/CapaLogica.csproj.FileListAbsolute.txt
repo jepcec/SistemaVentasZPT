@@ -1,0 +1,9 @@
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaLogica\obj\Debug\CapaLogica.pdb

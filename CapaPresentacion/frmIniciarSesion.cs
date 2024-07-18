@@ -16,5 +16,16 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            Utilidades.AbrirFormulario<frmPrincipal>();
+            this.Close();
+        }
     }
 }
