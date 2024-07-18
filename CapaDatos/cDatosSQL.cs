@@ -7,7 +7,7 @@ using System.Collections;
 
 using System.Configuration;
 
-namespace capaDatos
+namespace CapaDatos
 {
     public class cDatosSQL : cDatos
     {

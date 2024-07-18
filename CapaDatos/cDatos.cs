@@ -5,7 +5,7 @@ using System.Collections;
 using System.Data;
 using System.Configuration;
 
-namespace capaDatos
+namespace CapaDatos
 {
     public abstract class cDatos
     {
