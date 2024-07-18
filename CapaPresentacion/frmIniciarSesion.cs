@@ -12,8 +12,9 @@ namespace CapaPresentacion
 {
     public partial class frmIniciarSesion : Form
     {
-        int _tCuentaRegresiva = 60;
+        int _tSesion = 60;
         int _tMensaje = 10;
+        int _intentos = 3;
         public frmIniciarSesion()
         {
             InitializeComponent();
@@ -31,19 +32,53 @@ namespace CapaPresentacion
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            string mensaje = "Numero de intentos disponibles ";
+            if(_intentos == 0)
+            {
+                mensaje = "Numero de intentos maximo cerrando sesion!";
+                Application.Exit();
+                
+            }
+            else
+            {
+                _intentos--;              
+                lblMensaje.Visible = true;
+
+                mensaje += (_intentos).ToString();
+
+            }
+            InciarTickMensaje(mensaje);
+
             
         }
 
         
         private void tCuentaRegresiva_Tick(object sender, EventArgs e)
         {
-            _tCuentaRegresiva--;
-            lblTime.Text = _tCuentaRegresiva.ToString();
-            if(_tCuentaRegresiva == 0)
+            _tSesion--;
+            lblTime.Text = _tSesion.ToString();
+            if(_tSesion == 0)
             {
                 Application.Exit();
             }
 
+        }
+
+        private void tMensaje_Tick(object sender, EventArgs e)
+        {
+            _tMensaje--;
+            if (_tMensaje  == 0)
+            {
+                lblMensaje.Text = "";
+                lblMensaje.Visible = false;
+                _tMensaje = 10;
+            }
+        }
+        private void InciarTickMensaje(string Mensaje)
+        {
+            _tMensaje = 10;
+            lblMensaje.Text = Mensaje;
+            tMensaje.Start();
         }
     }
 }

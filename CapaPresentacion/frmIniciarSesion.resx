@@ -129,7 +129,7 @@
     <value>72, 48</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 36</value>
+    <value>172, 29</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -159,7 +159,7 @@
     <value>125, 109</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 25</value>
+    <value>64, 20</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -193,7 +193,7 @@
     <value>103, 234</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 25</value>
+    <value>92, 20</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -369,7 +369,7 @@
     <value>Zoom</value>
   </data>
   <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 2</value>
+    <value>271, 3</value>
   </data>
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 32</value>
@@ -396,7 +396,7 @@
     <value>60, 147</value>
   </data>
   <data name="txtUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
+    <value>202, 28</value>
   </data>
   <data name="txtUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -420,7 +420,7 @@
     <value>60, 274</value>
   </data>
   <data name="txtContraseña.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
+    <value>202, 28</value>
   </data>
   <data name="txtContraseña.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -471,7 +471,7 @@
     <value>87, 404</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 15</value>
+    <value>90, 13</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -498,7 +498,7 @@
     <value>196, 404</value>
   </data>
   <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 15</value>
+    <value>19, 13</value>
   </data>
   <data name="lblTime.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -528,10 +528,10 @@
     <value>True</value>
   </data>
   <data name="lblMensaje.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 374</value>
+    <value>57, 373</value>
   </data>
   <data name="lblMensaje.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 15</value>
+    <value>47, 13</value>
   </data>
   <data name="lblMensaje.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -558,7 +558,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>326, 428</value>
+    <value>306, 428</value>
   </data>
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>

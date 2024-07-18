@@ -100,6 +100,10 @@
             this.tCuentaRegresiva.Interval = 1000;
             this.tCuentaRegresiva.Tick += new System.EventHandler(this.tCuentaRegresiva_Tick);
             // 
+            // tMensaje
+            // 
+            this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
+            // 
             // lblMensaje
             // 
             resources.ApplyResources(this.lblMensaje, "lblMensaje");
