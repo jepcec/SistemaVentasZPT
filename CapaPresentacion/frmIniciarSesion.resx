@@ -126,10 +126,10 @@
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 46</value>
+    <value>72, 48</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 29</value>
+    <value>209, 36</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -147,7 +147,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -156,10 +156,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 118</value>
+    <value>125, 109</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
+    <value>79, 25</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -190,10 +190,10 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 235</value>
+    <value>103, 234</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
+    <value>114, 25</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -211,12 +211,12 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="btnClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAP
-        hgAAD4YBskHpeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACIbSURBVHhe7d19
+        hQAAD4UBH/jIFQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACIbSURBVHhe7d19
         jGz3fdfxsfPYPKehNE8lVES0iUNid++c8fW9f+ydmXsto1pAo4sqIZAAgQRISZM0jUla5BIolRCCCv4p
         tCpEQFSJlJaikrZQYlIEVCpJnIfmwbGvnQcSX/va2ZlZ50HxcM7eM7bv7Nm7s/N0ft9zXm/prSQ7s7O7
         Myfn856dWbsDAADQOKa7u88en+/ePBp2/+Kkn71vPMj+9aTf+/38Pz+d+8B4mF3J//PbuU/kPjoaZF8c
@@ -369,7 +369,7 @@
     <value>Zoom</value>
   </data>
   <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 12</value>
+    <value>286, 2</value>
   </data>
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 32</value>
@@ -387,16 +387,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="txtUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
   <data name="txtUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 152</value>
+    <value>60, 147</value>
   </data>
   <data name="txtUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 28</value>
+    <value>202, 34</value>
   </data>
   <data name="txtUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -411,7 +411,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUsuario.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="txtContraseña.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
@@ -420,7 +420,7 @@
     <value>60, 274</value>
   </data>
   <data name="txtContraseña.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 28</value>
+    <value>202, 34</value>
   </data>
   <data name="txtContraseña.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -435,13 +435,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtContraseña.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="btnIniciarSesion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
   </data>
   <data name="btnIniciarSesion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 343</value>
+    <value>117, 326</value>
   </data>
   <data name="btnIniciarSesion.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -462,6 +462,93 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnIniciarSesion.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 404</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 15</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Tiempo de sesion</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 404</value>
+  </data>
+  <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 15</value>
+  </data>
+  <data name="lblTime.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblTime.Text" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;lblTime.Name" xml:space="preserve">
+    <value>lblTime</value>
+  </data>
+  <data name="&gt;&gt;lblTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="tCuentaRegresiva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tMensaje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 17</value>
+  </metadata>
+  <data name="lblMensaje.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMensaje.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 374</value>
+  </data>
+  <data name="lblMensaje.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="lblMensaje.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblMensaje.Text" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.Name" xml:space="preserve">
+    <value>lblMensaje</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblMensaje.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -471,13 +558,25 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>311, 428</value>
+    <value>326, 428</value>
   </data>
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmIniciarSesion</value>
+  </data>
+  <data name="&gt;&gt;tCuentaRegresiva.Name" xml:space="preserve">
+    <value>tCuentaRegresiva</value>
+  </data>
+  <data name="&gt;&gt;tCuentaRegresiva.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tMensaje.Name" xml:space="preserve">
+    <value>tMensaje</value>
+  </data>
+  <data name="&gt;&gt;tMensaje.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmIniciarSesion</value>

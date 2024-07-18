@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciarSesion));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,6 +37,11 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.tCuentaRegresiva = new System.Windows.Forms.Timer(this.components);
+            this.tMensaje = new System.Windows.Forms.Timer(this.components);
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -79,12 +85,35 @@
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // lblTime
+            // 
+            resources.ApplyResources(this.lblTime, "lblTime");
+            this.lblTime.Name = "lblTime";
+            // 
+            // tCuentaRegresiva
+            // 
+            this.tCuentaRegresiva.Interval = 1000;
+            this.tCuentaRegresiva.Tick += new System.EventHandler(this.tCuentaRegresiva_Tick);
+            // 
+            // lblMensaje
+            // 
+            resources.ApplyResources(this.lblMensaje, "lblMensaje");
+            this.lblMensaje.Name = "lblMensaje";
+            // 
             // frmIniciarSesion
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
@@ -94,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIniciarSesion";
+            this.Load += new System.EventHandler(this.FC_StartFormIniciarSesion);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +138,10 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer tCuentaRegresiva;
+        private System.Windows.Forms.Timer tMensaje;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

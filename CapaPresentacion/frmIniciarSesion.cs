@@ -12,20 +12,38 @@ namespace CapaPresentacion
 {
     public partial class frmIniciarSesion : Form
     {
+        int _tCuentaRegresiva = 60;
+        int _tMensaje = 10;
         public frmIniciarSesion()
         {
             InitializeComponent();
+            
+        }
+        public void FC_StartFormIniciarSesion(object sender, EventArgs e)
+        {
+            tCuentaRegresiva.Start();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            Utilidades.AbrirFormulario<frmPrincipal>();
-            this.Close();
+            
+        }
+
+        
+        private void tCuentaRegresiva_Tick(object sender, EventArgs e)
+        {
+            _tCuentaRegresiva--;
+            lblTime.Text = _tCuentaRegresiva.ToString();
+            if(_tCuentaRegresiva == 0)
+            {
+                Application.Exit();
+            }
+
         }
     }
 }
