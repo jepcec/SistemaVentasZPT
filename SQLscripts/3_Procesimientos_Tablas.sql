@@ -29,7 +29,7 @@ GO
 
 -- Modificar ROL
 CREATE PROCEDURE uspModificarRol
-    @IdRol INT,
+    @IdRol dbo.ID,
     @Descripcion VARCHAR(255)
 AS
 BEGIN
@@ -51,7 +51,7 @@ GO
 
 -- Eliminar ROL
 CREATE PROCEDURE uspEliminarRol
-    @IdRol INT
+    @IdRol dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -103,7 +103,7 @@ GO
 
 -- Insertar PERMISO
 CREATE PROCEDURE uspInsertarPermiso
-    @IdRol INT,
+    @IdRol dbo.ID,
     @NombreMenu VARCHAR(255)
 AS
 BEGIN
@@ -125,8 +125,8 @@ GO
 
 -- Modificar PERMISO
 CREATE PROCEDURE uspModificarPermiso
-    @IdPermiso INT,
-    @IdRol INT,
+    @IdPermiso dbo.ID,
+    @IdRol dbo.ID,
     @NombreMenu VARCHAR(255)
 AS
 BEGIN
@@ -150,7 +150,7 @@ GO
 
 -- Eliminar PERMISO
 CREATE PROCEDURE uspEliminarPermiso
-    @IdPermiso INT
+    @IdPermiso dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -205,7 +205,7 @@ CREATE PROCEDURE uspInsertarEmpleado
     @NombreCompleto VARCHAR(255),
     @Correo VARCHAR(255),
     @Clave VARCHAR(255),
-    @IdRol INT,
+    @IdRol dbo.ID,
     @Estado VARCHAR(20),
     @Imagen IMAGE = NULL
 AS
@@ -228,12 +228,12 @@ GO
 
 -- Modificar EMPLEADO
 CREATE PROCEDURE uspModificarEmpleado
-    @IdEmpleado INT,
+    @IdEmpleado dbo.ID,
     @Documento VARCHAR(20),
     @NombreCompleto VARCHAR(255),
     @Correo VARCHAR(255),
     @Clave VARCHAR(255),
-    @IdRol INT,
+    @IdRol dbo.ID,
     @Estado VARCHAR(20),
     @Imagen IMAGE = NULL
 AS
@@ -264,7 +264,7 @@ GO
 
 -- Eliminar EMPLEADO
 CREATE PROCEDURE uspEliminarEmpleado
-    @IdEmpleado INT
+    @IdEmpleado dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -345,7 +345,7 @@ GO
 
 -- Modificar CATEGORIA
 CREATE PROCEDURE uspModificarCategoria
-    @IdCategoria INT,
+    @IdCategoria dbo.ID,
     @Descripcion VARCHAR(255),
     @Estado VARCHAR(20)
 AS
@@ -370,7 +370,7 @@ GO
 
 -- Eliminar CATEGORIA
 CREATE PROCEDURE uspEliminarCategoria
-    @IdCategoria INT
+    @IdCategoria dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -424,7 +424,7 @@ CREATE PROCEDURE uspInsertarProducto
     @Codigo VARCHAR(50),
     @Nombre VARCHAR(255),
     @Descripcion VARCHAR(255),
-    @IdCategoria INT,
+    @IdCategoria dbo.ID,
     @Stock INT,
     @PrecioCompra DECIMAL(10, 2),
     @PrecioVenta DECIMAL(10, 2),
@@ -451,11 +451,11 @@ GO
 
 -- Modificar PRODUCTO
 CREATE PROCEDURE uspModificarProducto
-    @IdProducto INT,
+    @IdProducto dbo.ID,
     @Codigo VARCHAR(50),
     @Nombre VARCHAR(255),
     @Descripcion VARCHAR(255),
-    @IdCategoria INT,
+    @IdCategoria dbo.ID,
     @Stock INT,
     @PrecioCompra DECIMAL(10, 2),
     @PrecioVenta DECIMAL(10, 2),
@@ -492,7 +492,7 @@ GO
 
 -- Eliminar PRODUCTO
 CREATE PROCEDURE uspEliminarProducto
-    @IdProducto INT
+    @IdProducto dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -576,7 +576,7 @@ GO
 
 -- Modificar CLIENTE
 CREATE PROCEDURE uspModificarCliente
-    @IdCliente INT,
+    @IdCliente dbo.ID,
     @Documento VARCHAR(20),
     @NombreCompleto VARCHAR(255),
     @Correo VARCHAR(255),
@@ -605,7 +605,7 @@ GO
 
 -- Eliminar CLIENTE
 CREATE PROCEDURE uspEliminarCliente
-    @IdCliente INT
+    @IdCliente dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -682,7 +682,7 @@ GO
 
 -- Modificar PROVEEDOR
 CREATE PROCEDURE uspModificarProveedor
-    @IdProveedor INT,
+    @IdProveedor dbo.ID,
     @Documento VARCHAR(20),
     @RazonSocial VARCHAR(255),
     @Correo VARCHAR(255),
@@ -711,7 +711,7 @@ GO
 
 -- Eliminar PROVEEDOR
 CREATE PROCEDURE uspEliminarProveedor
-    @IdProveedor INT
+    @IdProveedor dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -763,8 +763,8 @@ GO
 
 -- Insertar COMPRA
 CREATE PROCEDURE uspInsertarCompra
-    @IdEmpleado INT,
-    @IdProveedor INT,
+    @IdEmpleado dbo.ID,
+    @IdProveedor dbo.ID,
     @TipoDocumento VARCHAR(50),
     @NumeroDocumento VARCHAR(50),
     @MontoTotal DECIMAL(10, 2)
@@ -788,9 +788,9 @@ GO
 
 -- Modificar COMPRA
 CREATE PROCEDURE uspModificarCompra
-    @IdCompra INT,
-    @IdEmpleado INT,
-    @IdProveedor INT,
+    @IdCompra dbo.ID,
+    @IdEmpleado dbo.ID,
+    @IdProveedor dbo.ID,
     @TipoDocumento VARCHAR(50),
     @NumeroDocumento VARCHAR(50),
     @MontoTotal DECIMAL(10, 2)
@@ -818,7 +818,7 @@ GO
 
 -- Eliminar COMPRA
 CREATE PROCEDURE uspEliminarCompra
-    @IdCompra INT
+    @IdCompra dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -882,8 +882,8 @@ GO
 
 -- Insertar DETALLE_COMPRA
 CREATE PROCEDURE uspInsertarDetalleCompra
-    @IdCompra INT,
-    @IdProducto INT,
+    @IdCompra dbo.ID,
+    @IdProducto dbo.ID,
     @PrecioCompra DECIMAL(10, 2),
     @PrecioVenta DECIMAL(10, 2),
     @Cantidad INT,
@@ -908,9 +908,9 @@ GO
 
 -- Modificar DETALLE_COMPRA
 CREATE PROCEDURE uspModificarDetalleCompra
-    @IdDetalleCompra INT,
-    @IdCompra INT,
-    @IdProducto INT,
+    @IdDetalleCompra dbo.ID,
+    @IdCompra dbo.ID,
+    @IdProducto dbo.ID,
     @PrecioCompra DECIMAL(10, 2),
     @PrecioVenta DECIMAL(10, 2),
     @Cantidad INT,
@@ -939,7 +939,7 @@ GO
 
 -- Eliminar DETALLE_COMPRA
 CREATE PROCEDURE uspEliminarDetalleCompra
-    @IdDetalleCompra INT
+    @IdDetalleCompra dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -960,7 +960,7 @@ GO
 
 -- Listar DETALLE_COMPRA
 CREATE PROCEDURE uspListarDetalleCompra
-    @IdCompra INT
+    @IdCompra dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -974,7 +974,7 @@ GO
 
 -- Buscar DETALLE_COMPRA
 CREATE PROCEDURE uspBuscarDetalleCompra
-    @IdCompra INT,
+    @IdCompra dbo.ID,
     @campo NVARCHAR(50),
     @contenido NVARCHAR(50) = NULL
 AS
@@ -1004,7 +1004,7 @@ GO
 
 -- Insertar VENTA
 CREATE PROCEDURE uspInsertarVenta
-    @IdEmpleado INT,
+    @IdEmpleado dbo.ID,
     @TipoDocumento VARCHAR(50),
     @NumeroDocumento VARCHAR(50),
     @DocumentoCliente VARCHAR(20),
@@ -1033,8 +1033,8 @@ GO
 
 -- Modificar VENTA
 CREATE PROCEDURE uspModificarVenta
-    @IdVenta INT,
-    @IdEmpleado INT,
+    @IdVenta dbo.ID,
+    @IdEmpleado dbo.ID,
     @TipoDocumento VARCHAR(50),
     @NumeroDocumento VARCHAR(50),
     @DocumentoCliente VARCHAR(20),
@@ -1067,7 +1067,7 @@ GO
 
 -- Eliminar VENTA
 CREATE PROCEDURE uspEliminarVenta
-    @IdVenta INT
+    @IdVenta dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -1128,8 +1128,8 @@ GO
 
 -- Insertar DETALLE_VENTA
 CREATE PROCEDURE uspInsertarDetalleVenta
-    @IdVenta INT,
-    @IdProducto INT,
+    @IdVenta dbo.ID,
+    @IdProducto dbo.ID,
     @PrecioUnitario DECIMAL(10, 2),
     @Cantidad INT,
     @SubTotal DECIMAL(10, 2)
@@ -1153,9 +1153,9 @@ GO
 
 -- Modificar DETALLE_VENTA
 CREATE PROCEDURE uspModificarDetalleVenta
-    @IdDetalleVenta INT,
-    @IdVenta INT,
-    @IdProducto INT,
+    @IdDetalleVenta dbo.ID,
+    @IdVenta dbo.ID,
+    @IdProducto dbo.ID,
     @PrecioUnitario DECIMAL(10, 2),
     @Cantidad INT,
     @SubTotal DECIMAL(10, 2)
@@ -1183,7 +1183,7 @@ GO
 
 -- Eliminar DETALLE_VENTA
 CREATE PROCEDURE uspEliminarDetalleVenta
-    @IdDetalleVenta INT
+    @IdDetalleVenta dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -1204,7 +1204,7 @@ GO
 
 -- Listar DETALLE_VENTA
 CREATE PROCEDURE uspListarDetalleVenta
-    @IdVenta INT
+    @IdVenta dbo.ID
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -1218,7 +1218,7 @@ GO
 
 -- Buscar DETALLE_VENTA
 CREATE PROCEDURE uspBuscarDetalleVenta
-    @IdVenta INT,
+    @IdVenta dbo.ID,
     @campo NVARCHAR(50),
     @contenido NVARCHAR(50) = NULL
 AS
