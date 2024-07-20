@@ -15,3 +15,7 @@ C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\Capa
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Procesos.frmVenta.resources
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.FormTest.resources

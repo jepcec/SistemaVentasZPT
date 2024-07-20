@@ -1,4 +1,6 @@
-﻿using System;
+﻿using capaLogica;
+using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace CapaPresentacion
 {
     public partial class frmIniciarSesion : Form
     {
+        cEmpleado oEmpleado = new cEmpleado();
+
         int _tSesion = 60;
         int _tMensaje = 10;
         int _intentos = 3;
+        int _tRetraso = 10;
         public frmIniciarSesion()
         {
             InitializeComponent();
@@ -43,8 +48,23 @@ namespace CapaPresentacion
             {
                 _intentos--;              
                 lblMensaje.Visible = true;
-
                 mensaje += (_intentos).ToString();
+                oEmpleado.IdEmpleado = txtUsuario.Text;
+                oEmpleado.Clave = txtContraseña.Text;
+
+                if (oEmpleado.VerificarUsuario())
+                {
+                    mensaje = oEmpleado.Mensaje;
+                    oEmpleado.CargarInformacion();
+                    ConfiguracionUsuario.CargarInformacion(oEmpleado);
+                    if(ConfiguracionUsuario.RolUsuario == ConfiguracionUsuario.Rol.Administrado)
+                    {
+                        MessageBox.Show(ConfiguracionUsuario.RolUsuario.ToString());
+                        _tMensaje = 10;
+                        tCloseFrm.Start();
+
+                    }
+                }
 
             }
             InciarTickMensaje(mensaje);
@@ -79,6 +99,15 @@ namespace CapaPresentacion
             _tMensaje = 10;
             lblMensaje.Text = Mensaje;
             tMensaje.Start();
+        }
+
+        private void tCloseFrm_Tick(object sender, EventArgs e)
+        {
+            _tRetraso--;
+            if (_tRetraso == 0)
+            {
+                Close();
+            }
         }
     }
 }

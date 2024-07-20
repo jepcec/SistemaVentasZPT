@@ -42,6 +42,7 @@
             this.tCuentaRegresiva = new System.Windows.Forms.Timer(this.components);
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.tCloseFrm = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -109,6 +110,10 @@
             resources.ApplyResources(this.lblMensaje, "lblMensaje");
             this.lblMensaje.Name = "lblMensaje";
             // 
+            // tCloseFrm
+            // 
+            this.tCloseFrm.Tick += new System.EventHandler(this.tCloseFrm_Tick);
+            // 
             // frmIniciarSesion
             // 
             resources.ApplyResources(this, "$this");
@@ -147,5 +152,6 @@
         private System.Windows.Forms.Timer tCuentaRegresiva;
         private System.Windows.Forms.Timer tMensaje;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Timer tCloseFrm;
     }
 }

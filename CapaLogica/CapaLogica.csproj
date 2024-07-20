@@ -43,7 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cCategoria.cs" />
+    <Compile Include="cCliente.cs" />
+    <Compile Include="cCompra.cs" />
+    <Compile Include="cDetalleCompra.cs" />
+    <Compile Include="cDetalleVenta.cs" />
+    <Compile Include="cEmpleado.cs" />
+    <Compile Include="ConfiguracionUsuario.cs" />
+    <Compile Include="cPermiso.cs" />
+    <Compile Include="cProducto.cs" />
+    <Compile Include="cProveedor.cs" />
+    <Compile Include="cRol.cs" />
     <Compile Include="cUtilitarios.cs" />
+    <Compile Include="cVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
