@@ -7,7 +7,7 @@ GO
 -- Definir tipos personalizados para mejorar la consistencia
 CREATE TYPE dbo.ID FROM VARCHAR(10);
 CREATE TYPE dbo.Descripcion FROM VARCHAR(255);
-CREATE TYPE dbo.Estado FROM VARCHAR(20);
+CREATE TYPE dbo.Estado FROM BIT;
 CREATE TYPE dbo.Documento FROM VARCHAR(20);
 CREATE TYPE dbo.Telefono FROM VARCHAR(20);
 CREATE TYPE dbo.Dinero FROM DECIMAL(10, 2);
@@ -41,7 +41,7 @@ CREATE TABLE EMPLEADO (
     Correo VARCHAR(100) NOT NULL UNIQUE,
     Clave VARCHAR(100) NOT NULL,
     IdRol dbo.ID NOT NULL,
-    Estado dbo.Estado NOT NULL,
+    Estado dbo.Estado NOT NULL DEFAULT 1,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
     Imagen VARBINARY(MAX),
     FOREIGN KEY (IdRol) REFERENCES ROL(IdRol)
@@ -52,7 +52,7 @@ GO
 CREATE TABLE CATEGORIA (
     IdCategoria dbo.ID PRIMARY KEY,
     Descripcion dbo.Descripcion NOT NULL,
-    Estado dbo.Estado NOT NULL,
+    Estado dbo.Estado NOT NULL DEFAULT 1,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE()
 )
 GO
@@ -67,7 +67,7 @@ CREATE TABLE PRODUCTO (
     Stock INT NOT NULL DEFAULT 0,
     PrecioCompra dbo.Dinero NOT NULL,
     PrecioVenta dbo.Dinero NOT NULL,
-    Estado dbo.Estado NOT NULL,
+    Estado dbo.Estado NOT NULL DEFAULT 1,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
     Imagen VARBINARY(MAX),
     FOREIGN KEY (IdCategoria) REFERENCES CATEGORIA(IdCategoria)
@@ -81,7 +81,7 @@ CREATE TABLE CLIENTE (
     NombreCompleto dbo.Descripcion NOT NULL,
     Correo VARCHAR(100),
     Telefono dbo.Telefono,
-    Estado dbo.Estado NOT NULL,
+    Estado dbo.Estado NOT NULL DEFAULT 1,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE()
 )
 GO
@@ -93,7 +93,7 @@ CREATE TABLE PROVEEDOR (
     RazonSocial dbo.Descripcion NOT NULL,
     Correo VARCHAR(100),
     Telefono dbo.Telefono,
-    Estado dbo.Estado NOT NULL,
+    Estado dbo.Estado NOT NULL DEFAULT 1,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE()
 )
 GO
@@ -107,6 +107,7 @@ CREATE TABLE COMPRA (
     NumeroDocumento VARCHAR(50) NOT NULL,
     MontoTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
+	Estado dbo.Estado NOT NULL DEFAULT 1,
     FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado),
     FOREIGN KEY (IdProveedor) REFERENCES PROVEEDOR(IdProveedor)
 )
@@ -122,6 +123,7 @@ CREATE TABLE DETALLE_COMPRA (
     Cantidad INT NOT NULL,
     MontoTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
+	Estado dbo.Estado NOT NULL DEFAULT 1,
     FOREIGN KEY (IdCompra) REFERENCES COMPRA(IdCompra),
     FOREIGN KEY (IdProducto) REFERENCES PRODUCTO(IdProducto)
 )
@@ -139,6 +141,7 @@ CREATE TABLE VENTA (
     MontoCambio dbo.Dinero NOT NULL,
     MontoTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
+	Estado dbo.Estado NOT NULL DEFAULT 1,
     FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 )
 GO
@@ -152,6 +155,7 @@ CREATE TABLE DETALLE_VENTA (
     Cantidad INT NOT NULL,
     SubTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
+	Estado dbo.Estado NOT NULL DEFAULT 1,
     FOREIGN KEY (IdVenta) REFERENCES VENTA(IdVenta),
     FOREIGN KEY (IdProducto) REFERENCES PRODUCTO(IdProducto)
 )

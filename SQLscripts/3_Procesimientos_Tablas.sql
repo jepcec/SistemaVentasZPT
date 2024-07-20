@@ -206,7 +206,6 @@ CREATE PROCEDURE uspInsertarEmpleado
     @Correo VARCHAR(255),
     @Clave VARCHAR(255),
     @IdRol dbo.ID,
-    @Estado VARCHAR(20),
     @Imagen IMAGE = NULL
 AS
 BEGIN
@@ -215,8 +214,8 @@ BEGIN
 	DECLARE @NuevoID dbo.ID
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('EMPLEADO')
-        INSERT INTO EMPLEADO (IdEmpleado,Documento, NombreCompleto, Correo, Clave, IdRol, Estado, FechaRegistro, Imagen)
-        VALUES (@NuevoID, @Documento, @NombreCompleto, @Correo, HASHBYTES('MD5', @Clave), @IdRol, @Estado, GETDATE(), @Imagen);
+        INSERT INTO EMPLEADO (IdEmpleado,Documento, NombreCompleto, Correo, Clave, IdRol, FechaRegistro, Imagen)
+        VALUES (@NuevoID, @Documento, @NombreCompleto, @Correo, HASHBYTES('MD5', @Clave), @IdRol, GETDATE(), @Imagen);
         INSERT INTO @Result VALUES (0, 'Empleado insertado exitosamente.');
     END TRY
     BEGIN CATCH
@@ -234,7 +233,6 @@ CREATE PROCEDURE uspModificarEmpleado
     @Correo VARCHAR(255),
     @Clave VARCHAR(255),
     @IdRol dbo.ID,
-    @Estado VARCHAR(20),
     @Imagen IMAGE = NULL
 AS
 BEGIN
@@ -246,8 +244,7 @@ BEGIN
             NombreCompleto = @NombreCompleto, 
             Correo = @Correo, 
             Clave = CASE WHEN @Clave = '' THEN Clave ELSE HASHBYTES('MD5', @Clave) END,
-            IdRol = @IdRol, 
-            Estado = @Estado,
+            IdRol = @IdRol,
             Imagen = ISNULL(@Imagen, Imagen)
         WHERE IdEmpleado = @IdEmpleado;
         IF @@ROWCOUNT > 0
@@ -323,8 +320,7 @@ GO
 
 -- Insertar CATEGORIA
 CREATE PROCEDURE uspInsertarCategoria
-    @Descripcion VARCHAR(255),
-    @Estado VARCHAR(20)
+    @Descripcion VARCHAR(255)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -332,8 +328,8 @@ BEGIN
 	DECLARE @NuevoID dbo.ID
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('CATEGORIA')
-        INSERT INTO CATEGORIA (IdCategoria,Descripcion, Estado, FechaRegistro)
-        VALUES (@NuevoID, @Descripcion, @Estado, GETDATE());
+        INSERT INTO CATEGORIA (IdCategoria,Descripcion, FechaRegistro)
+        VALUES (@NuevoID, @Descripcion, GETDATE());
         INSERT INTO @Result VALUES (0, 'Categoría insertada exitosamente.');
     END TRY
     BEGIN CATCH
@@ -346,15 +342,14 @@ GO
 -- Modificar CATEGORIA
 CREATE PROCEDURE uspModificarCategoria
     @IdCategoria dbo.ID,
-    @Descripcion VARCHAR(255),
-    @Estado VARCHAR(20)
+    @Descripcion VARCHAR(255)
 AS
 BEGIN
     SET NOCOUNT ON;
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     BEGIN TRY
         UPDATE CATEGORIA 
-        SET Descripcion = @Descripcion, Estado = @Estado
+        SET Descripcion = @Descripcion
         WHERE IdCategoria = @IdCategoria;
         IF @@ROWCOUNT > 0
             INSERT INTO @Result VALUES (0, 'Categoría modificada exitosamente.');
@@ -428,7 +423,6 @@ CREATE PROCEDURE uspInsertarProducto
     @Stock INT,
     @PrecioCompra DECIMAL(10, 2),
     @PrecioVenta DECIMAL(10, 2),
-    @Estado VARCHAR(20),
     @Imagen IMAGE = NULL
 AS
 BEGIN
@@ -437,8 +431,8 @@ BEGIN
 	DECLARE @NuevoID dbo.ID
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('PRODUCTO')
-        INSERT INTO PRODUCTO (IdProducto, Codigo, Nombre, Descripcion, IdCategoria, Stock, PrecioCompra, PrecioVenta, Estado, FechaRegistro, Imagen)
-        VALUES (@NuevoID, @Codigo, @Nombre, @Descripcion, @IdCategoria, @Stock, @PrecioCompra, @PrecioVenta, @Estado, GETDATE(), @Imagen);
+        INSERT INTO PRODUCTO (IdProducto, Codigo, Nombre, Descripcion, IdCategoria, Stock, PrecioCompra, PrecioVenta, FechaRegistro, Imagen)
+        VALUES (@NuevoID, @Codigo, @Nombre, @Descripcion, @IdCategoria, @Stock, @PrecioCompra, @PrecioVenta, GETDATE(), @Imagen);
         
         INSERT INTO @Result VALUES (0, 'Producto insertado exitosamente.');
     END TRY
@@ -459,7 +453,6 @@ CREATE PROCEDURE uspModificarProducto
     @Stock INT,
     @PrecioCompra DECIMAL(10, 2),
     @PrecioVenta DECIMAL(10, 2),
-    @Estado VARCHAR(20),
     @Imagen IMAGE = NULL
 AS
 BEGIN
@@ -474,7 +467,6 @@ BEGIN
             Stock = @Stock,
             PrecioCompra = @PrecioCompra,
             PrecioVenta = @PrecioVenta,
-            Estado = @Estado,
             Imagen = ISNULL(@Imagen, Imagen)
         WHERE IdProducto = @IdProducto;
         
@@ -554,8 +546,7 @@ CREATE PROCEDURE uspInsertarCliente
     @Documento VARCHAR(20),
     @NombreCompleto VARCHAR(255),
     @Correo VARCHAR(255),
-    @Telefono VARCHAR(20),
-    @Estado VARCHAR(20)
+    @Telefono VARCHAR(20)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -563,8 +554,8 @@ BEGIN
 	DECLARE @NuevoID dbo.ID
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('CLIENTE')
-        INSERT INTO CLIENTE (IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado, FechaRegistro)
-        VALUES (@NuevoID, @Documento, @NombreCompleto, @Correo, @Telefono, @Estado, GETDATE());
+        INSERT INTO CLIENTE (IdCliente, Documento, NombreCompleto, Correo, Telefono, FechaRegistro)
+        VALUES (@NuevoID, @Documento, @NombreCompleto, @Correo, @Telefono, GETDATE());
         INSERT INTO @Result VALUES (0, 'Cliente insertado exitosamente.');
     END TRY
     BEGIN CATCH
@@ -580,8 +571,7 @@ CREATE PROCEDURE uspModificarCliente
     @Documento VARCHAR(20),
     @NombreCompleto VARCHAR(255),
     @Correo VARCHAR(255),
-    @Telefono VARCHAR(20),
-    @Estado VARCHAR(20)
+    @Telefono VARCHAR(20)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -589,7 +579,7 @@ BEGIN
     BEGIN TRY
         UPDATE CLIENTE 
         SET Documento = @Documento, NombreCompleto = @NombreCompleto, 
-            Correo = @Correo, Telefono = @Telefono, Estado = @Estado
+            Correo = @Correo, Telefono = @Telefono
         WHERE IdCliente = @IdCliente;
         IF @@ROWCOUNT > 0
             INSERT INTO @Result VALUES (0, 'Cliente modificado exitosamente.');
@@ -660,8 +650,7 @@ CREATE PROCEDURE uspInsertarProveedor
     @Documento VARCHAR(20),
     @RazonSocial VARCHAR(255),
     @Correo VARCHAR(255),
-    @Telefono VARCHAR(20),
-    @Estado VARCHAR(20)
+    @Telefono VARCHAR(20)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -669,8 +658,8 @@ BEGIN
 	DECLARE @NuevoID dbo.ID
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('PROVEEDOR')
-        INSERT INTO PROVEEDOR (IdProveedor, Documento, RazonSocial, Correo, Telefono, Estado, FechaRegistro)
-        VALUES (@NuevoID, @Documento, @RazonSocial, @Correo, @Telefono, @Estado, GETDATE());
+        INSERT INTO PROVEEDOR (IdProveedor, Documento, RazonSocial, Correo, Telefono, FechaRegistro)
+        VALUES (@NuevoID, @Documento, @RazonSocial, @Correo, @Telefono, GETDATE());
         INSERT INTO @Result VALUES (0, 'Proveedor insertado exitosamente.');
     END TRY
     BEGIN CATCH
@@ -686,8 +675,7 @@ CREATE PROCEDURE uspModificarProveedor
     @Documento VARCHAR(20),
     @RazonSocial VARCHAR(255),
     @Correo VARCHAR(255),
-    @Telefono VARCHAR(20),
-    @Estado VARCHAR(20)
+    @Telefono VARCHAR(20)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -695,7 +683,7 @@ BEGIN
     BEGIN TRY
         UPDATE PROVEEDOR 
         SET Documento = @Documento, RazonSocial = @RazonSocial, 
-            Correo = @Correo, Telefono = @Telefono, Estado = @Estado
+            Correo = @Correo, Telefono = @Telefono
         WHERE IdProveedor = @IdProveedor;
         IF @@ROWCOUNT > 0
             INSERT INTO @Result VALUES (0, 'Proveedor modificado exitosamente.');

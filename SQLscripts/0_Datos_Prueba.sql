@@ -22,32 +22,29 @@ EXEC uspInsertarEmpleado
     @NombreCompleto = 'Juan Pérez', 
     @Correo = 'juan@example.com', 
     @Clave = 'password123', 
-    @IdRol = 'R0001', 
-    @Estado = 'Activo'
+    @IdRol = 'R0001'
 
 EXEC uspInsertarEmpleado 
     @Documento = '87654321', 
     @NombreCompleto = 'María García', 
     @Correo = 'maria@example.com', 
     @Clave = 'password456', 
-    @IdRol = 'R0002', 
-    @Estado = 'Activo'
+    @IdRol = 'R0002'
 
 EXEC uspInsertarEmpleado 
     @Documento = '11223344', 
     @NombreCompleto = 'Carlos López', 
     @Correo = 'carlos@example.com', 
     @Clave = 'password789', 
-    @IdRol = 'R0002', 
-    @Estado = 'Activo'
+    @IdRol = 'R0002'
 
 -- *****************************************************
 -- DATOS CATEGORIA
 -- *****************************************************
-EXEC uspInsertarCategoria @Descripcion = 'Electrónicos', @Estado = 'Activo'
-EXEC uspInsertarCategoria @Descripcion = 'Muebles', @Estado = 'Activo'
-EXEC uspInsertarCategoria @Descripcion = 'Ropa', @Estado = 'Activo'
-EXEC uspInsertarCategoria @Descripcion = 'Alimentos', @Estado = 'Activo'
+EXEC uspInsertarCategoria @Descripcion = 'Electrónicos'
+EXEC uspInsertarCategoria @Descripcion = 'Muebles'
+EXEC uspInsertarCategoria @Descripcion = 'Ropa'
+EXEC uspInsertarCategoria @Descripcion = 'Alimentos'
 
 -- *****************************************************
 -- DATOS PRODUCTO
@@ -59,8 +56,7 @@ EXEC uspInsertarProducto
     @IdCategoria = 'CT0001', 
     @Stock = 50, 
     @PrecioCompra = 300.00, 
-    @PrecioVenta = 450.00, 
-    @Estado = 'Activo'
+    @PrecioVenta = 450.00
 
 EXEC uspInsertarProducto 
     @Codigo = 'hjhkjhkj', 
@@ -69,8 +65,7 @@ EXEC uspInsertarProducto
     @IdCategoria = 'CT0002', 
     @Stock = 30, 
     @PrecioCompra = 80.00, 
-    @PrecioVenta = 150.00, 
-    @Estado = 'Activo'
+    @PrecioVenta = 150.00
 
 EXEC uspInsertarProducto 
     @Codigo = 'kjjlkjkljlkj', 
@@ -79,8 +74,7 @@ EXEC uspInsertarProducto
     @IdCategoria = 'CT0003', 
     @Stock = 100, 
     @PrecioCompra = 5.00, 
-    @PrecioVenta = 15.00, 
-    @Estado = 'Activo'
+    @PrecioVenta = 15.00
 
 EXEC uspInsertarProducto 
     @Codigo = 'kjlkjkljlkj', 
@@ -89,8 +83,7 @@ EXEC uspInsertarProducto
     @IdCategoria = 'CT0004', 
     @Stock = 200, 
     @PrecioCompra = 2.00, 
-    @PrecioVenta = 4.00, 
-    @Estado = 'Activo'
+    @PrecioVenta = 4.00
 
 -- *****************************************************
 -- DATOS CLIENTE
@@ -99,22 +92,19 @@ EXEC uspInsertarCliente
     @Documento = '11111111', 
     @NombreCompleto = 'Ana Martínez', 
     @Correo = 'ana@email.com', 
-    @Telefono = '999888777', 
-    @Estado = 'Activo'
+    @Telefono = '999888777'
 
 EXEC uspInsertarCliente 
     @Documento = '22222222', 
     @NombreCompleto = 'Pedro Rodríguez', 
     @Correo = 'pedro@email.com', 
-    @Telefono = '888777666', 
-    @Estado = 'Activo'
+    @Telefono = '888777666'
 
 EXEC uspInsertarCliente 
     @Documento = '33333333', 
     @NombreCompleto = 'Lucía Sánchez', 
     @Correo = 'lucia@email.com', 
-    @Telefono = '777666555', 
-    @Estado = 'Activo'
+    @Telefono = '777666555'
 
 -- *****************************************************
 -- DATOS PROVEEDOR
@@ -123,43 +113,39 @@ EXEC uspInsertarProveedor
     @Documento = '20123456789',
     @RazonSocial = 'Distribuidora TecnoPartes S.A.',
     @Correo = 'ventas@tecnopartes.com',
-    @Telefono = '(01) 555-1234',
-    @Estado = 'Activo'
+    @Telefono = '(01) 555-1234'
 -- Insertar Proveedor 2
 EXEC uspInsertarProveedor 
     @Documento = '20987654321',
     @RazonSocial = 'Suministros Oficina Pro E.I.R.L.',
     @Correo = 'contacto@oficinapro.com',
-    @Telefono = '(01) 555-5678',
-    @Estado = 'Activo'
+    @Telefono = '(01) 555-5678'
 -- Insertar Proveedor 3
 EXEC uspInsertarProveedor 
     @Documento = '20456789012',
     @RazonSocial = 'Insumos Químicos del Perú S.A.C.',
     @Correo = 'ventas@insumosquimicos.pe',
-    @Telefono = '(01) 555-9012',
-    @Estado = 'Activo'
+    @Telefono = '(01) 555-9012'
 -- Insertar Proveedor 4
 EXEC uspInsertarProveedor 
     @Documento = '20345678901',
     @RazonSocial = 'Maquinarias Industriales del Sur S.R.L.',
     @Correo = 'info@maquinariassur.com',
-    @Telefono = '(01) 555-3456',
-    @Estado = 'Activo'
+    @Telefono = '(01) 555-3456'
 
 -- *****************************************************
 -- DATOS COMPRA
 -- *****************************************************
 EXEC uspInsertarCompra 
     @IdEmpleado = 'E0002', 
-    @IdProveedor = 'PRV0002', 
+    @IdProveedor = 'PRV0001', 
     @TipoDocumento = 'Factura', 
     @NumeroDocumento = 'F001-001', 
     @MontoTotal = 20000.00
 
 EXEC uspInsertarCompra 
-    @IdEmpleado = 'PRV0003', 
-    @IdProveedor = 2, 
+    @IdEmpleado = 'E0003', 
+    @IdProveedor = 'PRV0002', 
     @TipoDocumento = 'Factura', 
     @NumeroDocumento = 'F001-002', 
     @MontoTotal = 5000.00
