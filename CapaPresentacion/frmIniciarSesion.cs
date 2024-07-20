@@ -59,8 +59,7 @@ namespace CapaPresentacion
                     ConfiguracionUsuario.CargarInformacion(oEmpleado);
                     if(ConfiguracionUsuario.RolUsuario == ConfiguracionUsuario.Rol.Administrado)
                     {
-                        MessageBox.Show(ConfiguracionUsuario.RolUsuario.ToString());
-                        _tMensaje = 10;
+                        ReniciarTiempos();
                         tCloseFrm.Start();
 
                     }
@@ -70,6 +69,10 @@ namespace CapaPresentacion
             InciarTickMensaje(mensaje);
 
             
+        }
+        private void ReniciarTiempos()
+        {
+            _tMensaje = 10;
         }
 
         
@@ -106,6 +109,8 @@ namespace CapaPresentacion
             _tRetraso--;
             if (_tRetraso == 0)
             {
+                ((frmPrincipal)MdiParent).tssRol.Text = ConfiguracionUsuario.RolUsuario.ToString();
+                ((frmPrincipal)MdiParent).msPrincipal.Enabled = true;
                 Close();
             }
         }

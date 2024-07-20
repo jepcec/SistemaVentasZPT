@@ -29,6 +29,7 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
+        // esto no
         public bool Modificar()
         {
             DataRow ofila = odatos.TraerDataRow("uspModificarDetalleVenta", IdDetalleVenta, IdVenta, IdProducto, PrecioUnitario, Cantidad, SubTotal);
@@ -43,5 +44,6 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
+        // esto no
     }
 }

@@ -152,7 +152,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+    <Folder Include="Seguridad\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
       <Project>{7febe460-a232-443d-8faa-313e7385c387}</Project>

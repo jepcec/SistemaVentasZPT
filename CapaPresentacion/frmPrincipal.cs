@@ -25,6 +25,8 @@ namespace CapaPresentacion
         {
             CargarBarraEstado();
             TimerHoraSTM();
+            msPrincipal.Enabled = false;
+            Utilidades.VerificarFormulacionExistente<frmIniciarSesion>(this);
         }
         private void CargarBarraEstado()
         {

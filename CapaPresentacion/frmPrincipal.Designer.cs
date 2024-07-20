@@ -40,7 +40,10 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssRol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssInformacion.SuspendLayout();
             this.SuspendLayout();
@@ -52,10 +55,11 @@
             this.tsmIniciarSesion,
             this.tsmMantenimiento,
             this.tsmProcesos,
-            this.tsmInformes});
+            this.tsmInformes,
+            this.seguridadToolStripMenuItem});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
-            this.msPrincipal.Size = new System.Drawing.Size(776, 24);
+            this.msPrincipal.Size = new System.Drawing.Size(777, 24);
             this.msPrincipal.TabIndex = 0;
             this.msPrincipal.Text = "menuStrip1";
             // 
@@ -106,10 +110,10 @@
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel4,
-            this.toolStripStatusLabel5});
+            this.tssRol});
             this.ssInformacion.Location = new System.Drawing.Point(0, 465);
             this.ssInformacion.Name = "ssInformacion";
-            this.ssInformacion.Size = new System.Drawing.Size(776, 26);
+            this.ssInformacion.Size = new System.Drawing.Size(777, 26);
             this.ssInformacion.TabIndex = 4;
             this.ssInformacion.Text = "statusStrip1";
             // 
@@ -141,19 +145,40 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(151, 21);
             this.toolStripStatusLabel4.Text = "fecha";
             // 
-            // toolStripStatusLabel5
+            // tssRol
             // 
-            this.toolStripStatusLabel5.AutoSize = false;
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(151, 21);
-            this.toolStripStatusLabel5.Text = "usuario";
+            this.tssRol.AutoSize = false;
+            this.tssRol.Name = "tssRol";
+            this.tssRol.Size = new System.Drawing.Size(151, 21);
+            this.tssRol.Text = "usuario";
+            // 
+            // seguridadToolStripMenuItem
+            // 
+            this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarContraseñaToolStripMenuItem,
+            this.habilitarToolStripMenuItem});
+            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            // 
+            // cambiarContraseñaToolStripMenuItem
+            // 
+            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
+            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
+            // 
+            // habilitarToolStripMenuItem
+            // 
+            this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
+            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.habilitarToolStripMenuItem.Text = "Habilitar Inhabilitar Usuario";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(776, 491);
+            this.ClientSize = new System.Drawing.Size(777, 491);
             this.Controls.Add(this.ssInformacion);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.msPrincipal);
@@ -163,6 +188,7 @@
             this.MainMenuStrip = this.msPrincipal;
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FC_StartFormPrincipal);
             this.msPrincipal.ResumeLayout(false);
             this.msPrincipal.PerformLayout();
@@ -174,8 +200,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip msPrincipal;
         private System.Windows.Forms.ToolStripMenuItem tsmIniciarSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmMantenimiento;
         private System.Windows.Forms.ToolStripMenuItem tsmProcesos;
@@ -186,6 +210,10 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
-        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+        public System.Windows.Forms.ToolStripStatusLabel tssRol;
+        private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem habilitarToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip msPrincipal;
     }
 }
