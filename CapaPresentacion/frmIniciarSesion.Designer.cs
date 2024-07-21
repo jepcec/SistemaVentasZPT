@@ -117,9 +117,9 @@
             // frmIniciarSesion
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label4);
@@ -132,6 +132,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIniciarSesion";
+            this.Opacity = 0.8D;
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FC_StartFormIniciarSesion);
             this.ResumeLayout(false);
             this.PerformLayout();

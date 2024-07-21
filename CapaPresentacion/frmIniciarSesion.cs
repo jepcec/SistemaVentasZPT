@@ -48,7 +48,7 @@ namespace CapaPresentacion
             {
                 _intentos--;              
                 lblMensaje.Visible = true;
-                mensaje += (_intentos).ToString();
+               
                 oEmpleado.Correo = txtUsuario.Text;
                 oEmpleado.Clave = txtContraseña.Text;
 
@@ -63,6 +63,10 @@ namespace CapaPresentacion
                         tCloseFrm.Start();
 
                     }
+                }
+                else
+                {
+                    mensaje = oEmpleado.Mensaje;
                 }
 
             }

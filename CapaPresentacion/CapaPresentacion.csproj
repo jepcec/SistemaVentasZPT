@@ -70,6 +70,48 @@
     <Compile Include="Mantenimiento\frmEmpleado.Designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmBoletaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmBoletaVenta.Designer.cs">
+      <DependentUpon>frmBoletaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmCardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmCardex.Designer.cs">
+      <DependentUpon>frmCardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmFacturaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmFacturaCompra.Designer.cs">
+      <DependentUpon>frmFacturaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmFacturaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmFacturaVenta.Designer.cs">
+      <DependentUpon>frmFacturaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmListarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmListarEmpleado.Designer.cs">
+      <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmHabilitarInhabilitarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmHabilitarInhabilitarUsuario.Designer.cs">
+      <DependentUpon>frmHabilitarInhabilitarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="Mantenimiento\frmCliente.cs">
       <SubType>Form</SubType>
@@ -164,10 +206,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-    <Folder Include="Seguridad\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
       <Project>{7febe460-a232-443d-8faa-313e7385c387}</Project>

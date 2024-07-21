@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaPresentacion.Mantenimiento;
+
 namespace CapaPresentacion
 {
     public partial class frmPrincipal : Form
@@ -55,7 +57,27 @@ namespace CapaPresentacion
         {
             Utilidades.VerificarFormulacionExistente<frmIniciarSesion>(this);
         }
+        private void tsmCliente_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmCliente>(this);
+        }
+        private void tsmEmpleado_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmEmpleado>(this);
+        }
+
+        private void tsmProducto_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmProducto>(this);
+        }
+
+        private void tsmProveedor_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmProveedor>(this);
+        }
 
         #endregion ToolMenuStrip
+
+
     }
 }

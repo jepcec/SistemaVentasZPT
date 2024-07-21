@@ -34,6 +34,9 @@
             this.tsmMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInformes = new System.Windows.Forms.ToolStripMenuItem();
+            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
             this.ssInformacion = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -41,9 +44,14 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssRol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEmpleado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProveedor = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssInformacion.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +67,8 @@
             this.seguridadToolStripMenuItem});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
-            this.msPrincipal.Size = new System.Drawing.Size(777, 24);
+            this.msPrincipal.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.msPrincipal.Size = new System.Drawing.Size(1036, 24);
             this.msPrincipal.TabIndex = 0;
             this.msPrincipal.Text = "menuStrip1";
             // 
@@ -72,12 +81,22 @@
             // 
             // tsmMantenimiento
             // 
+            this.tsmMantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmCliente,
+            this.tsmEmpleado,
+            this.tsmProducto,
+            this.tsmProveedor});
             this.tsmMantenimiento.Name = "tsmMantenimiento";
             this.tsmMantenimiento.Size = new System.Drawing.Size(101, 20);
             this.tsmMantenimiento.Text = "Mantenimiento";
             // 
             // tsmProcesos
             // 
+            this.tsmProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.compraToolStripMenuItem,
+            this.ventaToolStripMenuItem,
+            this.anularCompraToolStripMenuItem,
+            this.anularVentaToolStripMenuItem});
             this.tsmProcesos.Name = "tsmProcesos";
             this.tsmProcesos.Size = new System.Drawing.Size(66, 20);
             this.tsmProcesos.Text = "Procesos";
@@ -88,6 +107,27 @@
             this.tsmInformes.Size = new System.Drawing.Size(66, 20);
             this.tsmInformes.Text = "Informes";
             // 
+            // seguridadToolStripMenuItem
+            // 
+            this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarContraseñaToolStripMenuItem,
+            this.habilitarToolStripMenuItem});
+            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            // 
+            // cambiarContraseñaToolStripMenuItem
+            // 
+            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
+            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
+            // 
+            // habilitarToolStripMenuItem
+            // 
+            this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
+            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.habilitarToolStripMenuItem.Text = "Habilitar Inhabilitar Usuario";
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.Control;
@@ -95,9 +135,10 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Location = new System.Drawing.Point(749, 0);
+            this.btnClose.Location = new System.Drawing.Point(1012, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 23);
+            this.btnClose.Size = new System.Drawing.Size(24, 24);
             this.btnClose.TabIndex = 2;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -111,9 +152,10 @@
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel4,
             this.tssRol});
-            this.ssInformacion.Location = new System.Drawing.Point(0, 465);
+            this.ssInformacion.Location = new System.Drawing.Point(0, 578);
             this.ssInformacion.Name = "ssInformacion";
-            this.ssInformacion.Size = new System.Drawing.Size(777, 26);
+            this.ssInformacion.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.ssInformacion.Size = new System.Drawing.Size(1036, 26);
             this.ssInformacion.TabIndex = 4;
             this.ssInformacion.Text = "statusStrip1";
             // 
@@ -152,33 +194,64 @@
             this.tssRol.Size = new System.Drawing.Size(151, 21);
             this.tssRol.Text = "usuario";
             // 
-            // seguridadToolStripMenuItem
+            // tsmCliente
             // 
-            this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cambiarContraseñaToolStripMenuItem,
-            this.habilitarToolStripMenuItem});
-            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            this.tsmCliente.Name = "tsmCliente";
+            this.tsmCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmCliente.Text = "Cliente";
+            this.tsmCliente.Click += new System.EventHandler(this.tsmCliente_Click);
             // 
-            // cambiarContraseñaToolStripMenuItem
+            // tsmEmpleado
             // 
-            this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
-            this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
+            this.tsmEmpleado.Name = "tsmEmpleado";
+            this.tsmEmpleado.Size = new System.Drawing.Size(180, 22);
+            this.tsmEmpleado.Text = "Empleado";
+            this.tsmEmpleado.Click += new System.EventHandler(this.tsmEmpleado_Click);
             // 
-            // habilitarToolStripMenuItem
+            // tsmProducto
             // 
-            this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
-            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.habilitarToolStripMenuItem.Text = "Habilitar Inhabilitar Usuario";
+            this.tsmProducto.Name = "tsmProducto";
+            this.tsmProducto.Size = new System.Drawing.Size(180, 22);
+            this.tsmProducto.Text = "Producto";
+            this.tsmProducto.Click += new System.EventHandler(this.tsmProducto_Click);
+            // 
+            // tsmProveedor
+            // 
+            this.tsmProveedor.Name = "tsmProveedor";
+            this.tsmProveedor.Size = new System.Drawing.Size(180, 22);
+            this.tsmProveedor.Text = "Proveedor";
+            this.tsmProveedor.Click += new System.EventHandler(this.tsmProveedor_Click);
+            // 
+            // compraToolStripMenuItem
+            // 
+            this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
+            this.compraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.compraToolStripMenuItem.Text = "Compra";
+            // 
+            // ventaToolStripMenuItem
+            // 
+            this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventaToolStripMenuItem.Text = "Venta";
+            // 
+            // anularCompraToolStripMenuItem
+            // 
+            this.anularCompraToolStripMenuItem.Name = "anularCompraToolStripMenuItem";
+            this.anularCompraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anularCompraToolStripMenuItem.Text = "Anular compra";
+            // 
+            // anularVentaToolStripMenuItem
+            // 
+            this.anularVentaToolStripMenuItem.Name = "anularVentaToolStripMenuItem";
+            this.anularVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anularVentaToolStripMenuItem.Text = "Anular venta";
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(777, 491);
+            this.ClientSize = new System.Drawing.Size(1036, 604);
             this.Controls.Add(this.ssInformacion);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.msPrincipal);
@@ -186,6 +259,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msPrincipal;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -215,5 +289,13 @@
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem habilitarToolStripMenuItem;
         public System.Windows.Forms.MenuStrip msPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem tsmCliente;
+        private System.Windows.Forms.ToolStripMenuItem tsmEmpleado;
+        private System.Windows.Forms.ToolStripMenuItem tsmProducto;
+        private System.Windows.Forms.ToolStripMenuItem tsmProveedor;
+        private System.Windows.Forms.ToolStripMenuItem compraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anularCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anularVentaToolStripMenuItem;
     }
 }
