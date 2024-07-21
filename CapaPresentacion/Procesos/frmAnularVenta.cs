@@ -12,6 +12,7 @@ namespace CapaPresentacion.Procesos
 {
     public partial class frmAnularVenta : Form
     {
+        
         public frmAnularVenta()
         {
             InitializeComponent();

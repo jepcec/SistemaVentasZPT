@@ -32,7 +32,15 @@
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmIniciarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEmpleado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProveedor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmProcesos = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInformes = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,14 +52,6 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssRol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmCliente = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmEmpleado = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmProducto = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmProveedor = new System.Windows.Forms.ToolStripMenuItem();
-            this.compraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssInformacion.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,34 @@
             this.tsmMantenimiento.Size = new System.Drawing.Size(101, 20);
             this.tsmMantenimiento.Text = "Mantenimiento";
             // 
+            // tsmCliente
+            // 
+            this.tsmCliente.Name = "tsmCliente";
+            this.tsmCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmCliente.Text = "Cliente";
+            this.tsmCliente.Click += new System.EventHandler(this.tsmCliente_Click);
+            // 
+            // tsmEmpleado
+            // 
+            this.tsmEmpleado.Name = "tsmEmpleado";
+            this.tsmEmpleado.Size = new System.Drawing.Size(180, 22);
+            this.tsmEmpleado.Text = "Empleado";
+            this.tsmEmpleado.Click += new System.EventHandler(this.tsmEmpleado_Click);
+            // 
+            // tsmProducto
+            // 
+            this.tsmProducto.Name = "tsmProducto";
+            this.tsmProducto.Size = new System.Drawing.Size(180, 22);
+            this.tsmProducto.Text = "Producto";
+            this.tsmProducto.Click += new System.EventHandler(this.tsmProducto_Click);
+            // 
+            // tsmProveedor
+            // 
+            this.tsmProveedor.Name = "tsmProveedor";
+            this.tsmProveedor.Size = new System.Drawing.Size(180, 22);
+            this.tsmProveedor.Text = "Proveedor";
+            this.tsmProveedor.Click += new System.EventHandler(this.tsmProveedor_Click);
+            // 
             // tsmProcesos
             // 
             this.tsmProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -100,6 +128,31 @@
             this.tsmProcesos.Name = "tsmProcesos";
             this.tsmProcesos.Size = new System.Drawing.Size(66, 20);
             this.tsmProcesos.Text = "Procesos";
+            // 
+            // compraToolStripMenuItem
+            // 
+            this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
+            this.compraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.compraToolStripMenuItem.Text = "Compra";
+            // 
+            // ventaToolStripMenuItem
+            // 
+            this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventaToolStripMenuItem.Text = "Venta";
+            this.ventaToolStripMenuItem.Click += new System.EventHandler(this.ventaToolStripMenuItem_Click);
+            // 
+            // anularCompraToolStripMenuItem
+            // 
+            this.anularCompraToolStripMenuItem.Name = "anularCompraToolStripMenuItem";
+            this.anularCompraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anularCompraToolStripMenuItem.Text = "Anular compra";
+            // 
+            // anularVentaToolStripMenuItem
+            // 
+            this.anularVentaToolStripMenuItem.Name = "anularVentaToolStripMenuItem";
+            this.anularVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anularVentaToolStripMenuItem.Text = "Anular venta";
             // 
             // tsmInformes
             // 
@@ -193,58 +246,6 @@
             this.tssRol.Name = "tssRol";
             this.tssRol.Size = new System.Drawing.Size(151, 21);
             this.tssRol.Text = "usuario";
-            // 
-            // tsmCliente
-            // 
-            this.tsmCliente.Name = "tsmCliente";
-            this.tsmCliente.Size = new System.Drawing.Size(180, 22);
-            this.tsmCliente.Text = "Cliente";
-            this.tsmCliente.Click += new System.EventHandler(this.tsmCliente_Click);
-            // 
-            // tsmEmpleado
-            // 
-            this.tsmEmpleado.Name = "tsmEmpleado";
-            this.tsmEmpleado.Size = new System.Drawing.Size(180, 22);
-            this.tsmEmpleado.Text = "Empleado";
-            this.tsmEmpleado.Click += new System.EventHandler(this.tsmEmpleado_Click);
-            // 
-            // tsmProducto
-            // 
-            this.tsmProducto.Name = "tsmProducto";
-            this.tsmProducto.Size = new System.Drawing.Size(180, 22);
-            this.tsmProducto.Text = "Producto";
-            this.tsmProducto.Click += new System.EventHandler(this.tsmProducto_Click);
-            // 
-            // tsmProveedor
-            // 
-            this.tsmProveedor.Name = "tsmProveedor";
-            this.tsmProveedor.Size = new System.Drawing.Size(180, 22);
-            this.tsmProveedor.Text = "Proveedor";
-            this.tsmProveedor.Click += new System.EventHandler(this.tsmProveedor_Click);
-            // 
-            // compraToolStripMenuItem
-            // 
-            this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
-            this.compraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.compraToolStripMenuItem.Text = "Compra";
-            // 
-            // ventaToolStripMenuItem
-            // 
-            this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ventaToolStripMenuItem.Text = "Venta";
-            // 
-            // anularCompraToolStripMenuItem
-            // 
-            this.anularCompraToolStripMenuItem.Name = "anularCompraToolStripMenuItem";
-            this.anularCompraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.anularCompraToolStripMenuItem.Text = "Anular compra";
-            // 
-            // anularVentaToolStripMenuItem
-            // 
-            this.anularVentaToolStripMenuItem.Name = "anularVentaToolStripMenuItem";
-            this.anularVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.anularVentaToolStripMenuItem.Text = "Anular venta";
             // 
             // frmPrincipal
             // 

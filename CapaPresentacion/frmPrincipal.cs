@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaLogica;
 using CapaPresentacion.Mantenimiento;
+using CapaPresentacion.Procesos;
+
 
 namespace CapaPresentacion
 {
@@ -76,8 +78,15 @@ namespace CapaPresentacion
             Utilidades.VerificarFormulacionExistente<frmProveedor>(this);
         }
 
+
         #endregion ToolMenuStrip
 
-
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVenta venta = new frmVenta(ConfiguracionUsuario.Correo);
+            venta.MdiParent = this;
+            venta.Focus();
+            venta.Show();
+        }
     }
 }

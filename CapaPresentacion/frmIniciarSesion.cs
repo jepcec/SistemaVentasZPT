@@ -113,7 +113,7 @@ namespace CapaPresentacion
             _tRetraso--;
             if (_tRetraso == 0)
             {
-                ((frmPrincipal)MdiParent).tssRol.Text = ConfiguracionUsuario.RolUsuario.ToString();
+                ((frmPrincipal)MdiParent).tssRol.Text = oEmpleado.Correo;
                 ((frmPrincipal)MdiParent).msPrincipal.Enabled = true;
                 Close();
             }

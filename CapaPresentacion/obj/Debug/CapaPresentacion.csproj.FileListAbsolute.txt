@@ -23,3 +23,4 @@ C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\Capa
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.frmEmpleado.resources
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.frmProducto.resources
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.frmProveedor.resources
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Procesos.frmCompra.resources
