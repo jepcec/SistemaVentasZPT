@@ -49,7 +49,7 @@ namespace CapaPresentacion
                 _intentos--;              
                 lblMensaje.Visible = true;
                 mensaje += (_intentos).ToString();
-                oEmpleado.IdEmpleado = txtUsuario.Text;
+                oEmpleado.Correo = txtUsuario.Text;
                 oEmpleado.Clave = txtContraseña.Text;
 
                 if (oEmpleado.VerificarUsuario())

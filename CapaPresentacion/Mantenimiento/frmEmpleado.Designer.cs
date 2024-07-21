@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.Mantenimiento
 {
-    partial class frmCliente
+    partial class frmEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,14 @@
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtIdRol = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,82 +50,83 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.Clientes = new System.Windows.Forms.GroupBox();
+            this.Empleados = new System.Windows.Forms.GroupBox();
+            this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.txtContenido = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbCampo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.btnAgregarFoto = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
-            this.Clientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.Empleados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(658, 485);
+            this.btnSalir.Location = new System.Drawing.Point(658, 534);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 27;
+            this.btnSalir.TabIndex = 35;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(540, 485);
+            this.btnCancelar.Location = new System.Drawing.Point(540, 534);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 26;
+            this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(417, 485);
+            this.btnEliminar.Location = new System.Drawing.Point(417, 534);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 25;
+            this.btnEliminar.TabIndex = 33;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(299, 485);
+            this.btnModificar.Location = new System.Drawing.Point(299, 534);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 24;
+            this.btnModificar.TabIndex = 32;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(171, 485);
+            this.btnInsertar.Location = new System.Drawing.Point(171, 534);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
-            this.btnInsertar.TabIndex = 23;
+            this.btnInsertar.TabIndex = 31;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(44, 485);
+            this.btnNuevo.Location = new System.Drawing.Point(44, 534);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 22;
+            this.btnNuevo.TabIndex = 30;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtEstado);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtIdRol);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.txtClave);
             this.groupBox2.Controls.Add(this.txtDocumento);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
@@ -127,15 +136,80 @@
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dtpFechaRegistro);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtTelefono);
-            this.groupBox2.Location = new System.Drawing.Point(14, 6);
+            this.groupBox2.Location = new System.Drawing.Point(16, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(417, 251);
-            this.groupBox2.TabIndex = 21;
+            this.groupBox2.Size = new System.Drawing.Size(417, 277);
+            this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Cliente";
+            this.groupBox2.Text = "Datos Empleado";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 16);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Estado";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(114, 187);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(282, 22);
+            this.txtEstado.TabIndex = 23;
+            this.txtEstado.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 162);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 16);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Id Rol";
+            // 
+            // txtIdRol
+            // 
+            this.txtIdRol.Location = new System.Drawing.Point(114, 159);
+            this.txtIdRol.Name = "txtIdRol";
+            this.txtIdRol.Size = new System.Drawing.Size(282, 22);
+            this.txtIdRol.TabIndex = 21;
+            this.txtIdRol.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Clave";
+            // 
+            // txtClave
+            // 
+            this.txtClave.Location = new System.Drawing.Point(114, 131);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(282, 22);
+            this.txtClave.TabIndex = 19;
+            this.txtClave.TabStop = false;
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Location = new System.Drawing.Point(114, 47);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(284, 22);
+            this.txtDocumento.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 50);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 16);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Documeto";
             // 
             // label9
             // 
@@ -191,49 +265,42 @@
             // 
             // dtpFechaRegistro
             // 
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(114, 186);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(114, 215);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(200, 22);
             this.dtpFechaRegistro.TabIndex = 9;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Telefono";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 189);
+            this.label5.Location = new System.Drawing.Point(11, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Fecha Registro";
             // 
-            // txtTelefono
+            // Empleados
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(114, 131);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(284, 22);
-            this.txtTelefono.TabIndex = 5;
+            this.Empleados.Controls.Add(this.dgvEmpleado);
+            this.Empleados.Controls.Add(this.txtContenido);
+            this.Empleados.Controls.Add(this.label8);
+            this.Empleados.Controls.Add(this.cbCampo);
+            this.Empleados.Controls.Add(this.label7);
+            this.Empleados.Location = new System.Drawing.Point(12, 312);
+            this.Empleados.Name = "Empleados";
+            this.Empleados.Size = new System.Drawing.Size(773, 216);
+            this.Empleados.TabIndex = 28;
+            this.Empleados.TabStop = false;
+            this.Empleados.Text = "Alumnos";
             // 
-            // Clientes
+            // dgvEmpleado
             // 
-            this.Clientes.Controls.Add(this.dgvCliente);
-            this.Clientes.Controls.Add(this.txtContenido);
-            this.Clientes.Controls.Add(this.label8);
-            this.Clientes.Controls.Add(this.cbCampo);
-            this.Clientes.Controls.Add(this.label7);
-            this.Clientes.Location = new System.Drawing.Point(12, 263);
-            this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(773, 216);
-            this.Clientes.TabIndex = 20;
-            this.Clientes.TabStop = false;
-            this.Clientes.Text = "Clientes";
+            this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleado.Location = new System.Drawing.Point(6, 59);
+            this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.RowTemplate.Height = 24;
+            this.dgvEmpleado.Size = new System.Drawing.Size(761, 150);
+            this.dgvEmpleado.TabIndex = 14;
             // 
             // txtContenido
             // 
@@ -278,52 +345,30 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Campo";
             // 
-            // txtDocumento
+            // btnAgregarFoto
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(112, 47);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(284, 22);
-            this.txtDocumento.TabIndex = 15;
+            this.btnAgregarFoto.Location = new System.Drawing.Point(594, 177);
+            this.btnAgregarFoto.Name = "btnAgregarFoto";
+            this.btnAgregarFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarFoto.TabIndex = 36;
+            this.btnAgregarFoto.Text = "Agregar";
+            this.btnAgregarFoto.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // pbFoto
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 16);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Documeto";
+            this.pbFoto.Location = new System.Drawing.Point(556, 25);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(154, 130);
+            this.pbFoto.TabIndex = 37;
+            this.pbFoto.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Estado";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(114, 159);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(284, 22);
-            this.txtEstado.TabIndex = 17;
-            // 
-            // dgvCliente
-            // 
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(6, 59);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.RowTemplate.Height = 24;
-            this.dgvCliente.Size = new System.Drawing.Size(761, 150);
-            this.dgvCliente.TabIndex = 14;
-            // 
-            // frmCliente
+            // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 520);
+            this.ClientSize = new System.Drawing.Size(800, 562);
+            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.btnAgregarFoto);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminar);
@@ -331,14 +376,15 @@
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.Clientes);
-            this.Name = "frmCliente";
-            this.Text = "frmCliente";
+            this.Controls.Add(this.Empleados);
+            this.Name = "frmEmpleado";
+            this.Text = "frmEmpleado";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.Clientes.ResumeLayout(false);
-            this.Clientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.Empleados.ResumeLayout(false);
+            this.Empleados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,6 +398,14 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtIdRol;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
@@ -359,18 +413,14 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.GroupBox Clientes;
+        private System.Windows.Forms.GroupBox Empleados;
+        private System.Windows.Forms.DataGridView dgvEmpleado;
         private System.Windows.Forms.TextBox txtContenido;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbCampo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.Button btnAgregarFoto;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

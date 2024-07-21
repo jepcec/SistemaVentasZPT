@@ -49,7 +49,7 @@ namespace CapaLogica
         }
         public bool VerificarUsuario()
         {
-            DataRow ofila = odatos.TraerDataRow("uspVerificarUsuario", IdEmpleado,Clave);
+            DataRow ofila = odatos.TraerDataRow("uspVerificarUsuario", Correo,Clave);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
@@ -57,7 +57,7 @@ namespace CapaLogica
         public string DevolverCargo() => odatos.TraerValor("uspDevolverCargo", Correo);
         public void CargarInformacion()
         {
-            DataRow ofila = odatos.TraerDataRow("uspBuscarEmpleado", "IdEmpleado",IdEmpleado);
+            DataRow ofila = odatos.TraerDataRow("uspBuscarEmpleado", "Correo", Correo);
             if (ofila != null)
             {
                 try

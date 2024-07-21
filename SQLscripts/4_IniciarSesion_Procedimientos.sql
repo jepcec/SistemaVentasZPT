@@ -41,6 +41,7 @@ BEGIN
 END;
 GO
 
+
 -- Procedimiento para devolver cargo de usuario
 CREATE PROCEDURE uspDevolverCargo
 	@correo varchar(100)
