@@ -181,6 +181,9 @@
     <EmbeddedResource Include="Mantenimiento\frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmAnularCompra.resx">
+      <DependentUpon>frmAnularCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\frmAnularVenta.resx">
       <DependentUpon>frmAnularVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +202,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\frmBoletaVenta.resx">
+      <DependentUpon>frmBoletaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
