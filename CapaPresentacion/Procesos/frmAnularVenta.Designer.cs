@@ -29,88 +29,88 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbFactura = new System.Windows.Forms.RadioButton();
+            this.rbBoleta = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAnular = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbFactura);
+            this.groupBox1.Controls.Add(this.rbBoleta);
             this.groupBox1.Location = new System.Drawing.Point(25, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 108);
+            this.groupBox1.Size = new System.Drawing.Size(388, 68);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Comprobante";
             // 
-            // radioButton1
+            // rbFactura
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 20);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbFactura.AutoSize = true;
+            this.rbFactura.Location = new System.Drawing.Point(236, 35);
+            this.rbFactura.Name = "rbFactura";
+            this.rbFactura.Size = new System.Drawing.Size(77, 21);
+            this.rbFactura.TabIndex = 1;
+            this.rbFactura.TabStop = true;
+            this.rbFactura.Text = "Factura";
+            this.rbFactura.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbBoleta
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 57);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(100, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton1";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbBoleta.AutoSize = true;
+            this.rbBoleta.Location = new System.Drawing.Point(29, 35);
+            this.rbBoleta.Name = "rbBoleta";
+            this.rbBoleta.Size = new System.Drawing.Size(69, 21);
+            this.rbBoleta.TabIndex = 1;
+            this.rbBoleta.TabStop = true;
+            this.rbBoleta.Text = "Boleta";
+            this.rbBoleta.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 166);
+            this.textBox1.Location = new System.Drawing.Point(144, 129);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(235, 22);
             this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 166);
+            this.label1.Location = new System.Drawing.Point(28, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(107, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "NrmDocumento";
+            this.label1.Text = "Nro Documento";
             // 
             // txtAnular
             // 
-            this.txtAnular.Location = new System.Drawing.Point(78, 235);
+            this.txtAnular.Location = new System.Drawing.Point(144, 207);
             this.txtAnular.Name = "txtAnular";
-            this.txtAnular.Size = new System.Drawing.Size(75, 23);
+            this.txtAnular.Size = new System.Drawing.Size(92, 34);
             this.txtAnular.TabIndex = 3;
             this.txtAnular.Text = "Anular";
             this.txtAnular.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblResultado
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 204);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(295, 268);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(84, 17);
+            this.lblResultado.TabIndex = 4;
+            this.lblResultado.Text = "Resultado...";
             // 
             // frmAnularVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 476);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(439, 337);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtAnular);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -127,11 +127,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbFactura;
+        private System.Windows.Forms.RadioButton rbBoleta;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button txtAnular;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblResultado;
     }
 }

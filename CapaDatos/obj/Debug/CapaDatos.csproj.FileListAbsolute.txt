@@ -4,3 +4,9 @@ C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\Capa
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaDatos\bin\Debug\CapaDatos.pdb
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaDatos\obj\Debug\CapaDatos.pdb
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaDatos\bin\Debug\CapaDatos.dll
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaDatos\obj\Debug\CapaDatos.dll
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaDatos\obj\Debug\CapaDatos.pdb
