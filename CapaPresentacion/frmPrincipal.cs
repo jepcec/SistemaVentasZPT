@@ -78,15 +78,10 @@ namespace CapaPresentacion
             Utilidades.VerificarFormulacionExistente<frmProveedor>(this);
         }
 
-
-        #endregion ToolMenuStrip
-
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVenta venta = new frmVenta(ConfiguracionUsuario.Correo);
-            venta.MdiParent = this;
-            venta.Focus();
-            venta.Show();
+            Utilidades.VerificarFormulacionExistente<frmVenta>(this, ConfiguracionUsuario.Correo);
         }
+        #endregion ToolMenuStrip
     }
 }

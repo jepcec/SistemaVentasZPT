@@ -8,6 +8,7 @@ using CapaDatos;
 using CapaLogica;
 public static class ConfiguracionUsuario
 {
+    public static cEmpleado Usuario { get; set; }
     public static string IdEmpleado { get; set; }
     public static string Documento { get; set; }
     public static string NombreCompleto { get; set; }
@@ -20,10 +21,10 @@ public static class ConfiguracionUsuario
 
     public static Rol RolUsuario = Rol.None;
     public static cDatos oDatos = new cDatosSQL();
-
     public enum Rol { None, Administrado, Vendedor, Almacenero }
     public static void CargarInformacion(cEmpleado usuario)
     {
+        Usuario = usuario;
         IdEmpleado = usuario.IdEmpleado;
         Documento = usuario.Documento;
         NombreCompleto = usuario.NombreCompleto;

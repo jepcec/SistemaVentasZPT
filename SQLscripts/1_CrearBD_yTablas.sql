@@ -129,6 +129,8 @@ CREATE TABLE DETALLE_COMPRA (
 )
 GO
 
+
+-- IdVenta int Identity(1,1) Primary Key   [tambien para ]
 -- Create VENTA table
 CREATE TABLE VENTA (
     IdVenta dbo.ID PRIMARY KEY,
@@ -141,7 +143,7 @@ CREATE TABLE VENTA (
     MontoCambio dbo.Dinero NOT NULL,
     MontoTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
-	Estado dbo.Estado NOT NULL DEFAULT 1,
+	Estado dbo.Estado NOT NULL DEFAULT 1, -- para verificar si esta nulo
     FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 )
 GO

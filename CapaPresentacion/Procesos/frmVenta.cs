@@ -29,6 +29,7 @@ namespace CapaPresentacion.Procesos
         {
             InitializeComponent();
             usuario = pUser;
+            MessageBox.Show("Usuario correcto" + pUser);
         }
 
         private void frmVenta_Load(object sender, EventArgs e)

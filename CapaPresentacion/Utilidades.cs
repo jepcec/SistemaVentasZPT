@@ -37,5 +37,23 @@ public static class Utilidades
         T nuevoFormulario = new T();
         nuevoFormulario.Show();
     }
+    public static void VerificarFormulacionExistente<T>(Form formulariosPadre, params object[] args) where T : Form
+    {
+        T t = Application.OpenForms.OfType<T>().FirstOrDefault();
+        if (t != null)
+        {
+            // Enfocar ventana existente
+            t.Focus();
+        }
+        else
+        {
+            // Crear nuevo formulario de tipo T con parámetros
+            T nuevoFormulario = (T)Activator.CreateInstance(typeof(T), args);
+            nuevoFormulario.MdiParent = formulariosPadre;
+            nuevoFormulario.Show();
+            nuevoFormulario.Focus();
+        }
+    }
+
 
 }
