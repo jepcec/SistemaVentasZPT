@@ -42,9 +42,11 @@
             // 
             this.groupBox1.Controls.Add(this.rbFactura);
             this.groupBox1.Controls.Add(this.rbBoleta);
-            this.groupBox1.Location = new System.Drawing.Point(29, 24);
+            this.groupBox1.Location = new System.Drawing.Point(22, 20);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 68);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(291, 55);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Comprobante";
@@ -52,9 +54,10 @@
             // rbFactura
             // 
             this.rbFactura.AutoSize = true;
-            this.rbFactura.Location = new System.Drawing.Point(252, 35);
+            this.rbFactura.Location = new System.Drawing.Point(189, 28);
+            this.rbFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbFactura.Name = "rbFactura";
-            this.rbFactura.Size = new System.Drawing.Size(77, 21);
+            this.rbFactura.Size = new System.Drawing.Size(69, 19);
             this.rbFactura.TabIndex = 1;
             this.rbFactura.TabStop = true;
             this.rbFactura.Text = "Factura";
@@ -63,9 +66,10 @@
             // rbBoleta
             // 
             this.rbBoleta.AutoSize = true;
-            this.rbBoleta.Location = new System.Drawing.Point(29, 35);
+            this.rbBoleta.Location = new System.Drawing.Point(22, 28);
+            this.rbBoleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbBoleta.Name = "rbBoleta";
-            this.rbBoleta.Size = new System.Drawing.Size(69, 21);
+            this.rbBoleta.Size = new System.Drawing.Size(63, 19);
             this.rbBoleta.TabIndex = 1;
             this.rbBoleta.TabStop = true;
             this.rbBoleta.Text = "Boleta";
@@ -74,17 +78,19 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(278, 278);
+            this.lblResultado.Location = new System.Drawing.Point(208, 226);
+            this.lblResultado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(84, 17);
+            this.lblResultado.Size = new System.Drawing.Size(72, 15);
             this.lblResultado.TabIndex = 9;
             this.lblResultado.Text = "Resultado...";
             // 
             // txtAnular
             // 
-            this.txtAnular.Location = new System.Drawing.Point(112, 207);
+            this.txtAnular.Location = new System.Drawing.Point(84, 168);
+            this.txtAnular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAnular.Name = "txtAnular";
-            this.txtAnular.Size = new System.Drawing.Size(92, 34);
+            this.txtAnular.Size = new System.Drawing.Size(69, 28);
             this.txtAnular.TabIndex = 8;
             this.txtAnular.Text = "Anular";
             this.txtAnular.UseVisualStyleBackColor = true;
@@ -92,29 +98,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 136);
+            this.label1.Location = new System.Drawing.Point(13, 109);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 17);
+            this.label1.Size = new System.Drawing.Size(94, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Nro Documento";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 131);
+            this.textBox1.Location = new System.Drawing.Point(136, 106);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 22);
+            this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 6;
             // 
             // frmAnularCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 326);
+            this.ClientSize = new System.Drawing.Size(339, 265);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtAnular);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAnularCompra";
             this.Text = "frmAnularCompra";
             this.groupBox1.ResumeLayout(false);
