@@ -44,37 +44,38 @@ namespace CapaPresentacion.Procesos
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            if (rbBoleta.Checked)
-            {
-                oVenta.TipoDocumento = "Boleta";
-            }
-            else
-            {
-                oVenta.TipoDocumento = "Factura";
-            }
-            // --------------- asignar oVenta --------------------------
-            //oVenta.NumeroDocumento = txtNrodocumento;
-            //oVenta.emision = dtpFechaemision.value
-            //oVenta.MontoTotal = decimal.Parse(txtMontoTotal);
-            //oVenta.IdTipoComprovante = rbTipoBoleta
-            //oVenta.Insertar();
+            oVenta.IdEmpleado = oEmpleado.IdEmpleado;
+            if (rbBoleta.Checked) oVenta.TipoDocumento = "Boleta";
+            else oVenta.TipoDocumento = "Factura";
+            oVenta.NumeroDocumento = txtNroComprobante.Text;
+            oVenta.DocumentoCliente = txtDocumento.Text;
+            oVenta.NombreCliente = txtNombre.Text;
+            //MontoPago
+            //MontoCambio
+            oVenta.MontoTotal = decimal.Parse(txtMontoTotal.Text);
+            oVenta.FechaRegistro = dtpComprobante.Value;
+            oVenta.Insertar();
 
-            //int maxIdVenta = oVenta.RecureparMaxID();
+            var maxIdVenta = oVenta.RecuperarIDMax();
             //ocular IDProdcuto
             for (int i = 0; i < dgvProductos.Rows.Count; i++)
             {
-                //oDetalleVenta.Cantidad = dgvProductos.Rows[i][0].ToString(); comvertir a entero
-                //oDetalleVenta.PrecioUnitario = dgvProductos.Rows[i][0].ToString(); comvertir a entero;
-                //oDetalleVenta.IdProducto = AsignarProducto
-                //oDetalleVenta.IdVenta = maxIdVenta;
-                //oDetalleVenta.Insertar();
+                oDetalleVenta.Cantidad = int.Parse(dgvProductos.Rows[i].Cells[0].Value.ToString());
+                oDetalleVenta.PrecioUnitario = int.Parse(dgvProductos.Rows[i].Cells[0].Value.ToString());
+                oDetalleVenta.IdProducto = dgvProductos.Rows[i].Cells[0].Value.ToString();
+                oDetalleVenta.IdVenta = maxIdVenta;
+                oDetalleVenta.Insertar();
             }
-            //lblMensaje.Text = oVenta.Mensaje;
+            lblMensaje.Text = oVenta.Mensaje;
             //Timer.Start(); --mensaje 
-            //CargarFormularioReporteComprobante();
+            CargarFormularioReporteComprobante();
             //LimpiarTextbox();
 
             // -------- Cadavez que se ejecute un detalle venta ejecuta un trigger actualiza un stock del producto (SQL)
+        }
+        private void CargarFormularioReporteComprobante()
+        {
+
         }
 
         
