@@ -50,5 +50,10 @@ namespace CapaLogica
         }
         // esto no
         // Agregar Anular
+        public string RecuperarIDMax()
+        {
+            string idMaximo = "0000";
+            return idMaximo;
+        }
     }
 }
