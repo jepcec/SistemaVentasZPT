@@ -29,6 +29,7 @@ namespace CapaPresentacion.Mantenimiento
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            txtID.Text = oProducto.SiguienteID();
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";

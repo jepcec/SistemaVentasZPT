@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Mantenimiento;
+using CapaPresentacion.Procesos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,10 @@ namespace CapaPresentacion
             Application.Run(new frmPrincipal());
             //Application.Run(new frmCliente());
             //Application.Run(new frmEmpleado());
+            //Application.Run(new FormTest());
+            //Application.Run(new frmVenta());
 
         }
-        
+
     }
 }

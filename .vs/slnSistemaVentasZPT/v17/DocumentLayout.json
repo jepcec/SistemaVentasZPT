@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\jhone\\documents\\jepc\\unsaac\\desarrollo de sofware\\sistemaventaszpt\\capapresentacion\\procesos\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\procesos\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\procesos\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\procesos\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,44 +27,8 @@
       "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\procesos\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\procesos\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\procesos\\frmanularcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\procesos\\frmanularcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\cproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\cproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,8 +39,56 @@
       "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\cproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\mantenimiento\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\ccliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\ccliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\cempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\cempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|c:\\users\\jhone\\documents\\jepc\\unsaac\\desarrollo de sofware\\sistemaventaszpt\\capalogica\\cventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\cventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\procesos\\frmanularcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\procesos\\frmanularcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\configuracionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,14 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\utilidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\utilidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\procesos\\frmcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -159,10 +175,6 @@
       "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\procesos\\frmcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\cempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\cempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\cdetalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\cdetalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -175,16 +187,8 @@
       "RelativeMoniker": "D:0:0:{566D2ACF-B4D1-4FC4-9822-FA9859FB5D79}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\cdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capapresentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{5309CDDA-122B-4C3A-9FB6-959F52B0A3DC}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\ccompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\ccompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\ccliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|solutionrelative:capalogica\\ccliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FEBE460-A232-443D-8FAA-313E7385C387}|CapaLogica\\CapaLogica.csproj|C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\capalogica\\crol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -214,7 +218,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -238,19 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmEmpleado.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T01:15:17.744Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "frmProveedor.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProveedor.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmProveedor.cs",
@@ -262,13 +254,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmProveedor.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProveedor.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmProveedor.cs",
               "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProveedor.cs",
               "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmProveedor.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAkwH8AAAAJAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAiwB0AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-23T18:13:49.966Z",
               "EditorCaption": ""
@@ -276,19 +268,121 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Program.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Program.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Program.cs",
+              "RelativeToolTip": "CapaPresentacion\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:46:08.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmVenta.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmVenta.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmVenta.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmVenta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Procesos\\frmVenta.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:10:58.68Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmVenta.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmVenta.cs",
               "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmVenta.cs",
               "RelativeToolTip": "CapaPresentacion\\Procesos\\frmVenta.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAYwEcAAAAOAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADYAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-21T01:15:52.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
+              "Title": "cProveedor.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProveedor.cs",
+              "RelativeDocumentMoniker": "CapaLogica\\cProveedor.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProveedor.cs",
+              "RelativeToolTip": "CapaLogica\\cProveedor.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAuwC0AAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T00:07:06.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmProducto.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProducto.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmProducto.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProducto.cs",
+              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmProducto.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAmwB8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:13:52.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "cProducto.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProducto.cs",
+              "RelativeDocumentMoniker": "CapaLogica\\cProducto.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProducto.cs",
+              "RelativeToolTip": "CapaLogica\\cProducto.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAqwDEAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T00:05:29.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
+              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAiwB4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T18:13:56.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T01:15:17.744Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmCliente.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmCliente.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmCliente.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmCliente.cs",
+              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmCliente.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwBsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T00:50:10.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "frmCliente.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmCliente.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmCliente.cs",
@@ -300,32 +394,109 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
-              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmEmpleado.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAxwIgAAAA0AAAA",
+              "DocumentIndex": 13,
+              "Title": "cCliente.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cCliente.cs",
+              "RelativeDocumentMoniker": "CapaLogica\\cCliente.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cCliente.cs",
+              "RelativeToolTip": "CapaLogica\\cCliente.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAuwC0AAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T18:13:56.583Z",
+              "WhenOpened": "2024-07-20T00:06:10.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmVenta.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmVenta.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmVenta.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmVenta.cs [Design]",
-              "RelativeToolTip": "CapaPresentacion\\Procesos\\frmVenta.cs [Design]",
+              "DocumentIndex": 14,
+              "Title": "cEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cEmpleado.cs",
+              "RelativeDocumentMoniker": "CapaLogica\\cEmpleado.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cEmpleado.cs",
+              "RelativeToolTip": "CapaLogica\\cEmpleado.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAowFQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T09:10:58.68Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-20T00:04:09.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\App.config",
+              "RelativeDocumentMoniker": "CapaPresentacion\\App.config",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\App.config",
+              "RelativeToolTip": "CapaPresentacion\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-07-18T08:59:19.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormTest.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FormTest.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs",
+              "RelativeToolTip": "CapaPresentacion\\FormTest.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAwwCEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T01:04:44.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormTest.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FormTest.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\FormTest.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T01:04:27.201Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs",
+              "RelativeToolTip": "CapaPresentacion\\frmPrincipal.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T10:14:43.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:00:24.735Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "cVenta.cs",
+              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cVenta.cs",
+              "RelativeDocumentMoniker": "CapaLogica\\cVenta.cs",
+              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cVenta.cs",
+              "RelativeToolTip": "CapaLogica\\cVenta.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAqwDkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T12:22:41.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "frmAnularCompra.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmAnularCompra.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmAnularCompra.cs",
@@ -336,92 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\frmPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T09:00:24.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\frmPrincipal.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmPrincipal.cs",
-              "RelativeToolTip": "CapaPresentacion\\frmPrincipal.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAAAE4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T10:14:43.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "cProveedor.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProveedor.cs",
-              "RelativeDocumentMoniker": "CapaLogica\\cProveedor.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProveedor.cs",
-              "RelativeToolTip": "CapaLogica\\cProveedor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T00:07:06.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "frmCliente.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmCliente.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmCliente.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmCliente.cs",
-              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmCliente.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T00:50:10.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmProducto.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProducto.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmProducto.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmProducto.cs",
-              "RelativeToolTip": "CapaPresentacion\\Mantenimiento\\frmProducto.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAiwBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T18:13:52.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "cProducto.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProducto.cs",
-              "RelativeDocumentMoniker": "CapaLogica\\cProducto.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cProducto.cs",
-              "RelativeToolTip": "CapaLogica\\cProducto.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBkAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T00:05:29.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Program.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Program.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Program.cs",
-              "RelativeToolTip": "CapaPresentacion\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T09:46:08.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "ConfiguracionUsuario.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\ConfiguracionUsuario.cs",
               "RelativeDocumentMoniker": "CapaLogica\\ConfiguracionUsuario.cs",
@@ -433,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "frmIniciarSesion.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmIniciarSesion.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmIniciarSesion.cs",
@@ -445,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "frmIniciarSesion.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\frmIniciarSesion.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmIniciarSesion.cs",
@@ -456,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Utilidades.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Utilidades.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Utilidades.cs",
@@ -468,30 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FormTest.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FormTest.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\FormTest.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T01:04:27.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FormTest.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FormTest.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\FormTest.cs",
-              "RelativeToolTip": "CapaPresentacion\\FormTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T01:04:44.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "frmCompra.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmCompra.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmCompra.cs",
@@ -502,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "frmAnularVenta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmAnularVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmAnularVenta.cs",
@@ -513,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "frmHabilitarInhabilitarUsuario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Seguridad\\frmHabilitarInhabilitarUsuario.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Seguridad\\frmHabilitarInhabilitarUsuario.cs",
@@ -524,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Seguridad\\frmCambiarContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Seguridad\\frmCambiarContrase\u00F1a.cs",
@@ -535,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "frmListarEmpleado.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmListarEmpleado.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmListarEmpleado.cs",
@@ -547,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "frmListarEmpleado.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmListarEmpleado.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmListarEmpleado.cs",
@@ -558,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "frmFacturaVenta.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmFacturaVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmFacturaVenta.cs",
@@ -570,7 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "frmFacturaVenta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmFacturaVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmFacturaVenta.cs",
@@ -581,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "frmFacturaCompra.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmFacturaCompra.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmFacturaCompra.cs",
@@ -593,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "frmCardex.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmCardex.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmCardex.cs",
@@ -605,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "frmBoletaVenta.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmBoletaVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmBoletaVenta.cs",
@@ -617,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "frmFacturaCompra.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmFacturaCompra.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmFacturaCompra.cs",
@@ -628,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "frmCardex.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmCardex.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmCardex.cs",
@@ -639,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "frmBoletaVenta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Reportes\\frmBoletaVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\frmBoletaVenta.cs",
@@ -650,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "frmAnularCompra.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmAnularCompra.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmAnularCompra.cs",
@@ -662,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "frmAnularVenta.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmAnularVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmAnularVenta.cs",
@@ -674,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "frmCompra.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Procesos\\frmCompra.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Procesos\\frmCompra.cs",
@@ -686,19 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "cEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cEmpleado.cs",
-              "RelativeDocumentMoniker": "CapaLogica\\cEmpleado.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cEmpleado.cs",
-              "RelativeToolTip": "CapaLogica\\cEmpleado.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAADwv0AAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T00:04:09.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "cDetalleCompra.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cDetalleCompra.cs",
               "RelativeDocumentMoniker": "CapaLogica\\cDetalleCompra.cs",
@@ -710,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "cDetalleVenta.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cDetalleVenta.cs",
               "RelativeDocumentMoniker": "CapaLogica\\cDetalleVenta.cs",
@@ -722,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "cDatos.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaDatos\\cDatos.cs",
               "RelativeDocumentMoniker": "CapaDatos\\cDatos.cs",
@@ -734,19 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\App.config",
-              "RelativeDocumentMoniker": "CapaPresentacion\\App.config",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\App.config",
-              "RelativeToolTip": "CapaPresentacion\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-07-18T08:59:19.517Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "cCompra.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cCompra.cs",
               "RelativeDocumentMoniker": "CapaLogica\\cCompra.cs",
@@ -758,19 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "cCliente.cs",
-              "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cCliente.cs",
-              "RelativeDocumentMoniker": "CapaLogica\\cCliente.cs",
-              "ToolTip": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cCliente.cs",
-              "RelativeToolTip": "CapaLogica\\cCliente.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAuwCsAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T00:06:10.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "cCategoria.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cCategoria.cs",
               "RelativeDocumentMoniker": "CapaLogica\\cCategoria.cs",
@@ -782,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "cPermiso.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cPermiso.cs",
               "RelativeDocumentMoniker": "CapaLogica\\cPermiso.cs",
@@ -794,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "cRol.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaLogica\\cRol.cs",
               "RelativeDocumentMoniker": "CapaLogica\\cRol.cs",
@@ -806,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "cDatosSQL.cs",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaDatos\\cDatosSQL.cs",
               "RelativeDocumentMoniker": "CapaDatos\\cDatosSQL.cs",
@@ -818,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "frmPersona.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jhone\\Documents\\JEPC\\Unsaac\\Desarrollo de sofware\\SistemaVentasZPT\\CapaPresentacion\\Mantenimiento\\frmPersona.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Mantenimiento\\frmPersona.cs",
