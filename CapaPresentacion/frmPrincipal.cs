@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using CapaLogica;
 using CapaPresentacion.Mantenimiento;
 using CapaPresentacion.Procesos;
-
+using CapaPresentacion.Reportes;
 
 namespace CapaPresentacion
 {
@@ -81,6 +81,11 @@ namespace CapaPresentacion
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilidades.VerificarFormulacionExistente<frmVenta>(this, ConfiguracionUsuario.Correo);
+        }
+
+        private void boletaDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmBoletaVenta>(this);
         }
         #endregion ToolMenuStrip
     }

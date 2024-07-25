@@ -70,6 +70,18 @@
     <Compile Include="Mantenimiento\frmEmpleado.Designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\sfrmBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\sfrmBuscarCliente.Designer.cs">
+      <DependentUpon>sfrmBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\sfrmBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\sfrmBuscarProducto.Designer.cs">
+      <DependentUpon>sfrmBuscarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmBoletaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     </Compile>
     <Compile Include="Reportes\frmListarEmpleado.Designer.cs">
       <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\sfrmBuscarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\sfrmBuscarVenta.Designer.cs">
+      <DependentUpon>sfrmBuscarVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\frmCambiarContraseña.cs">
       <SubType>Form</SubType>
@@ -204,6 +222,12 @@
     </Compile>
     <EmbeddedResource Include="Reportes\frmBoletaVenta.resx">
       <DependentUpon>frmBoletaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmListarEmpleado.resx">
+      <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\sfrmBuscarVenta.resx">
+      <DependentUpon>sfrmBuscarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

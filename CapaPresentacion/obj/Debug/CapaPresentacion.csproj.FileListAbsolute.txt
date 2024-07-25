@@ -54,3 +54,6 @@ D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Procesos.frmAnularCompra.resources
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Procesos.frmAnularVenta.resources
 C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmBoletaVenta.resources
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Procesos.frmAnularCompra.resources
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmBoletaVenta.resources
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.sfrmBuscarVenta.resources
