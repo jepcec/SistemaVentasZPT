@@ -87,20 +87,23 @@ namespace CapaPresentacion.Reportes
             paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", txtNombreCliente.Text);
             paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", txtDocumentoCliente.Text);
             paginahtml_texto = paginahtml_texto.Replace("@FECHA", dtpFecha.Value.ToShortDateString());
+            paginahtml_texto = paginahtml_texto.Replace("@EMPLEADO", txtNombreEmpleado.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@ID_ EMPLEADO", txtIdEmpleado.Text);
             paginahtml_texto = paginahtml_texto.Replace("@TOTAL", txtMontoTotal.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@RECIBIDO", txtMontoRecibido.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@CAMBIO", txtMontoCambio.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@ID_BOLETA", txtIdVenta.Text);
 
             // Insertar Datos de la compra
             string filas = string.Empty;
-            decimal total = 0;
             foreach (DataGridViewRow row in dgvProductos.Rows)
             {
                 filas += "<tr>";
                 filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["NombreProducto"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["PrecioUnitario"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Importe"].Value.ToString() + "</td>";
                 filas += "</tr>";
-                total += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
             }
             paginahtml_texto = paginahtml_texto.Replace("@FILAS", filas);
 

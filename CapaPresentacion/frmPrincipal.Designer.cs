@@ -42,6 +42,7 @@
             this.anularCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anularVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInformes = new System.Windows.Forms.ToolStripMenuItem();
+            this.boletaDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,7 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssRol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.boletaDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssInformacion.SuspendLayout();
             this.SuspendLayout();
@@ -158,10 +159,18 @@
             // tsmInformes
             // 
             this.tsmInformes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.boletaDeVentasToolStripMenuItem});
+            this.boletaDeVentasToolStripMenuItem,
+            this.facturaDeVentasToolStripMenuItem});
             this.tsmInformes.Name = "tsmInformes";
             this.tsmInformes.Size = new System.Drawing.Size(79, 24);
             this.tsmInformes.Text = "Informes";
+            // 
+            // boletaDeVentasToolStripMenuItem
+            // 
+            this.boletaDeVentasToolStripMenuItem.Name = "boletaDeVentasToolStripMenuItem";
+            this.boletaDeVentasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.boletaDeVentasToolStripMenuItem.Text = "Boleta de Ventas";
+            this.boletaDeVentasToolStripMenuItem.Click += new System.EventHandler(this.boletaDeVentasToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -250,12 +259,12 @@
             this.tssRol.Size = new System.Drawing.Size(151, 21);
             this.tssRol.Text = "usuario";
             // 
-            // boletaDeVentasToolStripMenuItem
+            // facturaDeVentasToolStripMenuItem
             // 
-            this.boletaDeVentasToolStripMenuItem.Name = "boletaDeVentasToolStripMenuItem";
-            this.boletaDeVentasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.boletaDeVentasToolStripMenuItem.Text = "Boleta de Ventas";
-            this.boletaDeVentasToolStripMenuItem.Click += new System.EventHandler(this.boletaDeVentasToolStripMenuItem_Click);
+            this.facturaDeVentasToolStripMenuItem.Name = "facturaDeVentasToolStripMenuItem";
+            this.facturaDeVentasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.facturaDeVentasToolStripMenuItem.Text = "Factura de Ventas";
+            this.facturaDeVentasToolStripMenuItem.Click += new System.EventHandler(this.facturaDeVentasToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -309,5 +318,6 @@
         private System.Windows.Forms.ToolStripMenuItem anularCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anularVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletaDeVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturaDeVentasToolStripMenuItem;
     }
 }

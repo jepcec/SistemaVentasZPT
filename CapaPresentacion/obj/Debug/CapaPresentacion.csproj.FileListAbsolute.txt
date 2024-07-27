@@ -61,3 +61,4 @@ D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmFacturaVenta.resources

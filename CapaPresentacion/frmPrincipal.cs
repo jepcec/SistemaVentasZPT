@@ -87,6 +87,11 @@ namespace CapaPresentacion
         {
             Utilidades.VerificarFormulacionExistente<frmBoletaVenta>(this);
         }
+
+        private void facturaDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmFacturaVenta>(this);
+        }
         #endregion ToolMenuStrip
     }
 }
