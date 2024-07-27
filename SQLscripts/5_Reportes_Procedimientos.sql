@@ -74,18 +74,39 @@ AS
 BEGIN
     SET NOCOUNT ON;
     DECLARE @SQL NVARCHAR(MAX);
+
     IF @contenido IS NULL OR @contenido = ''
+    BEGIN
         SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
-					 FROM DETALLE_VENTA DV
-					 INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
-					 WHERE DV.IdVenta = @IdVenta';
+                     FROM DETALLE_VENTA DV
+                     INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
+                     WHERE DV.IdVenta = @IdVenta';
+    END
+
     ELSE
-        SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
-					 FROM DETALLE_VENTA DV
-					 INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
-                     WHERE DV.IdVenta = @IdVenta AND ' + @campo + ' LIKE @contenido + ''%''';
-    EXEC sp_executesql @SQL, N'@IdVenta INT, @contenido NVARCHAR(50)', @IdVenta, @contenido;
+    BEGIN
+        -- Determinar el tipo de dato del campo para construir la consulta adecuada
+        IF @campo IN ('Cantidad', 'PrecioUnitario', 'SubTotal')
+        BEGIN
+            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
+                         FROM DETALLE_VENTA DV
+                         INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
+                         WHERE DV.IdVenta = @IdVenta AND ' + @campo + ' LIKE CAST(@contenido AS DECIMAL(10, 2)) + ''%''';
+        END
+
+        ELSE
+        BEGIN
+            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
+                         FROM DETALLE_VENTA DV
+                         INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
+                         WHERE DV.IdVenta = @IdVenta AND ' + @campo + ' LIKE @contenido + ''%''';
+        END
+    END
+
+    EXEC sp_executesql @SQL, N'@IdVenta NVARCHAR(10), @contenido NVARCHAR(50)', @IdVenta, @contenido;
 END;
 GO
+
+drop procedure uspBuscarProductosVendidos
 
 --select * from DETALLE_VENTA

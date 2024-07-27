@@ -31,9 +31,9 @@
             this.grbProductos = new System.Windows.Forms.GroupBox();
             this.txtContenido = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.cbCampo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,20 +46,21 @@
             this.txtNroDocumento = new System.Windows.Forms.TextBox();
             this.txtDocumentoCliente = new System.Windows.Forms.TextBox();
             this.grbCliente = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.grbBoleta = new System.Windows.Forms.GroupBox();
-            this.grbPago = new System.Windows.Forms.GroupBox();
-            this.txtMontoTotal = new System.Windows.Forms.TextBox();
-            this.txtMontoRecibido = new System.Windows.Forms.TextBox();
-            this.txtMontoCambio = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.grbEmpleado = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.grbPago = new System.Windows.Forms.GroupBox();
+            this.txtMontoCambio = new System.Windows.Forms.TextBox();
+            this.txtMontoRecibido = new System.Windows.Forms.TextBox();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
+            this.grbEmpleado = new System.Windows.Forms.GroupBox();
+            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
             this.grbProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.grbCliente.SuspendLayout();
@@ -101,6 +102,18 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Contenido";
             // 
+            // dgvProductos
+            // 
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(20, 62);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.Size = new System.Drawing.Size(777, 133);
+            this.dgvProductos.TabIndex = 0;
+            // 
             // cbCampo
             // 
             this.cbCampo.FormattingEnabled = true;
@@ -124,18 +137,6 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Campo";
             // 
-            // dgvProductos
-            // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AllowUserToDeleteRows = false;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(20, 62);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(777, 133);
-            this.dgvProductos.TabIndex = 0;
-            // 
             // btnImprimir
             // 
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +146,7 @@
             this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnBuscar
             // 
@@ -187,9 +189,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(44, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 17);
+            this.label3.Size = new System.Drawing.Size(31, 17);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Documento";
+            this.label3.Text = "DNI";
             // 
             // label4
             // 
@@ -245,6 +247,13 @@
             this.grbCliente.TabStop = false;
             this.grbCliente.Text = "Cliente";
             // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(130, 54);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(236, 22);
+            this.txtNombreCliente.TabIndex = 19;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -253,13 +262,6 @@
             this.label9.Size = new System.Drawing.Size(58, 17);
             this.label9.TabIndex = 18;
             this.label9.Text = "Nombre";
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(130, 54);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(236, 22);
-            this.txtNombreCliente.TabIndex = 19;
             // 
             // grbBoleta
             // 
@@ -277,6 +279,22 @@
             this.grbBoleta.TabStop = false;
             this.grbBoleta.Text = "Datos Boleta";
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(130, 97);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(273, 22);
+            this.dtpFecha.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(44, 102);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 17);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Fecha";
+            // 
             // grbPago
             // 
             this.grbPago.Controls.Add(this.txtMontoCambio);
@@ -292,12 +310,12 @@
             this.grbPago.TabStop = false;
             this.grbPago.Text = "Forma de Pago";
             // 
-            // txtMontoTotal
+            // txtMontoCambio
             // 
-            this.txtMontoTotal.Location = new System.Drawing.Point(117, 31);
-            this.txtMontoTotal.Name = "txtMontoTotal";
-            this.txtMontoTotal.Size = new System.Drawing.Size(135, 22);
-            this.txtMontoTotal.TabIndex = 20;
+            this.txtMontoCambio.Location = new System.Drawing.Point(117, 104);
+            this.txtMontoCambio.Name = "txtMontoCambio";
+            this.txtMontoCambio.Size = new System.Drawing.Size(135, 22);
+            this.txtMontoCambio.TabIndex = 22;
             // 
             // txtMontoRecibido
             // 
@@ -306,21 +324,12 @@
             this.txtMontoRecibido.Size = new System.Drawing.Size(135, 22);
             this.txtMontoRecibido.TabIndex = 21;
             // 
-            // txtMontoCambio
+            // txtMontoTotal
             // 
-            this.txtMontoCambio.Location = new System.Drawing.Point(117, 104);
-            this.txtMontoCambio.Name = "txtMontoCambio";
-            this.txtMontoCambio.Size = new System.Drawing.Size(135, 22);
-            this.txtMontoCambio.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(44, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 17);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Fecha";
+            this.txtMontoTotal.Location = new System.Drawing.Point(117, 31);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(135, 22);
+            this.txtMontoTotal.TabIndex = 20;
             // 
             // grbEmpleado
             // 
@@ -335,21 +344,12 @@
             this.grbEmpleado.TabStop = false;
             this.grbEmpleado.Text = "Empleado";
             // 
-            // label11
+            // txtNombreEmpleado
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(44, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 17);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "ID";
-            // 
-            // txtIdEmpleado
-            // 
-            this.txtIdEmpleado.Location = new System.Drawing.Point(106, 29);
-            this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(148, 22);
-            this.txtIdEmpleado.TabIndex = 19;
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(119, 60);
+            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(227, 22);
+            this.txtNombreEmpleado.TabIndex = 21;
             // 
             // label12
             // 
@@ -360,19 +360,26 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Nombre";
             // 
-            // txtNombreEmpleado
+            // txtIdEmpleado
             // 
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(119, 60);
-            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(227, 22);
-            this.txtNombreEmpleado.TabIndex = 21;
+            this.txtIdEmpleado.Location = new System.Drawing.Point(106, 29);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.Size = new System.Drawing.Size(148, 22);
+            this.txtIdEmpleado.TabIndex = 19;
             // 
-            // dtpFecha
+            // label11
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(130, 97);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(273, 22);
-            this.dtpFecha.TabIndex = 19;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(44, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(21, 17);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "ID";
+            // 
+            // sfdGuardar
+            // 
+            this.sfdGuardar.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            this.sfdGuardar.InitialDirectory = "D:\\Informática\\2024-1\\Desarrollo de Software";
             // 
             // frmBoletaVenta
             // 
@@ -436,5 +443,6 @@
         private System.Windows.Forms.TextBox txtNombreEmpleado;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.SaveFileDialog sfdGuardar;
     }
 }
