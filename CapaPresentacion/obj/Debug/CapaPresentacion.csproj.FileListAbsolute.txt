@@ -57,7 +57,12 @@ C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\Capa
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Procesos.frmAnularCompra.resources
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmBoletaVenta.resources
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.sfrmBuscarVenta.resources
+<<<<<<< HEAD
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmListarEmpleado.resources
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\bin\Debug\itextsharp.dll
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\bin\Debug\itextsharp.xmlworker.dll
 D:\Informática\2024-1\Desarrollo de Software\SistemaVentasZPT\CapaPresentacion\bin\Debug\itextsharp.xml
+=======
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmListarEmpleado.resources
+C:\Users\jhone\Documents\JEPC\Unsaac\Desarrollo de sofware\SistemaVentasZPT\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.sfrmBuscarVenta.resources
+>>>>>>> b9558d658a8ef36768b7b0cc8a76d2e6f3b92378

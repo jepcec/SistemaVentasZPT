@@ -16,12 +16,22 @@ namespace CapaPresentacion
         cEmpleado empleado = new cEmpleado();       
         public FormTest()
         {
-            openFileDialog1.OpenFile();
+            InitializeComponent();
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
+            
+        }
 
+        private void FormTest_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(empleado.SiguienteID());
         }
     }
 }

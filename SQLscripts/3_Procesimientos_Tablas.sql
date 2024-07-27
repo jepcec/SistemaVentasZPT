@@ -754,7 +754,7 @@ CREATE PROCEDURE uspInsertarCompra
     @IdEmpleado dbo.ID,
     @IdProveedor dbo.ID,
     @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
+	@NumeroDocumento VARCHAR(20),
     @MontoTotal DECIMAL(10, 2)
 AS
 BEGIN
@@ -779,8 +779,6 @@ CREATE PROCEDURE uspModificarCompra
     @IdCompra dbo.ID,
     @IdEmpleado dbo.ID,
     @IdProveedor dbo.ID,
-    @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
     @MontoTotal DECIMAL(10, 2)
 AS
 BEGIN
@@ -788,8 +786,7 @@ BEGIN
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     BEGIN TRY
         UPDATE COMPRA 
-        SET IdEmpleado = @IdEmpleado, IdProveedor = @IdProveedor, 
-            TipoDocumento = @TipoDocumento, NumeroDocumento = @NumeroDocumento, 
+        SET IdEmpleado = @IdEmpleado, IdProveedor = @IdProveedor,
             MontoTotal = @MontoTotal
         WHERE IdCompra = @IdCompra;
         IF @@ROWCOUNT > 0
@@ -994,7 +991,6 @@ GO
 CREATE PROCEDURE uspInsertarVenta
     @IdEmpleado dbo.ID,
     @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
     @DocumentoCliente VARCHAR(20),
     @NombreCliente VARCHAR(255),
     @MontoPago DECIMAL(10, 2),
@@ -1005,9 +1001,11 @@ BEGIN
     SET NOCOUNT ON;
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
 	DECLARE @NuevoID dbo.ID
+	DECLARE @NumeroDocumento VARCHAR(20)
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('VENTA')
-        INSERT INTO VENTA (IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal, FechaRegistro)
+		SET @NumeroDocumento = dbo.ObtenerSiguienteNumeroComprobante(@TipoDocumento)
+        INSERT INTO VENTA (IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento , DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal, FechaRegistro)
         VALUES (@NuevoID, @IdEmpleado, @TipoDocumento, @NumeroDocumento, @DocumentoCliente, @NombreCliente, @MontoPago, @MontoCambio, @MontoTotal, GETDATE());
 
         INSERT INTO @Result VALUES (0, 'Venta insertada exitosamente.');
@@ -1023,8 +1021,6 @@ GO
 CREATE PROCEDURE uspModificarVenta
     @IdVenta dbo.ID,
     @IdEmpleado dbo.ID,
-    @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
     @DocumentoCliente VARCHAR(20),
     @NombreCliente VARCHAR(255),
     @MontoPago DECIMAL(10, 2),
@@ -1036,8 +1032,8 @@ BEGIN
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     BEGIN TRY
         UPDATE VENTA 
-        SET IdEmpleado = @IdEmpleado, TipoDocumento = @TipoDocumento, 
-            NumeroDocumento = @NumeroDocumento, DocumentoCliente = @DocumentoCliente, 
+        SET IdEmpleado = @IdEmpleado,
+            DocumentoCliente = @DocumentoCliente, 
             NombreCliente = @NombreCliente, MontoPago = @MontoPago, 
             MontoCambio = @MontoCambio, MontoTotal = @MontoTotal
         WHERE IdVenta = @IdVenta;

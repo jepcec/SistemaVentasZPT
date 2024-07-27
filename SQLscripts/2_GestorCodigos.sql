@@ -148,7 +148,7 @@ ON COMPRA
 AFTER INSERT
 AS
 BEGIN
-    EXEC IncrementarContador 'COMPRA'
+    EXEC IncrementarContador 'COMPRA';
 END
 GO
 
@@ -168,7 +168,21 @@ ON VENTA
 AFTER INSERT
 AS
 BEGIN
-    EXEC IncrementarContador 'VENTA'
+    DECLARE @TipoDocumento VARCHAR(50);
+	EXEC IncrementarContador 'VENTA';
+    -- Obtener el tipo de documento del registro insertado
+    SELECT @TipoDocumento = TipoDocumento
+    FROM INSERTED;
+
+    -- Incrementar el contador según el tipo de documento
+    IF @TipoDocumento = 'FACTURA'
+    BEGIN
+        EXEC IncrementarContador 'FACTURA';
+    END
+    ELSE IF @TipoDocumento = 'BOLETA'
+    BEGIN
+        EXEC IncrementarContador 'BOLETA';
+    END
 END
 GO
 
@@ -179,5 +193,51 @@ AFTER INSERT
 AS
 BEGIN
     EXEC IncrementarContador 'DETALLE_VENTA'
+END
+GO
+
+-- *******************************************************************************************
+-- PROCEDIMIENTOS GENERAR NÚMERO DE COMPROBANTE--
+-- *******************************************************************************************
+
+INSERT INTO CONTADORES (Tabla, Prefijo, UltimoNumero) VALUES 
+('FACTURA','121', 0), ('BOLETA','001', 0)
+GO
+-- FUNCION PARA OBTENER EL SIGUIENTE ID
+CREATE FUNCTION dbo.ObtenerSiguienteNumeroComprobante
+(
+    @TipoDocumento VARCHAR(50)
+)
+RETURNS VARCHAR(10)
+AS
+BEGIN
+    DECLARE @UltimoNumero INT
+    DECLARE @SiguienteID VARCHAR(10)
+	DECLARE @Prefijo VARCHAR(4)
+    
+    SELECT @UltimoNumero = UltimoNumero, @Prefijo = Prefijo
+    FROM CONTADORES
+    WHERE Tabla = @TipoDocumento
+
+    SET @UltimoNumero = @UltimoNumero + 1
+    SET @SiguienteID = @Prefijo + '-' + RIGHT('0000' + CAST(@UltimoNumero AS VARCHAR(4)), 4) + '-' + LEFT(@TipoDocumento, 1)
+    
+    RETURN @SiguienteID
+END
+GO
+
+-- PROCEDIMIENTO PARA OBTENER EL SIGUIENTE ID
+CREATE OR ALTER PROCEDURE uspGenerarNumeroComprobante
+    @TipoDocumento VARCHAR(50)
+AS
+BEGIN
+	DECLARE @NuevoCodigo VARCHAR(10)
+    SET NOCOUNT ON;
+
+    -- Obtener el siguiente ID usando la función
+    SET @NuevoCodigo = dbo.ObtenerSiguienteID(@TipoDocumento)
+
+    -- Devolver el código generado
+    SELECT @NuevoCodigo AS Codigo
 END
 GO
