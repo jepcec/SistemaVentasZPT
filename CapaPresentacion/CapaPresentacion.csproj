@@ -229,6 +229,9 @@
     <EmbeddedResource Include="Reportes\frmBoletaVenta.resx">
       <DependentUpon>frmBoletaVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmFacturaVenta.resx">
+      <DependentUpon>frmFacturaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmListarEmpleado.resx">
       <DependentUpon>frmListarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,7 +250,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -258,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\BoletaVenta.html" />
+    <Content Include="Recursos\FacturaVenta.html" />
     <Content Include="Recursos\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

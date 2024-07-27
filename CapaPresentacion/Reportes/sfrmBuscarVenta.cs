@@ -14,10 +14,10 @@ namespace CapaPresentacion.Reportes
     public partial class sfrmBuscarVenta : Form
     {
         string Comprobante;
-        frmBoletaVenta frmPadre;
+        Form frmPadre;
         cVenta oVenta = new cVenta();
         
-        public sfrmBuscarVenta(frmBoletaVenta Padre, string Tipo)
+        public sfrmBuscarVenta(Form Padre, string Tipo)
         {
             InitializeComponent();
             Comprobante = Tipo;
@@ -59,7 +59,8 @@ namespace CapaPresentacion.Reportes
         {
             DataGridViewRow Fila = dgvComprobantes.CurrentRow;
             string Codigo = Fila.Cells["IdVenta"].Value.ToString();
-            frmPadre.actualizarMuestra(Codigo);
+            if (frmPadre is frmBoletaVenta frmPadre1) frmPadre1.actualizarMuestra(Codigo);
+            else if (frmPadre is frmFacturaVenta frmPadre2) frmPadre2.actualizarMuestra(Codigo);
             Close();
         }
 

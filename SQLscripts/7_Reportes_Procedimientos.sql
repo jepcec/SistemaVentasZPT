@@ -57,7 +57,7 @@ CREATE PROCEDURE uspListarProductosVendidos
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal AS Importe
+    SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
     FROM DETALLE_VENTA DV
     INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
     WHERE DV.IdVenta = @IdVenta
@@ -77,7 +77,7 @@ BEGIN
 
     IF @contenido IS NULL OR @contenido = ''
     BEGIN
-        SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal AS Importe
+        SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
                      FROM DETALLE_VENTA DV
                      INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
                      WHERE DV.IdVenta = @IdVenta';
@@ -88,7 +88,7 @@ BEGIN
         -- Determinar el tipo de dato del campo para construir la consulta adecuada
         IF @campo IN ('Cantidad', 'PrecioUnitario', 'SubTotal')
         BEGIN
-            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal AS Importe
+            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
                          FROM DETALLE_VENTA DV
                          INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
                          WHERE DV.IdVenta = @IdVenta AND ' + @campo + ' LIKE CAST(@contenido AS DECIMAL(10, 2)) + ''%''';
@@ -96,7 +96,7 @@ BEGIN
 
         ELSE
         BEGIN
-            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal AS Importe
+            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DV.Cantidad, DV.PrecioUnitario, DV.SubTotal
                          FROM DETALLE_VENTA DV
                          INNER JOIN PRODUCTO P ON DV.IdProducto = P.IdProducto
                          WHERE DV.IdVenta = @IdVenta AND ' + @campo + ' LIKE @contenido + ''%''';
