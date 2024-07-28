@@ -1,0 +1,28 @@
+name: Build and Test with Visual Studio 2019
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.x.x'  # Especifica la versión de .NET si es necesario
+
+    - name: Build with MSBuild
+      run: msbuild myproject.sln /p:Configuration=Release
+
+    - name: Run tests
+      run: |
+        dotnet test myproject.sln /p:Configuration=Release --logger:"trx;LogFileName=testresults.trx"

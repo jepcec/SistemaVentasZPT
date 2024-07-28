@@ -1,0 +1,35 @@
+name: Build and Test with Visual Studio 2017
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.x.x'  # Especifica la versión de .NET si es necesario
+
+    - name: Install Visual Studio 2017 Build Tools
+      run: |
+        choco install visualstudio2017buildtools --version=15.9.38 -y
+        choco install visualstudio2017-workload-vctools -y
+        choco install visualstudio2017-workload-netcoretools -y
+        choco install visualstudio2017-workload-manageddesktopbuildtools -y
+
+    - name: Build with MSBuild
+      run: msbuild myproject.sln /p:Configuration=Release
+
+    - name: Run tests
+      run: |
+        dotnet test myproject.sln /p:Configuration=Release --logger:"trx;LogFileName=testresults.trx"
