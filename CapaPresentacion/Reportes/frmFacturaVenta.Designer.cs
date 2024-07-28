@@ -309,9 +309,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(44, 57);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 17);
+            this.label9.Size = new System.Drawing.Size(57, 17);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Consumidor";
+            this.label9.Text = "Usuario";
             // 
             // grbCliente
             // 

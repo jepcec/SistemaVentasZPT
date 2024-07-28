@@ -118,6 +118,12 @@
     <Compile Include="Reportes\frmListarEmpleado.Designer.cs">
       <DependentUpon>frmListarEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\sfrmBuscarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\sfrmBuscarCompra.Designer.cs">
+      <DependentUpon>sfrmBuscarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\sfrmBuscarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,11 +235,17 @@
     <EmbeddedResource Include="Reportes\frmBoletaVenta.resx">
       <DependentUpon>frmBoletaVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmFacturaCompra.resx">
+      <DependentUpon>frmFacturaCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmFacturaVenta.resx">
       <DependentUpon>frmFacturaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmListarEmpleado.resx">
       <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\sfrmBuscarCompra.resx">
+      <DependentUpon>sfrmBuscarCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\sfrmBuscarVenta.resx">
       <DependentUpon>sfrmBuscarVenta.cs</DependentUpon>
@@ -262,7 +274,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Recursos\BoletaVenta.html" />
+    <Content Include="Recursos\Boleta.html" />
+    <Content Include="Recursos\FacturaCompra.html" />
     <Content Include="Recursos\FacturaVenta.html" />
     <Content Include="Recursos\Logo.png" />
   </ItemGroup>

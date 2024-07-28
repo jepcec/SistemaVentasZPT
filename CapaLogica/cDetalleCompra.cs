@@ -23,6 +23,7 @@ namespace CapaLogica
         public string Mensaje;
 
         public DataTable Listar() => odatos.TraerDataTable("uspListarDetalleCompra");
+        public DataTable BuscarProductos(string pIdCompra, string campo, string contenido) => odatos.TraerDataTable("uspBuscarProductosComprados", pIdCompra, campo, contenido);
         public bool Insertar()
         {
             DataRow ofila = odatos.TraerDataRow("uspInsertarDetalleCompra", IdDetalleCompra, IdCompra, IdProducto, PrecioCompra, PrecioVenta, Cantidad, MontoTotal);

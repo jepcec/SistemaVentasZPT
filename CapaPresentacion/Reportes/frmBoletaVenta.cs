@@ -57,7 +57,7 @@ namespace CapaPresentacion.Reportes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            sfrmBuscarVenta hijo = new sfrmBuscarVenta(this, "Boleta");
+            sfrmBuscarVenta hijo = new sfrmBuscarVenta(this, "BOLETA");
             hijo.Show();
         }
 
@@ -77,7 +77,7 @@ namespace CapaPresentacion.Reportes
 
             // Construir la ruta relativa al archivo HTML
             string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string htmlFilePath = Path.Combine(projectDirectory, "Recursos", "BoletaVenta.html");
+            string htmlFilePath = Path.Combine(projectDirectory, "Recursos", "Boleta.html");
             string imagePath = Path.Combine(projectDirectory, "Recursos", "Logo.png");
 
             // Leer el contenido del archivo HTML
@@ -92,7 +92,7 @@ namespace CapaPresentacion.Reportes
             paginahtml_texto = paginahtml_texto.Replace("@TOTAL", txtMontoTotal.Text);
             paginahtml_texto = paginahtml_texto.Replace("@RECIBIDO", txtMontoRecibido.Text);
             paginahtml_texto = paginahtml_texto.Replace("@CAMBIO", txtMontoCambio.Text);
-            paginahtml_texto = paginahtml_texto.Replace("@ID_BOLETA", txtIdVenta.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@ID_BOLETA", txtNroDocumento.Text);
 
             // Insertar Datos de la compra
             string filas = string.Empty;

@@ -71,7 +71,7 @@ namespace CapaPresentacion.Reportes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            sfrmBuscarVenta hijo = new sfrmBuscarVenta(this, "Factura");
+            sfrmBuscarVenta hijo = new sfrmBuscarVenta(this, "FACTURA");
             hijo.Show();
         }
 
@@ -98,7 +98,7 @@ namespace CapaPresentacion.Reportes
             string paginahtml_texto = File.ReadAllText(htmlFilePath);
 
             // Reemplazar valores plantilla
-            paginahtml_texto = paginahtml_texto.Replace("@ID_FACTURA", txtIdVenta.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@ID_FACTURA", txtNroDocumento.Text);
             paginahtml_texto = paginahtml_texto.Replace("@CONSUMIDOR", txtNombreCliente.Text);
             paginahtml_texto = paginahtml_texto.Replace("@RUC", txtDocumentoCliente.Text);
             paginahtml_texto = paginahtml_texto.Replace("@FECHA", dtpFecha.Value.ToLongDateString());

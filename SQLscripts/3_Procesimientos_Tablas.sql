@@ -848,12 +848,14 @@ BEGIN
     SET NOCOUNT ON;
     DECLARE @SQL NVARCHAR(MAX);
     IF @contenido IS NULL OR @contenido = ''
-        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
+        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor, 
+						P.Documento AS DocumentoProveedor, P.Telefono AS TelfProveedor
                      FROM COMPRA C
                      INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
                      INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor';
     ELSE
-        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
+        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor, 
+						P.Documento AS DocumentoProveedor, P.Telefono AS TelfProveedor
                      FROM COMPRA C
                      INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
                      INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor
@@ -861,6 +863,7 @@ BEGIN
     EXEC sp_executesql @SQL, N'@contenido NVARCHAR(50)', @contenido;
 END;
 GO
+
 
 
 

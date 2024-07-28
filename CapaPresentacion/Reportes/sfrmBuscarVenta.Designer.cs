@@ -69,6 +69,8 @@
             // 
             this.dgvComprobantes.AllowUserToAddRows = false;
             this.dgvComprobantes.AllowUserToDeleteRows = false;
+            this.dgvComprobantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvComprobantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvComprobantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvComprobantes.Location = new System.Drawing.Point(12, 87);
             this.dgvComprobantes.Name = "dgvComprobantes";
@@ -132,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 313);
+            this.ClientSize = new System.Drawing.Size(750, 310);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label2);

@@ -107,6 +107,113 @@ BEGIN
 END;
 GO
 
-drop procedure uspBuscarProductosVendidos
 
---select * from DETALLE_VENTA
+
+
+
+-- *******************************************************************************************
+-- PROCEDIMIENTOS PARA CRAAR COMPROBANTES DE COMPRA --
+-- *******************************************************************************************
+
+-- Listar COMPRA
+CREATE PROCEDURE uspListarComprobantesCompras
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT C.IdCompra, C.NumeroDocumento, C.MontoTotal, C.FechaRegistro, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
+    FROM COMPRA C
+    INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
+    INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor
+	WHERE C.Estado = 1 AND C.TipoDocumento = 'FACTURA'
+    ORDER BY C.IdCompra;
+END;
+GO
+
+-- Buscar COMPROBANTES COMPRA
+CREATE PROCEDURE uspBuscarComprobanteCompra
+	@documento NVARCHAR(20),
+    @campo NVARCHAR(50),
+    @contenido NVARCHAR(50) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @SQL NVARCHAR(MAX);
+    
+    IF @contenido IS NULL OR @contenido = ''
+    BEGIN
+		SET @SQL = N'SELECT C.IdCompra, C.NumeroDocumento, C.MontoTotal, C.FechaRegistro, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
+					 FROM COMPRA C
+					 INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
+					 INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor
+					 WHERE C.Estado = 1 AND C.TipoDocumento = @documento';
+        EXEC sp_executesql @SQL, N'@documento NVARCHAR(10)', @documento;
+    END
+
+    ELSE
+    BEGIN
+		SET @SQL = N'SELECT C.IdCompra, C.NumeroDocumento, C.MontoTotal, C.FechaRegistro, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
+					 FROM COMPRA C
+					 INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
+					 INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor
+					 WHERE C.Estado = 1 AND C.TipoDocumento = @documento
+					 AND ' + QUOTENAME(@campo) + 'LIKE @contenido + ''%''';
+        EXEC sp_executesql @SQL, N'@documento NVARCHAR(10), @contenido NVARCHAR(50)', @documento, @contenido;
+    END
+END;
+GO
+
+-- Listar Productos Comprados
+CREATE PROCEDURE uspListarProductosComprados
+    @IdCompra dbo.ID
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT P.Nombre AS NombreProducto, DC.Cantidad, DC.PrecioCompra AS PrecioUnitario, DC.MontoTotal AS Importe
+    FROM DETALLE_COMPRA DC
+    INNER JOIN PRODUCTO P ON DC.IdProducto = P.IdProducto
+    WHERE DC.IdCompra = @IdCompra
+    ORDER BY DC.IdDetalleCompra;
+END;
+GO
+
+-- Buscar DETALLES PRODUCTOS COMPRADOS
+CREATE PROCEDURE uspBuscarProductosComprados
+    @IdCompra dbo.ID,
+    @campo NVARCHAR(50),
+    @contenido NVARCHAR(50) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @SQL NVARCHAR(MAX);
+
+    IF @contenido IS NULL OR @contenido = ''
+    BEGIN
+        SET @SQL = N'SELECT P.Nombre AS NombreProducto, DC.Cantidad, DC.PrecioCompra AS PrecioUnitario, DC.MontoTotal AS Importe
+					 FROM DETALLE_COMPRA DC
+					 INNER JOIN PRODUCTO P ON DC.IdProducto = P.IdProducto
+					 WHERE DC.IdCompra = @IdCompra';
+    END
+
+    ELSE
+    BEGIN
+        -- Determinar el tipo de dato del campo para construir la consulta adecuada
+        IF @campo IN ('Cantidad', 'PrecioCompra', 'SubTotal')
+        BEGIN
+            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DC.Cantidad, DC.PrecioCompra AS PrecioUnitario, DC.MontoTotal AS Importe
+						 FROM DETALLE_COMPRA DC
+						 INNER JOIN PRODUCTO P ON DC.IdProducto = P.IdProducto
+                         WHERE DC.IdCompra = @IdCompra AND ' + @campo + ' LIKE CAST(@contenido AS DECIMAL(10, 2)) + ''%''';
+        END
+
+        ELSE
+        BEGIN
+            SET @SQL = N'SELECT P.Nombre AS NombreProducto, DC.Cantidad, DC.PrecioCompra AS PrecioUnitario, DC.MontoTotal AS Importe
+						 FROM DETALLE_COMPRA DC
+						 INNER JOIN PRODUCTO P ON DC.IdProducto = P.IdProducto
+                         WHERE DC.IdCompra = @IdCompra AND ' + @campo + ' LIKE @contenido + ''%''';
+        END
+    END
+
+    EXEC sp_executesql @SQL, N'@IdCompra NVARCHAR(10), @contenido NVARCHAR(50)', @IdCompra, @contenido;
+END;
+GO
