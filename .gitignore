@@ -6,15 +6,77 @@ CapaPresentacion/App.config
 
 # Conflictos por configuración
 .vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Conflicotos por compilación CapaDatos
+# Conflictos por compilación CapaDatos
 CapaDatos/bin/
 CapaDatos/obj/
 
-# Conflicotos por compilación Logica
+# Conflictos por compilación Logica
 CapaLogica/bin/
 CapaLogica/obj/
 
-# Conflicotos por compilación Presentación
+# Conflictos por compilación Presentación
 CapaPresentacion/bin/
 CapaPresentacion/obj/
+
+# Archivos de paquetes
+*.nupkg
+*.snupkg
+# La carpeta packages se puede ignorar debido a la restauración de paquetes
+packages/
+# Excepto build/, que se utiliza como un objetivo de MSBuild
+!packages/build/
+
+# Logs
+*.log
+# Archivos de base de datos local
+*.mdf
+*.ldf
+
+# Node.js
+node_modules/
+
+# Web publish folder
+*.PublishTmp/
+
+# Rider
+.idea/
+*.sln.iml
+
+# MacOS
+*.DS_Store
+
+# Windows
+[Tt]humbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Archivos generados por el sistema
+*.bak
+*.swp
+*.tempx
+*.tmp
+*.temp
+~*
+
+# Archivos de publicación
+publish/
+
+# Archivos de configuración de la máquina
+*.vsconfig
+
+# Visual Studio Code
+.vscode/
+
+# Otros
+[Tt]est[Rr]esult*
+*.Cache
+*.Diff
+*.Original
+*.vspscc
+*.vssscc
+*.vspcc
