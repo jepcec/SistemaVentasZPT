@@ -1,10 +1,13 @@
 ﻿using CapaDatos;
+using capaLogica;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using static ConfiguracionUsuario;
 
 namespace CapaLogica
 {
@@ -42,6 +45,28 @@ namespace CapaLogica
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
+        }
+        public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "CLIENTE");
+        public void CargarInformacion()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspBuscarCliente", "Correo", Correo);
+            if (ofila != null)
+            {
+                try
+                {
+                    IdCliente = ofila["IdCliente"].ToString();
+                    Documento = ofila["Documento"].ToString();
+                    NombreCompleto = ofila["NombreCompleto"].ToString();
+                    Correo = ofila["Correo"].ToString();
+                    Telefono = ofila["Telefono"].ToString();
+                    Estado = ofila["Estado"].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
         }
     }
 }

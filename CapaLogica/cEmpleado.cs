@@ -80,7 +80,7 @@ namespace CapaLogica
                    
                 }
             }
-
         }
+        public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "EMPLEADO");
     }
 }

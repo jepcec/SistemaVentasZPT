@@ -3,8 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using static ConfiguracionUsuario;
+using System.Xml.Linq;
 
 namespace CapaLogica
 {
@@ -26,6 +29,7 @@ namespace CapaLogica
         public string Mensaje;
 
         public DataTable Listar() => odatos.TraerDataTable("uspListarProducto");
+        public DataTable BusquedaPersonalizada(string comando) => odatos.TraerDataTable_Consulta(comando);
         public bool Insertar()
         {
             DataRow ofila = odatos.TraerDataRow("uspInsertarProducto", IdProducto, Codigo, Nombre, Descripcion, IdCategoria, Stock, PrecioCompra, PrecioVenta, Estado, Imagen);
@@ -46,6 +50,34 @@ namespace CapaLogica
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
+        }
+        public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "PRODUCTO");
+        public void CargarInformacion()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspBuscarProducto", "IdProducto", IdProducto);
+            if (ofila != null)
+            {
+                try
+                {
+                    IdProducto = ofila["IdProducto"].ToString();
+                    Codigo = ofila["Codigo"].ToString();
+                    Nombre = ofila["Nombre"].ToString();
+                    Descripcion = ofila["Descripcion"].ToString();
+                    IdCategoria = ofila["IdCategoria"].ToString();
+                    Stock = int.Parse(ofila["Stock"].ToString());
+                    PrecioCompra = decimal.Parse(ofila["PrecioCompra"].ToString());
+                    PrecioVenta = decimal.Parse(ofila["PrecioVenta"].ToString());
+                    Estado = ofila["Estado"].ToString();
+                    FechaRegistro = Convert.ToDateTime(ofila["FechaRegistro"]);
+                    Imagen = (byte[])ofila["Imagen"];
+
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+
+                }
+            }
         }
     }
 }

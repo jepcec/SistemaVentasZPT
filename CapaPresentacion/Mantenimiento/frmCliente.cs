@@ -25,7 +25,7 @@ namespace CapaPresentacion.Mantenimiento
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //txtID.Text = oCliente.SiguienteID();
+            txtID.Text = oCliente.SiguienteID();
             txtDocumento.Text = "";
             txtNombre.Text = "";
             txtCorreo.Text = "";

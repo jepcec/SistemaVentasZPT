@@ -1,5 +1,6 @@
 ﻿using capaLogica;
 using CapaLogica;
+using CapaPresentacion.Mantenimiento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,13 +24,11 @@ namespace CapaPresentacion.Procesos
         cVenta oVenta = new cVenta();
         cDetalleVenta oDetalleVenta = new cDetalleVenta();
 
-        //
-
         public frmVenta(string pUser)
         {
             InitializeComponent();
             usuario = pUser;
-            MessageBox.Show("Usuario correcto" + pUser);
+            
         }
 
         private void frmVenta_Load(object sender, EventArgs e)
@@ -77,6 +76,50 @@ namespace CapaPresentacion.Procesos
             // -------- Cadavez que se ejecute un detalle venta ejecuta un trigger actualiza un stock del producto (SQL)
         }
 
-        
+        public string CorreoDialog {  get; set; }
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            using(var formBuscarCliente = new sfrmBuscarCliente(this))
+            {
+                DialogResult resultado = formBuscarCliente.ShowDialog();
+                if(resultado == DialogResult.OK)
+                {
+                    cCliente clienteAux = new cCliente();
+                    clienteAux.Correo = CorreoDialog;
+                    clienteAux.CargarInformacion();
+
+                    txtIdCliente.Text = clienteAux.IdCliente;
+                    txtDocumentoCliente.Text = clienteAux.Documento;
+                    txtNombreCliente.Text = clienteAux.NombreCompleto;
+                    txtCorreoCliente.Text = clienteAux.Correo;
+                    txtTelefonoCliente.Text = clienteAux.Telefono;                    
+                }
+            }
+        }
+
+
+        public string IdProductoDialog {  get; set; }
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            using(var formBuscarProducto = new sfrmBuscarProducto(this))
+            {
+                DialogResult resultado = formBuscarProducto.ShowDialog();
+                if(resultado == DialogResult.OK)
+                {
+                    cProducto auxProducto = new cProducto();
+                    auxProducto.IdProducto = IdProductoDialog;
+                    auxProducto.CargarInformacion();
+                    RellenarProductos(dgvProductos, auxProducto);
+
+                }
+            }
+        }
+        private void RellenarProductos(DataGridView pdgvProductos, cProducto producto)
+        {
+            pdgvProductos.Rows.Add(producto.IdProducto, producto.Codigo, producto.Nombre, producto.Descripcion, 
+                                   producto.IdCategoria, producto.Stock, producto.PrecioCompra, producto.PrecioVenta, 
+                                   producto.Estado, producto.FechaRegistro, producto.Imagen);
+
+        }
     }
 }
