@@ -1,7 +1,20 @@
-﻿################################################################################
+################################################################################
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
-/CapaPresentacion/App.config
+CapaPresentacion/App.config
 
+# Conflictos por configuración
 .vs/
+
+# Conflicotos por compilación CapaDatos
+CapaDatos/bin/
+CapaDatos/obj/
+
+# Conflicotos por compilación Logica
+CapaLogica/bin/
+CapaLogica/obj/
+
+# Conflicotos por compilación Presentación
+CapaPresentacion/bin/
+CapaPresentacion/obj/
