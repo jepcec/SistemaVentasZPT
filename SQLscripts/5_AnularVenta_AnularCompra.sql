@@ -1,5 +1,6 @@
-use BDVentas
-go
+USE BDVentas
+GO
+
 -- Procedimiento para anular una venta
 CREATE PROCEDURE uspAnularVenta
     @IdVenta dbo.ID
@@ -7,9 +8,11 @@ AS
 BEGIN
     SET NOCOUNT ON;
     
-    BEGIN TRANSACTION;
+    DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     
     BEGIN TRY
+        BEGIN TRANSACTION;
+        
         -- Cambiar el estado de la venta a 0 (anulado)
         UPDATE VENTA
         SET Estado = 0
@@ -22,12 +25,16 @@ BEGIN
         
         COMMIT TRANSACTION;
         
-        -- El trigger se encargar· de actualizar el stock
+        -- El trigger se encargar√° de actualizar el stock
+        
+        INSERT INTO @Result VALUES (0, 'Venta anulada exitosamente.');
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
-        THROW;
+        INSERT INTO @Result VALUES (1, 'Error al anular la venta: ' + ERROR_MESSAGE());
     END CATCH
+    
+    SELECT * FROM @Result;
 END
 GO
 
@@ -38,9 +45,11 @@ AS
 BEGIN
     SET NOCOUNT ON;
     
-    BEGIN TRANSACTION;
+    DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     
     BEGIN TRY
+        BEGIN TRANSACTION;
+        
         -- Cambiar el estado de la compra a 0 (anulado)
         UPDATE COMPRA
         SET Estado = 0
@@ -53,16 +62,20 @@ BEGIN
         
         COMMIT TRANSACTION;
         
-        -- El trigger se encargar· de actualizar el stock
+        -- El trigger se encargar√° de actualizar el stock
+        
+        INSERT INTO @Result VALUES (0, 'Compra anulada exitosamente.');
     END TRY
     BEGIN CATCH
         ROLLBACK TRANSACTION;
-        THROW;
+        INSERT INTO @Result VALUES (1, 'Error al anular la compra: ' + ERROR_MESSAGE());
     END CATCH
+    
+    SELECT * FROM @Result;
 END
 GO
 
--- Trigger para actualizar el stock despuÈs de anular una venta
+-- Trigger para actualizar el stock despu√©s de anular una venta
 CREATE TRIGGER trg_AnularVenta_ActualizarStock
 ON DETALLE_VENTA
 AFTER UPDATE
@@ -82,7 +95,7 @@ BEGIN
 END
 GO
 
--- Trigger para actualizar el stock despuÈs de anular una compra
+-- Trigger para actualizar el stock despu√©s de anular una compra
 CREATE TRIGGER trg_AnularCompra_ActualizarStock
 ON DETALLE_COMPRA
 AFTER UPDATE
