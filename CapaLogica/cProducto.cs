@@ -30,6 +30,8 @@ namespace CapaLogica
 
         public DataTable Listar() => odatos.TraerDataTable("uspListarProducto");
         public DataTable BusquedaPersonalizada(string comando) => odatos.TraerDataTable_Consulta(comando);
+        public DataTable ListarKardex(string dIdProducto) => odatos.TraerDataTable("uspObtenerKardex", dIdProducto);
+        public DataTable Buscar(string Campo, string Contenido) => odatos.TraerDataTable("uspBuscarProducto", Campo, Contenido);
         public bool Insertar()
         {
             DataRow ofila = odatos.TraerDataRow("uspInsertarProducto", IdProducto, Codigo, Nombre, Descripcion, IdCategoria, Stock, PrecioCompra, PrecioVenta, Estado, Imagen);

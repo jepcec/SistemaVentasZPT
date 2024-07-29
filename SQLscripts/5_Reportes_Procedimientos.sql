@@ -217,3 +217,80 @@ BEGIN
     EXEC sp_executesql @SQL, N'@IdCompra NVARCHAR(10), @contenido NVARCHAR(50)', @IdCompra, @contenido;
 END;
 GO
+
+
+
+
+
+
+-- *******************************************************************************************
+-- PROCEDIMIENTOS PARA Mostrar el Kardex de una  --
+-- *******************************************************************************************
+
+CREATE PROCEDURE uspObtenerKardex
+    @IdProducto dbo.ID
+AS
+BEGIN
+    -- Crear una tabla temporal para almacenar las transacciones
+    CREATE TABLE #Kardex (
+        FechaRegistro DATETIME2(0),
+        TipoTransaccion VARCHAR(50),
+        Documento VARCHAR(50),
+        Cantidad INT,
+        PrecioUnitario DECIMAL(10, 2),
+        SubTotal DECIMAL(10, 2),
+        StockActual INT
+    );
+
+    DECLARE @StockInicial INT;
+    DECLARE @StockActual INT;
+    SET @StockInicial = 0; -- Asumiendo que se tiene un stock inicial de 0, esto puede ajustarse según sea necesario
+    SET @StockActual = @StockInicial;
+
+    -- Insertar las compras
+    INSERT INTO #Kardex (FechaRegistro, TipoTransaccion, Documento, Cantidad, PrecioUnitario, SubTotal, StockActual)
+    SELECT 
+        C.FechaRegistro,
+        'Compra' AS TipoTransaccion,
+        C.NumeroDocumento,
+        DC.Cantidad,
+        DC.PrecioCompra AS PrecioUnitario,
+        DC.MontoTotal AS SubTotal,
+        @StockActual + SUM(DC.Cantidad) OVER (ORDER BY C.FechaRegistro ROWS UNBOUNDED PRECEDING) AS StockActual
+    FROM DETALLE_COMPRA DC
+    INNER JOIN COMPRA C ON DC.IdCompra = C.IdCompra
+    WHERE DC.IdProducto = @IdProducto;
+
+    -- Actualizar el stock después de insertar las compras
+    SELECT @StockActual = MAX(StockActual) FROM #Kardex;
+
+    -- Insertar las ventas
+    INSERT INTO #Kardex (FechaRegistro, TipoTransaccion, Documento, Cantidad, PrecioUnitario, SubTotal, StockActual)
+    SELECT 
+        V.FechaRegistro,
+        'Venta' AS TipoTransaccion,
+        V.NumeroDocumento,
+        -DV.Cantidad, -- Las ventas se restan del stock
+        DV.PrecioUnitario,
+        DV.SubTotal,
+        @StockActual + SUM(-DV.Cantidad) OVER (ORDER BY V.FechaRegistro ROWS UNBOUNDED PRECEDING) AS StockActual
+    FROM DETALLE_VENTA DV
+    INNER JOIN VENTA V ON DV.IdVenta = V.IdVenta
+    WHERE DV.IdProducto = @IdProducto;
+
+    -- Seleccionar los resultados del Kardex ordenados por fecha
+    SELECT *
+    FROM #Kardex
+    ORDER BY FechaRegistro;
+
+    -- Eliminar la tabla temporal
+    DROP TABLE #Kardex;
+END;
+GO
+
+
+--select * from PRODUCTO
+
+EXEC uspObtenerKardex @IdProducto = 'PRD0001'
+
+--drop Procedure uspObtenerKardex
