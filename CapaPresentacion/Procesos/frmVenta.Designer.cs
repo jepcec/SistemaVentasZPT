@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
@@ -41,9 +42,9 @@
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.lblI = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNroDocumento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbFactura = new System.Windows.Forms.RadioButton();
@@ -61,13 +62,20 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtIGV = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.tMensaje = new System.Windows.Forms.Timer(this.components);
             this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -202,9 +210,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtpFechaRegistro);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtNroDocumento);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Location = new System.Drawing.Point(465, 28);
@@ -216,13 +224,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Comprobante";
             // 
-            // dateTimePicker1
+            // dtpFechaRegistro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 143);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(116, 143);
+            this.dtpFechaRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(265, 22);
+            this.dtpFechaRegistro.TabIndex = 10;
             // 
             // label4
             // 
@@ -234,13 +242,13 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Fecha";
             // 
-            // textBox3
+            // txtNroDocumento
             // 
-            this.textBox3.Location = new System.Drawing.Point(96, 108);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(393, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtNroDocumento.Location = new System.Drawing.Point(96, 108);
+            this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNroDocumento.Name = "txtNroDocumento";
+            this.txtNroDocumento.Size = new System.Drawing.Size(393, 22);
+            this.txtNroDocumento.TabIndex = 8;
             // 
             // label3
             // 
@@ -311,6 +319,7 @@
             this.btnQuitarProducto.TabIndex = 4;
             this.btnQuitarProducto.Text = "Quitar producto";
             this.btnQuitarProducto.UseVisualStyleBackColor = true;
+            this.btnQuitarProducto.Click += new System.EventHandler(this.btnQuitarProducto_Click);
             // 
             // btnAgregarProducto
             // 
@@ -388,15 +397,24 @@
             // 
             // dgvProductos
             // 
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.coIdProducto});
+            this.coIdProducto,
+            this.coProducto,
+            this.coPrecio,
+            this.coStock,
+            this.coCantidad,
+            this.coSubTotal});
             this.dgvProductos.Location = new System.Drawing.Point(8, 23);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.Size = new System.Drawing.Size(971, 140);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_ActualizarMontos);
+            this.dgvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProductos_RowsRemoved);
             // 
             // btnGuardar
             // 
@@ -428,13 +446,13 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "label10";
             // 
-            // textBox10
+            // txtSubTotal
             // 
-            this.textBox10.Location = new System.Drawing.Point(775, 544);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(167, 22);
-            this.textBox10.TabIndex = 10;
+            this.txtSubTotal.Location = new System.Drawing.Point(775, 544);
+            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Size = new System.Drawing.Size(167, 22);
+            this.txtSubTotal.TabIndex = 10;
             // 
             // label11
             // 
@@ -446,13 +464,13 @@
             this.label11.TabIndex = 9;
             this.label11.Text = "SubTotal";
             // 
-            // textBox11
+            // txtIGV
             // 
-            this.textBox11.Location = new System.Drawing.Point(775, 576);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(167, 22);
-            this.textBox11.TabIndex = 12;
+            this.txtIGV.Location = new System.Drawing.Point(775, 576);
+            this.txtIGV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIGV.Name = "txtIGV";
+            this.txtIGV.Size = new System.Drawing.Size(167, 22);
+            this.txtIGV.TabIndex = 12;
             // 
             // label12
             // 
@@ -464,13 +482,13 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "IGV";
             // 
-            // textBox12
+            // txtMontoTotal
             // 
-            this.textBox12.Location = new System.Drawing.Point(775, 608);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(167, 22);
-            this.textBox12.TabIndex = 14;
+            this.txtMontoTotal.Location = new System.Drawing.Point(775, 608);
+            this.txtMontoTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(167, 22);
+            this.txtMontoTotal.TabIndex = 14;
             // 
             // label13
             // 
@@ -482,6 +500,18 @@
             this.label13.TabIndex = 13;
             this.label13.Text = "Total";
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(124, 543);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 16);
+            this.lblMensaje.TabIndex = 15;
+            // 
+            // tMensaje
+            // 
+            this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
+            // 
             // coIdProducto
             // 
             this.coIdProducto.HeaderText = "IdProducto";
@@ -489,16 +519,52 @@
             this.coIdProducto.Name = "coIdProducto";
             this.coIdProducto.Width = 125;
             // 
+            // coProducto
+            // 
+            this.coProducto.HeaderText = "Producto";
+            this.coProducto.MinimumWidth = 6;
+            this.coProducto.Name = "coProducto";
+            this.coProducto.Width = 125;
+            // 
+            // coPrecio
+            // 
+            this.coPrecio.HeaderText = "Precio";
+            this.coPrecio.MinimumWidth = 6;
+            this.coPrecio.Name = "coPrecio";
+            this.coPrecio.Width = 125;
+            // 
+            // coStock
+            // 
+            this.coStock.HeaderText = "Stock";
+            this.coStock.MinimumWidth = 6;
+            this.coStock.Name = "coStock";
+            this.coStock.Width = 125;
+            // 
+            // coCantidad
+            // 
+            this.coCantidad.HeaderText = "Cantidad";
+            this.coCantidad.MinimumWidth = 6;
+            this.coCantidad.Name = "coCantidad";
+            this.coCantidad.Width = 125;
+            // 
+            // coSubTotal
+            // 
+            this.coSubTotal.HeaderText = "Sub Total";
+            this.coSubTotal.MinimumWidth = 6;
+            this.coSubTotal.Name = "coSubTotal";
+            this.coSubTotal.Width = 125;
+            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 640);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtIGV);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label10);
@@ -536,7 +602,7 @@
         private System.Windows.Forms.RadioButton rbFactura;
         private System.Windows.Forms.RadioButton rbBoleta;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNroDocumento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnQuitarProducto;
@@ -557,18 +623,25 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Label lblI;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtMontoTotal;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtIGV;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Timer tMensaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn coIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coSubTotal;
     }
 }
