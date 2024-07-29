@@ -59,6 +59,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -70,12 +76,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
-            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerarDocumento = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -210,6 +211,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnGenerarDocumento);
             this.groupBox2.Controls.Add(this.dtpFechaRegistro);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtNroDocumento);
@@ -247,7 +249,7 @@
             this.txtNroDocumento.Location = new System.Drawing.Point(96, 108);
             this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroDocumento.Name = "txtNroDocumento";
-            this.txtNroDocumento.Size = new System.Drawing.Size(393, 22);
+            this.txtNroDocumento.Size = new System.Drawing.Size(285, 22);
             this.txtNroDocumento.TabIndex = 8;
             // 
             // label3
@@ -416,6 +418,48 @@
             this.dgvProductos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_ActualizarMontos);
             this.dgvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProductos_RowsRemoved);
             // 
+            // coIdProducto
+            // 
+            this.coIdProducto.HeaderText = "IdProducto";
+            this.coIdProducto.MinimumWidth = 6;
+            this.coIdProducto.Name = "coIdProducto";
+            this.coIdProducto.Width = 125;
+            // 
+            // coProducto
+            // 
+            this.coProducto.HeaderText = "Producto";
+            this.coProducto.MinimumWidth = 6;
+            this.coProducto.Name = "coProducto";
+            this.coProducto.Width = 125;
+            // 
+            // coPrecio
+            // 
+            this.coPrecio.HeaderText = "Precio";
+            this.coPrecio.MinimumWidth = 6;
+            this.coPrecio.Name = "coPrecio";
+            this.coPrecio.Width = 125;
+            // 
+            // coStock
+            // 
+            this.coStock.HeaderText = "Stock";
+            this.coStock.MinimumWidth = 6;
+            this.coStock.Name = "coStock";
+            this.coStock.Width = 125;
+            // 
+            // coCantidad
+            // 
+            this.coCantidad.HeaderText = "Cantidad";
+            this.coCantidad.MinimumWidth = 6;
+            this.coCantidad.Name = "coCantidad";
+            this.coCantidad.Width = 125;
+            // 
+            // coSubTotal
+            // 
+            this.coSubTotal.HeaderText = "Sub Total";
+            this.coSubTotal.MinimumWidth = 6;
+            this.coSubTotal.Name = "coSubTotal";
+            this.coSubTotal.Width = 125;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -512,47 +556,15 @@
             // 
             this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
-            // coIdProducto
+            // btnGenerarDocumento
             // 
-            this.coIdProducto.HeaderText = "IdProducto";
-            this.coIdProducto.MinimumWidth = 6;
-            this.coIdProducto.Name = "coIdProducto";
-            this.coIdProducto.Width = 125;
-            // 
-            // coProducto
-            // 
-            this.coProducto.HeaderText = "Producto";
-            this.coProducto.MinimumWidth = 6;
-            this.coProducto.Name = "coProducto";
-            this.coProducto.Width = 125;
-            // 
-            // coPrecio
-            // 
-            this.coPrecio.HeaderText = "Precio";
-            this.coPrecio.MinimumWidth = 6;
-            this.coPrecio.Name = "coPrecio";
-            this.coPrecio.Width = 125;
-            // 
-            // coStock
-            // 
-            this.coStock.HeaderText = "Stock";
-            this.coStock.MinimumWidth = 6;
-            this.coStock.Name = "coStock";
-            this.coStock.Width = 125;
-            // 
-            // coCantidad
-            // 
-            this.coCantidad.HeaderText = "Cantidad";
-            this.coCantidad.MinimumWidth = 6;
-            this.coCantidad.Name = "coCantidad";
-            this.coCantidad.Width = 125;
-            // 
-            // coSubTotal
-            // 
-            this.coSubTotal.HeaderText = "Sub Total";
-            this.coSubTotal.MinimumWidth = 6;
-            this.coSubTotal.Name = "coSubTotal";
-            this.coSubTotal.Width = 125;
+            this.btnGenerarDocumento.Location = new System.Drawing.Point(393, 106);
+            this.btnGenerarDocumento.Name = "btnGenerarDocumento";
+            this.btnGenerarDocumento.Size = new System.Drawing.Size(137, 23);
+            this.btnGenerarDocumento.TabIndex = 11;
+            this.btnGenerarDocumento.Text = "Generar Documento";
+            this.btnGenerarDocumento.UseVisualStyleBackColor = true;
+            this.btnGenerarDocumento.Click += new System.EventHandler(this.btnGenerarDocumento_Click);
             // 
             // frmVenta
             // 
@@ -643,5 +655,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn coStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn coCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn coSubTotal;
+        private System.Windows.Forms.Button btnGenerarDocumento;
     }
 }

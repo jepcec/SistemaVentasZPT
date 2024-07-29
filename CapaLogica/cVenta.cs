@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CapaLogica
 {
@@ -20,6 +21,7 @@ namespace CapaLogica
         public decimal MontoCambio { get; set; }
         public decimal MontoTotal { get; set; }
         public DateTime FechaRegistro { get; set; }
+        public int Estado {  get; set; }
 
         private cDatos odatos = new cDatosSQL();
         public string Mensaje;
@@ -29,7 +31,7 @@ namespace CapaLogica
         public DataTable BuscarComprobante(string Tipo, string campo, string contenido) => odatos.TraerDataTable("uspBuscarComprobanteVenta", Tipo, campo, contenido);
         public bool Insertar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspInsertarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal);
+            DataRow ofila = odatos.TraerDataRow("uspInsertarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal,FechaRegistro);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
@@ -38,7 +40,7 @@ namespace CapaLogica
         // esto no
         public bool Modificar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspModificarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal);
+            DataRow ofila = odatos.TraerDataRow("uspModificarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal,FechaRegistro,Estado);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
@@ -50,7 +52,32 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
-        // esto no
-        // Agregar Anular
+        public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarCodigo", "VENTA");
+        public void CargarInformacion()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspBuscarVenta", "IdVenta", IdVenta);
+            if (ofila != null)
+            {
+                try
+                {
+                    IdVenta = ofila["IdVenta"].ToString();
+                    IdEmpleado = ofila["IdEmpleado"].ToString();
+                    TipoDocumento = ofila["TipoDocumento"].ToString();
+                    NumeroDocumento = ofila["NumeroDocumento"].ToString();
+                    DocumentoCliente = ofila["DocumentoCliente"].ToString();
+                    NombreCliente = ofila["NombreCliente"].ToString();
+                    MontoPago = decimal.Parse(ofila["MontoPago"].ToString());
+                    MontoCambio = decimal.Parse(ofila["MontoCambio"].ToString());
+                    MontoTotal = decimal.Parse(ofila["MontoTotal"].ToString());
+                    FechaRegistro = Convert.ToDateTime(ofila["FechaRegistro"]);
+                    Estado = (bool)ofila["Estado"]?1:0;
+
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+        }
     }
 }

@@ -136,12 +136,14 @@ namespace CapaPresentacion.Procesos
         }
         private void CalcularTotal()
         {
-            decimal total = 0;
+            decimal Subtotal = 0;
             foreach (DataGridViewRow row in dgvProductos.Rows)
             {
-                total += Convert.ToDecimal(row.Cells["coSubTotal"].Value.ToString());
+                Subtotal += Convert.ToDecimal(row.Cells["coSubTotal"].Value.ToString());
             }
-            txtMontoTotal .Text = total.ToString("0.00");
+            txtSubTotal.Text = Subtotal.ToString("0.00");
+            txtIGV.Text = (Subtotal * 18 / 100).ToString("0.00");
+            txtMontoTotal.Text = (Subtotal + Subtotal*18/100).ToString("0.00");
         }
         private void CargarFormularioCombrobante()
         {
@@ -180,6 +182,11 @@ namespace CapaPresentacion.Procesos
         private void dgvProductos_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             CalcularTotal();
+        }
+
+        private void btnGenerarDocumento_Click(object sender, EventArgs e)
+        {
+            txtNroDocumento.Text = oVenta.GenerarNroDocumento();
         }
     }
 }

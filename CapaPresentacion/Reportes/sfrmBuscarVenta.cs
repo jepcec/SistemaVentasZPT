@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
+using CapaPresentacion.Procesos;
 
 namespace CapaPresentacion.Reportes
 {
@@ -52,10 +53,22 @@ namespace CapaPresentacion.Reportes
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Fila = dgvComprobantes.CurrentRow;
-            string Codigo = Fila.Cells["IdVenta"].Value.ToString();
-            if (frmPadre is frmBoletaVenta frmPadre1) frmPadre1.actualizarMuestra(Codigo);
-            else if (frmPadre is frmFacturaVenta frmPadre2) frmPadre2.actualizarMuestra(Codigo);
+            // ----------------------by esau : para formulario anularVenta-----------------------
+            if (frmPadre is frmAnularVenta anularVenta) 
+            {
+                DataGridViewRow Fila = dgvComprobantes.CurrentRow;
+                string Codigo = Fila.Cells["IdVenta"].Value.ToString();
+                anularVenta.IdVentaDialog = Codigo;
+                DialogResult = DialogResult.OK;
+            } 
+            // ----------------------------------------------------------------------------------
+            else
+            {
+                DataGridViewRow Fila = dgvComprobantes.CurrentRow;
+                string Codigo = Fila.Cells["IdVenta"].Value.ToString();
+                if (frmPadre is frmBoletaVenta frmPadre1) frmPadre1.actualizarMuestra(Codigo);
+                else if (frmPadre is frmFacturaVenta frmPadre2) frmPadre2.actualizarMuestra(Codigo);
+            }
             Close();
         }
 
