@@ -102,6 +102,11 @@ namespace CapaPresentacion
         {
             Utilidades.VerificarFormulacionExistente<frmKardex>(this);
         }
+
+        private void listarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmListarEmpleado>(this);
+        }
         #endregion ToolMenuStrip
     }
 }

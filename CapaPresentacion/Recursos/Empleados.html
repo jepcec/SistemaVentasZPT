@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Page Design</title>
+        <style>
+            table.border {
+                border-collapse: collapse;
+            }
+            table.border th{
+                padding: 5px;
+                border: 1px solid black;
+            }
+            table.border td{
+                padding: 5px;
+                border: 1px solid black;
+            }
+            /* Estilos para personalizar la línea de guiones */
+            .dashed-line {
+                border: 0;
+                border-top: 1px dashed black; /* Línea de guiones */
+                margin: 20px 0; /* Espaciado arriba y abajo de la línea */
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width: 100%">
+
+            <!-- Línea de guiones como encabezado -->
+            <tr>
+                <td colspan="3">
+                    <div class="dashed-line"></div>
+                </td>
+            </tr>
+
+            <!-- Datos de la EMPRESA -->
+            <tr>
+                <td style="width: 20%"></td>
+                <td style="width: 60%" align="center">
+                    <table>
+                        <tr><td align="center">PROYECTO FINAL</td></tr>
+                        <tr><td align="center">Av. de La Cultura 773</td></tr>
+                        <tr><td align="center">Telefono: (084)604160</td></tr>
+                    </table>
+                </td>
+                <td style="width: 20%">
+                    <table class="border" style="width: 100%;"> 
+                        <tr><td align="center">RUC: 20172474501</td></tr>
+                        <tr><td align="center">REPORTE EMPLEADOS</td></tr>
+                        <tr><td align="center">@FECHA</td></tr>
+                    </table>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr><td colspan="3" height="20"></td></tr>
+
+            <!-- Línea de guiones entre los datos del Empleado y los datos de la compra -->
+            <tr>
+                <td colspan="3">
+                    <div class="dashed-line"></div>
+                </td>
+            </tr>
+
+            <!-- Datos de la COMPRA -->
+            <tr>
+                <td colspan="3">
+                    <table class="border" style="width: 100%;">
+                        <thead style="background-color: #D8D8D8;">
+                            <tr>
+                                <th>DNI</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Estado</th>
+                                <th>Fecha Registro</th>
+                                <th>Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--<tr>
+                                <td>1</td>
+                                <td>sdsds</td>
+                                <td>2.4</td>
+                                <td>2.4</td>
+                            </tr>-->
+                            @FILAS
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr><td colspan="3" height="20"></td></tr>
+
+            <!-- Línea de guiones entre los datos de los Productos con los Pagos -->
+            <tr>
+                <td colspan="3">
+                    <div class="dashed-line"></div>
+                </td>
+            </tr>
+
+        </table>     
+    </body>
+</html>

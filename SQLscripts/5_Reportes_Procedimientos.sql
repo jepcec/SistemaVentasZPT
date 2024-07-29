@@ -289,8 +289,10 @@ END;
 GO
 
 
+
+
 --select * from PRODUCTO
 
-EXEC uspObtenerKardex @IdProducto = 'PRD0001'
+--EXEC uspObtenerKardex @IdProducto = 'PRD0001'
 
 --drop Procedure uspObtenerKardex

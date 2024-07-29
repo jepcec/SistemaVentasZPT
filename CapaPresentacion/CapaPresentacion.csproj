@@ -276,6 +276,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\Boleta.html" />
+    <Content Include="Recursos\Empleados.html" />
     <Content Include="Recursos\FacturaCompra.html" />
     <Content Include="Recursos\FacturaVenta.html" />
     <Content Include="Recursos\Kardex.html" />
