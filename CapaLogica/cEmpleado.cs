@@ -26,6 +26,7 @@ namespace CapaLogica
         public string Mensaje;
 
         public DataTable Listar() => odatos.TraerDataTable("uspListarEmpleado");
+        public DataTable BusquedaDinamica(string Campo, string Contenido) => odatos.TraerDataTable("uspBuscarEmpleado", Campo, Contenido); 
         public bool Insertar()
         {
             DataRow ofila = odatos.TraerDataRow("uspInsertarEmpleado", IdEmpleado, Documento, NombreCompleto, Correo, Clave, IdRol, Estado, Imagen);
