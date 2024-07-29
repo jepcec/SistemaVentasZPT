@@ -103,8 +103,8 @@ CREATE TABLE COMPRA (
     IdCompra dbo.ID PRIMARY KEY,
     IdEmpleado dbo.ID NOT NULL,
     IdProveedor dbo.ID NOT NULL,
-    TipoDocumento VARCHAR(50) NOT NULL,
-    NumeroDocumento VARCHAR(50) NOT NULL,
+    TipoDocumento VARCHAR(20) NOT NULL,
+    NumeroDocumento VARCHAR(20) NOT NULL,
     MontoTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
 	Estado dbo.Estado NOT NULL DEFAULT 1,
@@ -129,21 +129,19 @@ CREATE TABLE DETALLE_COMPRA (
 )
 GO
 
-
--- IdVenta int Identity(1,1) Primary Key   [tambien para ]
 -- Create VENTA table
 CREATE TABLE VENTA (
     IdVenta dbo.ID PRIMARY KEY,
     IdEmpleado dbo.ID NOT NULL,
-    TipoDocumento VARCHAR(50) NOT NULL,
-    NumeroDocumento VARCHAR(50) NOT NULL,
+    TipoDocumento VARCHAR(20) NOT NULL,
+    NumeroDocumento VARCHAR(20) NOT NULL,
     DocumentoCliente dbo.Documento NOT NULL,
     NombreCliente dbo.Descripcion NOT NULL,
     MontoPago dbo.Dinero NOT NULL,
     MontoCambio dbo.Dinero NOT NULL,
     MontoTotal dbo.Dinero NOT NULL,
     FechaRegistro dbo.FechaHora NOT NULL DEFAULT GETDATE(),
-	Estado dbo.Estado NOT NULL DEFAULT 1, -- para verificar si esta nulo
+	Estado dbo.Estado NOT NULL DEFAULT 1,
     FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 )
 GO

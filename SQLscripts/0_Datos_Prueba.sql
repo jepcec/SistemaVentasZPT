@@ -139,14 +139,14 @@ EXEC uspInsertarProveedor
 EXEC uspInsertarCompra 
     @IdEmpleado = 'E0002', 
     @IdProveedor = 'PRV0001', 
-    @TipoDocumento = 'Factura', 
+    @TipoDocumento = 'FACTURA', 
     @NumeroDocumento = 'F001-001', 
     @MontoTotal = 20000.00
 
 EXEC uspInsertarCompra 
     @IdEmpleado = 'E0003', 
     @IdProveedor = 'PRV0002', 
-    @TipoDocumento = 'Factura', 
+    @TipoDocumento = 'BOLETA', 
     @NumeroDocumento = 'F001-002', 
     @MontoTotal = 5000.00
 
@@ -182,8 +182,7 @@ EXEC uspInsertarDetalleCompra
 -- *****************************************************
 EXEC uspInsertarVenta 
     @IdEmpleado = 'E0002', 
-    @TipoDocumento = 'Boleta', 
-    @NumeroDocumento = 'B001-001', 
+    @TipoDocumento = 'BOLETA',
     @DocumentoCliente = '11111111', 
     @NombreCliente = 'Ana Martínez', 
     @MontoPago = 500.00, 
@@ -192,8 +191,7 @@ EXEC uspInsertarVenta
 
 EXEC uspInsertarVenta 
     @IdEmpleado = 'E0002', 
-    @TipoDocumento = 'Factura', 
-    @NumeroDocumento = 'F001-001', 
+    @TipoDocumento = 'FACTURA', 
     @DocumentoCliente = '22222222', 
     @NombreCliente = 'Pedro Rodríguez', 
     @MontoPago = 200.00, 

@@ -510,7 +510,7 @@ BEGIN
     SET NOCOUNT ON;
     SELECT P.*, C.Descripcion AS NombreCategoria
     FROM PRODUCTO P
-    INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria AND P.Estado = 1
+    INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria
     ORDER BY P.IdProducto;
 END;
 GO
@@ -526,11 +526,11 @@ BEGIN
     IF @contenido IS NULL OR @contenido = ''
         SET @SQL = N'SELECT P.*, C.Descripcion AS NombreCategoria
                      FROM PRODUCTO P
-                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria AND P.Estado = 1';
+                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria';
     ELSE
         SET @SQL = N'SELECT P.*, C.Descripcion AS NombreCategoria
                      FROM PRODUCTO P
-                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria AND P.Estado = 1
+                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria
                      WHERE ' + @campo + ' LIKE @contenido + ''%''';
     EXEC sp_executesql @SQL, N'@contenido NVARCHAR(50)', @contenido;
 END;
@@ -754,7 +754,7 @@ CREATE PROCEDURE uspInsertarCompra
     @IdEmpleado dbo.ID,
     @IdProveedor dbo.ID,
     @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
+	@NumeroDocumento VARCHAR(20),
     @MontoTotal DECIMAL(10, 2)
 AS
 BEGIN
@@ -779,8 +779,6 @@ CREATE PROCEDURE uspModificarCompra
     @IdCompra dbo.ID,
     @IdEmpleado dbo.ID,
     @IdProveedor dbo.ID,
-    @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
     @MontoTotal DECIMAL(10, 2)
 AS
 BEGIN
@@ -788,8 +786,7 @@ BEGIN
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     BEGIN TRY
         UPDATE COMPRA 
-        SET IdEmpleado = @IdEmpleado, IdProveedor = @IdProveedor, 
-            TipoDocumento = @TipoDocumento, NumeroDocumento = @NumeroDocumento, 
+        SET IdEmpleado = @IdEmpleado, IdProveedor = @IdProveedor,
             MontoTotal = @MontoTotal
         WHERE IdCompra = @IdCompra;
         IF @@ROWCOUNT > 0
@@ -848,14 +845,12 @@ BEGIN
     SET NOCOUNT ON;
     DECLARE @SQL NVARCHAR(MAX);
     IF @contenido IS NULL OR @contenido = ''
-        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor, 
-						P.Documento AS DocumentoProveedor, P.Telefono AS TelfProveedor
+        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
                      FROM COMPRA C
                      INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
                      INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor';
     ELSE
-        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor, 
-						P.Documento AS DocumentoProveedor, P.Telefono AS TelfProveedor
+        SET @SQL = N'SELECT C.*, E.NombreCompleto AS NombreEmpleado, P.RazonSocial AS NombreProveedor
                      FROM COMPRA C
                      INNER JOIN EMPLEADO E ON C.IdEmpleado = E.IdEmpleado
                      INNER JOIN PROVEEDOR P ON C.IdProveedor = P.IdProveedor
@@ -863,7 +858,6 @@ BEGIN
     EXEC sp_executesql @SQL, N'@contenido NVARCHAR(50)', @contenido;
 END;
 GO
-
 
 
 
@@ -997,7 +991,6 @@ GO
 CREATE PROCEDURE uspInsertarVenta
     @IdEmpleado dbo.ID,
     @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
     @DocumentoCliente VARCHAR(20),
     @NombreCliente VARCHAR(255),
     @MontoPago DECIMAL(10, 2),
@@ -1008,9 +1001,11 @@ BEGIN
     SET NOCOUNT ON;
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
 	DECLARE @NuevoID dbo.ID
+	DECLARE @NumeroDocumento VARCHAR(20)
     BEGIN TRY
 		SET @NuevoID = dbo.ObtenerSiguienteID('VENTA')
-        INSERT INTO VENTA (IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal, FechaRegistro)
+		SET @NumeroDocumento = dbo.ObtenerSiguienteNumeroComprobante(@TipoDocumento)
+        INSERT INTO VENTA (IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento , DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal, FechaRegistro)
         VALUES (@NuevoID, @IdEmpleado, @TipoDocumento, @NumeroDocumento, @DocumentoCliente, @NombreCliente, @MontoPago, @MontoCambio, @MontoTotal, GETDATE());
 
         INSERT INTO @Result VALUES (0, 'Venta insertada exitosamente.');
@@ -1026,8 +1021,6 @@ GO
 CREATE PROCEDURE uspModificarVenta
     @IdVenta dbo.ID,
     @IdEmpleado dbo.ID,
-    @TipoDocumento VARCHAR(50),
-    @NumeroDocumento VARCHAR(50),
     @DocumentoCliente VARCHAR(20),
     @NombreCliente VARCHAR(255),
     @MontoPago DECIMAL(10, 2),
@@ -1039,8 +1032,8 @@ BEGIN
     DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
     BEGIN TRY
         UPDATE VENTA 
-        SET IdEmpleado = @IdEmpleado, TipoDocumento = @TipoDocumento, 
-            NumeroDocumento = @NumeroDocumento, DocumentoCliente = @DocumentoCliente, 
+        SET IdEmpleado = @IdEmpleado,
+            DocumentoCliente = @DocumentoCliente, 
             NombreCliente = @NombreCliente, MontoPago = @MontoPago, 
             MontoCambio = @MontoCambio, MontoTotal = @MontoTotal
         WHERE IdVenta = @IdVenta;
