@@ -44,6 +44,7 @@
             this.tsmInformes = new System.Windows.Forms.ToolStripMenuItem();
             this.boletaDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,7 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssRol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.facturaDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kardexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssInformacion.SuspendLayout();
             this.SuspendLayout();
@@ -162,7 +163,8 @@
             this.tsmInformes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.boletaDeVentasToolStripMenuItem,
             this.facturaDeVentasToolStripMenuItem,
-            this.facturaDeComprasToolStripMenuItem});
+            this.facturaDeComprasToolStripMenuItem,
+            this.kardexToolStripMenuItem});
             this.tsmInformes.Name = "tsmInformes";
             this.tsmInformes.Size = new System.Drawing.Size(79, 24);
             this.tsmInformes.Text = "Informes";
@@ -180,6 +182,13 @@
             this.facturaDeVentasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.facturaDeVentasToolStripMenuItem.Text = "Factura de Ventas";
             this.facturaDeVentasToolStripMenuItem.Click += new System.EventHandler(this.facturaDeVentasToolStripMenuItem_Click);
+            // 
+            // facturaDeComprasToolStripMenuItem
+            // 
+            this.facturaDeComprasToolStripMenuItem.Name = "facturaDeComprasToolStripMenuItem";
+            this.facturaDeComprasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.facturaDeComprasToolStripMenuItem.Text = "Factura de Compras";
+            this.facturaDeComprasToolStripMenuItem.Click += new System.EventHandler(this.facturaDeComprasToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -268,12 +277,12 @@
             this.tssRol.Size = new System.Drawing.Size(151, 21);
             this.tssRol.Text = "usuario";
             // 
-            // facturaDeComprasToolStripMenuItem
+            // kardexToolStripMenuItem
             // 
-            this.facturaDeComprasToolStripMenuItem.Name = "facturaDeComprasToolStripMenuItem";
-            this.facturaDeComprasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.facturaDeComprasToolStripMenuItem.Text = "Factura de Compras";
-            this.facturaDeComprasToolStripMenuItem.Click += new System.EventHandler(this.facturaDeComprasToolStripMenuItem_Click);
+            this.kardexToolStripMenuItem.Name = "kardexToolStripMenuItem";
+            this.kardexToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.kardexToolStripMenuItem.Text = "Kardex";
+            this.kardexToolStripMenuItem.Click += new System.EventHandler(this.kardexToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -329,5 +338,6 @@
         private System.Windows.Forms.ToolStripMenuItem boletaDeVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaDeVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaDeComprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kardexToolStripMenuItem;
     }
 }

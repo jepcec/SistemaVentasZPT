@@ -510,7 +510,7 @@ BEGIN
     SET NOCOUNT ON;
     SELECT P.*, C.Descripcion AS NombreCategoria
     FROM PRODUCTO P
-    INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria
+    INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria AND P.Estado = 1
     ORDER BY P.IdProducto;
 END;
 GO
@@ -526,11 +526,11 @@ BEGIN
     IF @contenido IS NULL OR @contenido = ''
         SET @SQL = N'SELECT P.*, C.Descripcion AS NombreCategoria
                      FROM PRODUCTO P
-                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria';
+                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria AND P.Estado = 1';
     ELSE
         SET @SQL = N'SELECT P.*, C.Descripcion AS NombreCategoria
                      FROM PRODUCTO P
-                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria
+                     INNER JOIN CATEGORIA C ON P.IdCategoria = C.IdCategoria AND P.Estado = 1
                      WHERE ' + @campo + ' LIKE @contenido + ''%''';
     EXEC sp_executesql @SQL, N'@contenido NVARCHAR(50)', @contenido;
 END;

@@ -97,6 +97,11 @@ namespace CapaPresentacion
         {
             Utilidades.VerificarFormulacionExistente<frmFacturaCompra>(this);
         }
+
+        private void kardexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmKardex>(this);
+        }
         #endregion ToolMenuStrip
     }
 }
