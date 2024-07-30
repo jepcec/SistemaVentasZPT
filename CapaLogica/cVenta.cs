@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using capaLogica;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -40,7 +41,7 @@ namespace CapaLogica
         // esto no
         public bool Modificar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspModificarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal,FechaRegistro,Estado);
+            DataRow ofila = odatos.TraerDataRow("uspModificarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal,FechaRegistro,Estado == 1);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
@@ -52,7 +53,8 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
-        public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarCodigo", "VENTA");
+        public string SiguienteID() => odatos.TraerValor("ObtenerSiguienteID", "VENTA");
+        public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarNumeroComprobante", TipoDocumento);
         public void CargarInformacion()
         {
             DataRow ofila = odatos.TraerDataRow("uspBuscarVenta", "IdVenta", IdVenta);

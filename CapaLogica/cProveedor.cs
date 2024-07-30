@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using static ConfiguracionUsuario;
 
 namespace CapaLogica
 {
@@ -44,5 +46,30 @@ namespace CapaLogica
             return CodigoError == 0;
         }
         public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "PROVEEDOR");
+        public void CargarInformacion()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspBuscarProveedor", "IdProveedor", IdProveedor);
+            if (ofila != null)
+            {
+                try
+                {
+                    IdProveedor = ofila["IdProveedor"].ToString();
+                    Documento = ofila["Documento"].ToString();
+                    RazonSocial = ofila["RazonSocial"].ToString();
+                    Correo = ofila["Correo"].ToString();
+                    Telefono = ofila["Telefono"].ToString();
+                    Estado = ofila["IdRol"].ToString();
+                    FechaRegistro = Convert.ToDateTime(ofila["FechaRegistro"]);
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+
+                }
+            }
+        }
     }
 }

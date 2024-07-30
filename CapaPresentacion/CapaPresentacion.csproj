@@ -88,6 +88,12 @@
     <Compile Include="Mantenimiento\sfrmBuscarProducto.Designer.cs">
       <DependentUpon>sfrmBuscarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\sfrmBuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\sfrmBuscarProveedor.Designer.cs">
+      <DependentUpon>sfrmBuscarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmBoletaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\sfrmBuscarProveedor.resx">
+      <DependentUpon>sfrmBuscarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\frmAnularCompra.resx">
       <DependentUpon>frmAnularCompra.cs</DependentUpon>

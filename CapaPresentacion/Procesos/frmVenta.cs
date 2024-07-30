@@ -46,9 +46,10 @@ namespace CapaPresentacion.Procesos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            oVenta.IdVenta = oVenta.SiguienteID();
             oVenta.IdEmpleado = txtIDEmpleado.Text;
-            if (rbBoleta.Checked) oVenta.TipoDocumento = "Boleta";
-            else oVenta.TipoDocumento = "Factura";
+            if (rbBoleta.Checked) oVenta.TipoDocumento = "BOLETA";
+            else oVenta.TipoDocumento = "FACTURA";
             oVenta.NumeroDocumento = txtNroDocumento.Text;
             oVenta.DocumentoCliente = txtDocumentoCliente.Text;
             oVenta.NombreCliente = txtNombreCliente.Text;
@@ -186,7 +187,10 @@ namespace CapaPresentacion.Procesos
 
         private void btnGenerarDocumento_Click(object sender, EventArgs e)
         {
+            string TipoDocumento = rbBoleta.Checked ? "BOLETA" : "FACTURA";
+            oVenta.TipoDocumento = TipoDocumento;
             txtNroDocumento.Text = oVenta.GenerarNroDocumento();
         }
+
     }
 }
