@@ -113,7 +113,11 @@ namespace CapaPresentacion.Procesos
                     auxProducto.IdProducto = IdProductoDialog;
                     auxProducto.CargarInformacion();
                     RellenarProductos(dgvProductos, auxProducto);
-
+                }
+                else if(resultado == DialogResult.Cancel)
+                {
+                    string mensaje = "Sin stock";
+                    lblMensaje.Text = mensaje;
                 }
             }
         }

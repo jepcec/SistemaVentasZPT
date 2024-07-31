@@ -17,14 +17,19 @@ namespace CapaPresentacion.Procesos
     {
         cCompra oCompra = new cCompra();
         cDetalleCompra oDetalleCompra = new cDetalleCompra();
-        public frmCompra()
+
+        cEmpleado oEmpleado = new cEmpleado();
+        public frmCompra(string correoEmpleado)
         {
             InitializeComponent();
+            oEmpleado.Correo = correoEmpleado;
         }
 
         private void frmCompra_Load(object sender, EventArgs e)
         {
-
+            oEmpleado.CargarInformacion();
+            txtIDEmpleado.Text = oEmpleado.IdEmpleado;
+            txtNombreEmpleado.Text = oEmpleado.NombreCompleto;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -48,7 +53,7 @@ namespace CapaPresentacion.Procesos
                 oDetalleCompra.PrecioVenta = decimal.Parse(dgvProductos.Rows[i].Cells["PrecioVenta"].ToString());
                 oDetalleCompra.Cantidad = int.Parse(dgvProductos.Rows[i].Cells["Cantidad"].ToString());
                 oDetalleCompra.MontoTotal = decimal.Parse(dgvProductos.Rows[i].Cells["MontoTotal"].ToString());
-                oDetalleCompra.FechaRegistro = DateTime.Now;
+                oDetalleCompra.FechaRegistro = dtpFechaRegistro.Value;
                 oDetalleCompra.Insertar();
             }
             lblMensaje.Text = oCompra.Mensaje;
@@ -102,6 +107,10 @@ namespace CapaPresentacion.Procesos
                 tiempoMensaje = 10;
                 lblMensaje.Visible = false;
             }
+        }
+        private void ReiniciarTiempoMensaje(int t = 10)
+        {
+            tiempoMensaje = t;
         }
     }
 }

@@ -105,15 +105,16 @@ namespace CapaPresentacion.Mantenimiento
         {
             if (dgvEmpleado.SelectedRows.Count > 0)
             {
-                string idEmpleado = dgvEmpleado.SelectedRows[0].Cells[0].Value.ToString();
-                string documento = dgvEmpleado.SelectedRows[0].Cells[1].Value.ToString();
-                string nombreEmpleado = dgvEmpleado.SelectedRows[0].Cells[2].Value.ToString();
-                string correo = dgvEmpleado.SelectedRows[0].Cells[3].Value.ToString();
-                string Clave = dgvEmpleado.SelectedRows[0].Cells[3].Value.ToString();
-                string idRol = dgvEmpleado.SelectedRows[0].Cells[3].Value.ToString();
-                string estado = dgvEmpleado.SelectedRows[0].Cells[5].Value.ToString();
-                var fechaRegistro = dgvEmpleado.SelectedRows[0].Cells[6].Value.ToString();
-                var foto = dgvEmpleado.SelectedRows[0].Cells[6].Value as byte[];
+                string idEmpleado = dgvEmpleado.SelectedRows[0].Cells["IdEmpleado"].Value.ToString();
+                string documento = dgvEmpleado.SelectedRows[0].Cells["Documento"].Value.ToString();
+                string nombreEmpleado = dgvEmpleado.SelectedRows[0].Cells["NombreCompleto"].Value.ToString();
+                string correo = dgvEmpleado.SelectedRows[0].Cells["Correo"].Value.ToString();
+                string Clave = dgvEmpleado.SelectedRows[0].Cells["Clave"].Value.ToString();
+                string idRol = dgvEmpleado.SelectedRows[0].Cells["IdRol"].Value.ToString();
+                string estado = dgvEmpleado.SelectedRows[0].Cells["Estado"].Value.ToString();
+                var fechaRegistro = dgvEmpleado.SelectedRows[0].Cells["FechaRegistro"].Value.ToString();
+                var foto = dgvEmpleado.SelectedRows[0].Cells["Imagen"].Value as byte[];
+                txtID.Text = idEmpleado;
                 txtDocumento.Text = documento;
                 txtNombre.Text = nombreEmpleado;
                 txtCorreo.Text = correo;
@@ -145,7 +146,5 @@ namespace CapaPresentacion.Mantenimiento
         {
             
         }
-
-        
     }
 }

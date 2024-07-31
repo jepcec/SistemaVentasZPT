@@ -128,7 +128,7 @@ namespace CapaPresentacion.Mantenimiento
                 string estado = dgvProducto.SelectedRows[0].Cells[8].Value.ToString();
                 var fechaRegistro = dgvProducto.SelectedRows[0].Cells[9].Value.ToString();
                 var foto = dgvProducto.SelectedRows[0].Cells[10].Value as byte[];
-
+                txtID.Text = idProducto;
                 txtCodigo.Text = codigo;
                 txtNombre.Text = nombre;
                 txtDescripcion.Text = descripcion;
