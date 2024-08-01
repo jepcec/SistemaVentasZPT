@@ -18,7 +18,7 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVenta("ccas"));
+            Application.Run(new frmPrincipal());
             //Application.Run(new frmCliente());
             //Application.Run(new frmEmpleado());
 

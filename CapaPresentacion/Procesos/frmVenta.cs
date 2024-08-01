@@ -36,8 +36,27 @@ namespace CapaPresentacion.Procesos
             oEmpleado.CargarInformacion();
             txtIDEmpleado.Text = oEmpleado.IdEmpleado;
             txtNombreEmpleado.Text = oEmpleado.NombreCompleto;
-
+            unableControls();
             Start();
+        }
+
+        private void unableControls()
+        {
+            txtIDEmpleado.Enabled = false;
+            txtNombreEmpleado.Enabled = false;
+
+            txtIdCliente.Enabled = false;
+            txtDocumentoCliente.Enabled = false;
+            txtNombreCliente.Enabled = false;
+            txtCorreoCliente.Enabled = false;
+            txtTelefonoCliente.Enabled = false;
+
+            txtSubTotal.Enabled = false;
+            txtIGV.Enabled = false;
+            txtMontoTotal.Enabled = false;
+
+            txtNroDocumento.Enabled = false;
+            dtpFechaRegistro.Enabled = false;
         }
         private void Start()
         {

@@ -26,14 +26,14 @@ namespace CapaLogica
         public DataTable Listar() => odatos.TraerDataTable("uspListarProveedor");
         public bool Insertar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspInsertarProveedor", IdProveedor, Documento, RazonSocial, Correo, Telefono, Estado);
+            DataRow ofila = odatos.TraerDataRow("uspInsertarProveedor", Documento, RazonSocial, Correo, Telefono);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
         public bool Modificar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspModificarProveedor", IdProveedor, Documento, RazonSocial, Correo, Telefono, Estado);
+            DataRow ofila = odatos.TraerDataRow("uspModificarProveedor", IdProveedor, Documento, RazonSocial, Correo, Telefono);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;

@@ -754,7 +754,7 @@ CREATE PROCEDURE uspInsertarCompra
     @IdEmpleado dbo.ID,
     @IdProveedor dbo.ID,
     @TipoDocumento VARCHAR(50),
-	@NumeroDocumento VARCHAR(20),
+    @NumeroDocumento VARCHAR(20),
     @MontoTotal DECIMAL(10, 2)
 AS
 BEGIN
