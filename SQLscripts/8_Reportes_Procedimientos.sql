@@ -107,6 +107,69 @@ BEGIN
 END;
 GO
 
-drop procedure uspBuscarProductosVendidos
 
---select * from DETALLE_VENTA
+-- Procedimiento para Actualizar la claveEmpleado
+CREATE PROCEDURE uspActualizarClaveEmpleado
+    @Correo VARCHAR(100),
+    @NuevaClave VARCHAR(100)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
+
+    BEGIN TRY
+        -- Verifica si el correo existe
+        IF EXISTS (SELECT 1 FROM EMPLEADO WHERE Correo = @Correo)
+        BEGIN
+            -- Actualiza la clave
+            UPDATE EMPLEADO
+            SET Clave = @NuevaClave
+            WHERE Correo = @Correo;
+
+            INSERT INTO @Result VALUES (0, 'Clave actualizada exitosamente.');
+        END
+        ELSE
+        BEGIN
+            INSERT INTO @Result VALUES (1, 'Correo no encontrado.');
+        END
+    END TRY
+    BEGIN CATCH
+        INSERT INTO @Result VALUES (1, ERROR_MESSAGE());
+    END CATCH;
+
+    SELECT * FROM @Result;
+END
+GO
+
+-- Procedimiento Almacenado para actualizar el estado del empleado
+CREATE PROCEDURE uspActualizarEstadoEmpleado
+    @IdEmpleado NVARCHAR(20),
+    @NuevoEstado BIT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @Result TABLE (ResultCode INT, ResultMessage NVARCHAR(200));
+
+    BEGIN TRY
+        -- Verifica si el empleado existe
+        IF EXISTS (SELECT 1 FROM EMPLEADO WHERE IdEmpleado = @IdEmpleado)
+        BEGIN
+            -- Actualiza el estado del empleado
+            UPDATE EMPLEADO
+            SET Estado = @NuevoEstado
+            WHERE IdEmpleado = @IdEmpleado;
+
+            INSERT INTO @Result VALUES (0, 'Estado actualizado exitosamente.');
+        END
+        ELSE
+        BEGIN
+            INSERT INTO @Result VALUES (1, 'Empleado no encontrado.');
+        END
+    END TRY
+    BEGIN CATCH
+        INSERT INTO @Result VALUES (1, ERROR_MESSAGE());
+    END CATCH;
+
+    SELECT * FROM @Result;
+END
+GO

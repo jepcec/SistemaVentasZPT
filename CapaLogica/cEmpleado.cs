@@ -26,7 +26,16 @@ namespace CapaLogica
         public string Mensaje;
 
         public DataTable Listar() => odatos.TraerDataTable("uspListarEmpleado");
-        public DataTable BusquedaDinamica(string Campo, string Contenido) => odatos.TraerDataTable("uspBuscarEmpleado", Campo, Contenido); 
+        public DataTable BusquedaDinamica(string Campo, string Contenido) => odatos.TraerDataTable("uspBuscarEmpleado", Campo, Contenido);
+
+        public bool CambiarClave()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspActualizarClaveEmpleado", Correo, Clave);
+            Mensaje = ofila[1].ToString();
+            byte CodigoError = Convert.ToByte(ofila[0]);
+            return CodigoError == 0;
+        }
+
         public bool Insertar()
         {
             DataRow ofila = odatos.TraerDataRow("uspInsertarEmpleado", Documento, NombreCompleto, Correo, Clave, IdRol, Imagen);
@@ -34,6 +43,15 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
+
+        public bool ActualizarEstado()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspActualizarEstadoEmpleado", IdEmpleado, 1-int.Parse(Estado));
+            Mensaje = ofila[1].ToString();
+            byte CodigoError = Convert.ToByte(ofila[0]);
+            return CodigoError == 0;
+        }
+
         public bool Modificar()
         {
             DataRow ofila = odatos.TraerDataRow("uspModificarEmpleado", IdEmpleado, Documento, NombreCompleto, Correo, Clave, IdRol, Imagen);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpleado));
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -35,8 +36,6 @@
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtIdRol = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,10 +60,14 @@
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.Empleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -151,23 +154,6 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Empleado";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(11, 190);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 17);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Estado";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(114, 187);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(282, 22);
-            this.txtEstado.TabIndex = 23;
-            this.txtEstado.TabStop = false;
             // 
             // label11
             // 
@@ -358,7 +344,7 @@
             // 
             // btnAgregarFoto
             // 
-            this.btnAgregarFoto.Location = new System.Drawing.Point(584, 161);
+            this.btnAgregarFoto.Location = new System.Drawing.Point(69, 167);
             this.btnAgregarFoto.Name = "btnAgregarFoto";
             this.btnAgregarFoto.Size = new System.Drawing.Size(91, 26);
             this.btnAgregarFoto.TabIndex = 36;
@@ -368,9 +354,11 @@
             // 
             // pbFoto
             // 
-            this.pbFoto.Location = new System.Drawing.Point(556, 25);
+            this.pbFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.InitialImage")));
+            this.pbFoto.Location = new System.Drawing.Point(36, 31);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(154, 130);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoto.TabIndex = 37;
             this.pbFoto.TabStop = false;
             // 
@@ -386,14 +374,40 @@
             // 
             this.ofdFoto.FileName = "openFileDialog1";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnAgregarFoto);
+            this.groupBox1.Controls.Add(this.pbFoto);
+            this.groupBox1.Location = new System.Drawing.Point(523, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(227, 209);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Imagen";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(114, 187);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(282, 22);
+            this.txtEstado.TabIndex = 23;
+            this.txtEstado.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 17);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Estado";
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.lblMensaje);
-            this.Controls.Add(this.pbFoto);
-            this.Controls.Add(this.btnAgregarFoto);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminar);
@@ -402,6 +416,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Empleados);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmEmpleado";
             this.Text = "frmEmpleado";
             this.Load += new System.EventHandler(this.frmEmpleado_Load);
@@ -411,6 +426,7 @@
             this.Empleados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,8 +441,6 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtIdRol;
         private System.Windows.Forms.Label label6;
@@ -451,5 +465,8 @@
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.OpenFileDialog ofdFoto;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtEstado;
     }
 }
