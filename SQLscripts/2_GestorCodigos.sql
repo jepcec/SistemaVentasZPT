@@ -208,11 +208,11 @@ CREATE FUNCTION dbo.ObtenerSiguienteNumeroComprobante
 (
     @TipoDocumento VARCHAR(50)
 )
-RETURNS VARCHAR(10)
+RETURNS VARCHAR(20)
 AS
 BEGIN
     DECLARE @UltimoNumero INT
-    DECLARE @SiguienteID VARCHAR(10)
+    DECLARE @SiguienteID VARCHAR(20)
 	DECLARE @Prefijo VARCHAR(4)
     
     SELECT @UltimoNumero = UltimoNumero, @Prefijo = Prefijo
@@ -220,22 +220,22 @@ BEGIN
     WHERE Tabla = @TipoDocumento
 
     SET @UltimoNumero = @UltimoNumero + 1
-    SET @SiguienteID = @Prefijo + '-' + RIGHT('0000' + CAST(@UltimoNumero AS VARCHAR(4)), 4) + '-' + LEFT(@TipoDocumento, 1)
+    SET @SiguienteID = @Prefijo + '-'  + RIGHT('0000' + CAST(@UltimoNumero AS VARCHAR(4)), 4) + '-' + LEFT(@TipoDocumento, 1)
     
     RETURN @SiguienteID
 END
 GO
 
 -- PROCEDIMIENTO PARA OBTENER EL SIGUIENTE ID
-CREATE OR ALTER PROCEDURE uspGenerarNumeroComprobante
+CREATE PROCEDURE uspGenerarNumeroComprobante
     @TipoDocumento VARCHAR(50)
 AS
 BEGIN
-	DECLARE @NuevoCodigo VARCHAR(10)
+	DECLARE @NuevoCodigo VARCHAR(20)
     SET NOCOUNT ON;
 
     -- Obtener el siguiente ID usando la función
-    SET @NuevoCodigo = dbo.ObtenerSiguienteID(@TipoDocumento)
+    SET @NuevoCodigo = dbo.ObtenerSiguienteNumeroComprobante(@TipoDocumento)
 
     -- Devolver el código generado
     SELECT @NuevoCodigo AS Codigo
