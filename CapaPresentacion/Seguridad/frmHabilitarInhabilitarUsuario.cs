@@ -18,7 +18,7 @@ namespace CapaPresentacion.Seguridad
         public frmHabilitarInhabilitarUsuario()
         {
             InitializeComponent();
-            oEmpleado.Listar();
+            dgvEmpleado.DataSource = oEmpleado.Listar();
             btnImprimir.Enabled = false;
         }
 

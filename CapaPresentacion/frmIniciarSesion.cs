@@ -115,6 +115,7 @@ namespace CapaPresentacion
             {
                 ((frmPrincipal)MdiParent).tssRol.Text = oEmpleado.Correo;
                 ((frmPrincipal)MdiParent).msPrincipal.Enabled = true;
+                ((frmPrincipal)MdiParent).tsmIniciarSesion.Enabled = false;
                 Close();
             }
         }
