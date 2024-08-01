@@ -262,6 +262,12 @@
     <EmbeddedResource Include="Reportes\sfrmBuscarVenta.resx">
       <DependentUpon>sfrmBuscarVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmHabilitarInhabilitarUsuario.resx">
+      <DependentUpon>frmHabilitarInhabilitarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
