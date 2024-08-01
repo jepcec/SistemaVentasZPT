@@ -146,6 +146,9 @@ namespace CapaPresentacion.Mantenimiento
             
         }
 
-        
+        private void dgvEmpleado_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
