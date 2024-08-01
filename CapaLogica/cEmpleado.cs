@@ -29,14 +29,14 @@ namespace CapaLogica
         public DataTable BusquedaDinamica(string Campo, string Contenido) => odatos.TraerDataTable("uspBuscarEmpleado", Campo, Contenido); 
         public bool Insertar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspInsertarEmpleado", IdEmpleado, Documento, NombreCompleto, Correo, Clave, IdRol, Estado, Imagen);
+            DataRow ofila = odatos.TraerDataRow("uspInsertarEmpleado", Documento, NombreCompleto, Correo, Clave, IdRol, Imagen);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
         public bool Modificar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspModificarEmpleado", IdEmpleado, Documento, NombreCompleto, Correo, Clave, IdRol, Estado, Imagen);
+            DataRow ofila = odatos.TraerDataRow("uspModificarEmpleado", IdEmpleado, Documento, NombreCompleto, Correo, Clave, IdRol, Imagen);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;

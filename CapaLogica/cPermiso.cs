@@ -21,7 +21,7 @@ namespace CapaLogica
         public DataTable Listar() => odatos.TraerDataTable("uspListarPermiso");
         public bool Insertar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspInsertarPermiso", IdPermiso, IdRol, NombreMenu);
+            DataRow ofila = odatos.TraerDataRow("uspInsertarPermiso", IdRol, NombreMenu);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;

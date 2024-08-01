@@ -25,6 +25,9 @@ namespace CapaPresentacion.Mantenimiento
         {
             Listar();
             CargarFotoDefault();
+            txtID.Enabled = false;
+            dtpFechaRegistro.Enabled = false;
+            txtEstado.Enabled = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -55,6 +58,7 @@ namespace CapaPresentacion.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            oEmpleado.IdEmpleado = txtID.Text;
             oEmpleado.Documento = txtDocumento.Text;
             oEmpleado.NombreCompleto = txtNombre.Text;
             oEmpleado.Correo = txtCorreo.Text;

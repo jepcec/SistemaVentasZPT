@@ -32,7 +32,7 @@ namespace CapaLogica
         public DataTable BuscarComprobante(string Tipo, string campo, string contenido) => odatos.TraerDataTable("uspBuscarComprobanteVenta", Tipo, campo, contenido);
         public bool Insertar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspInsertarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal,FechaRegistro);
+            DataRow ofila = odatos.TraerDataRow("uspInsertarVenta", IdEmpleado, TipoDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
@@ -41,7 +41,7 @@ namespace CapaLogica
         // esto no
         public bool Modificar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspModificarVenta", IdVenta, IdEmpleado, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal,FechaRegistro,Estado == 1);
+            DataRow ofila = odatos.TraerDataRow("uspModificarVenta", IdVenta, IdEmpleado, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;

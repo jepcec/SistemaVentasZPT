@@ -26,7 +26,7 @@ namespace CapaLogica
         public DataTable BuscarProductos(string pIdVenta, string campo, string contenido) => odatos.TraerDataTable("uspBuscarProductosVendidos", pIdVenta, campo, contenido);
         public bool Insertar()
         {
-            DataRow ofila = odatos.TraerDataRow("uspInsertarDetalleVenta", IdDetalleVenta, IdVenta, IdProducto, PrecioUnitario, Cantidad, SubTotal);
+            DataRow ofila = odatos.TraerDataRow("uspInsertarDetalleVenta", IdVenta, IdProducto, PrecioUnitario, Cantidad, SubTotal);
             Mensaje = ofila[1].ToString();
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;

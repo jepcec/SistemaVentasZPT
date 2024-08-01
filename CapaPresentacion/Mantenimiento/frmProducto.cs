@@ -25,6 +25,9 @@ namespace CapaPresentacion.Mantenimiento
         {
             Listar();
             CargarFotoDefault();
+            txtID.Enabled = false;
+            dtpFechaRegistro.Enabled = false;
+            txtEstado.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -60,6 +63,7 @@ namespace CapaPresentacion.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            oProducto.IdProducto = txtID.Text;
             oProducto.Codigo = txtCodigo.Text;
             oProducto.Nombre = txtNombre.Text;
             oProducto.Descripcion = txtDescripcion.Text;

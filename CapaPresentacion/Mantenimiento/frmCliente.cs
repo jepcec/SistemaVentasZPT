@@ -22,6 +22,9 @@ namespace CapaPresentacion.Mantenimiento
         private void frmCliente_Load(object sender, EventArgs e)
         {
             Listar();
+            dtpFechaRegistro.Enabled = false;
+            txtEstado.Enabled = false;
+            txtID.Enabled = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -48,6 +51,7 @@ namespace CapaPresentacion.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            oCliente.IdCliente = txtID.Text;
             oCliente.Documento = txtDocumento.Text;
             oCliente.NombreCompleto = txtNombre.Text;
             oCliente.Correo = txtCorreo.Text;
