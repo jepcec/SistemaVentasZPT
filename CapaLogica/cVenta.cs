@@ -53,7 +53,7 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
-        public string SiguienteID() => odatos.TraerValor("ObtenerSiguienteID", "VENTA");
+        public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "VENTA");
         public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarNumeroComprobante", TipoDocumento);
         public void CargarInformacion()
         {
