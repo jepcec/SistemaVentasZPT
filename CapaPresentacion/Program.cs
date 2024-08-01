@@ -1,5 +1,6 @@
 ﻿using CapaPresentacion.Mantenimiento;
 using CapaPresentacion.Procesos;
+using CapaPresentacion.Reportes;
 using System;
 using System.Collections.Generic;
 using System.Linq;

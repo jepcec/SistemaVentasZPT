@@ -53,10 +53,11 @@ namespace CapaPresentacion.Procesos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            oCompra.IdCompra = oCompra.SiguienteID();
+            MessageBox.Show(oCompra.IdCompra);
             oCompra.IdEmpleado = txtIDEmpleado.Text;
             oCompra.IdProveedor = txtIdProveedor.Text;
-            if (rbBoleta.Checked) oCompra.TipoDocumento = "BOLETA";
-            else oCompra.TipoDocumento = "FACTURA";
+            oCompra.TipoDocumento = "FACTURA";
             oCompra.NumeroDocumento = txtNroDocumento.Text;
             oCompra.MontoTotal = decimal.Parse(txtMontoTotal.Text);
             oCompra.FechaRegistro = dtpFechaRegistro.Value;
@@ -68,13 +69,13 @@ namespace CapaPresentacion.Procesos
             {
                 oDetalleCompra.IdCompra = oCompra.IdCompra;
                 oDetalleCompra.IdProducto = dgvProductos.Rows[i].Cells["coIdProducto"].ToString();
-                oDetalleCompra.PrecioCompra = decimal.Parse(dgvProductos.Rows[i].Cells["PrecioCompra"].ToString());
-                oDetalleCompra.PrecioVenta = decimal.Parse(dgvProductos.Rows[i].Cells["PrecioVenta"].ToString());
-                oDetalleCompra.Cantidad = int.Parse(dgvProductos.Rows[i].Cells["Cantidad"].ToString());
-                oDetalleCompra.MontoTotal = decimal.Parse(dgvProductos.Rows[i].Cells["MontoTotal"].ToString());
-                oDetalleCompra.FechaRegistro = dtpFechaRegistro.Value;
+                oDetalleCompra.PrecioCompra = decimal.Parse(dgvProductos.Rows[i].Cells["coPrecioCompra"].Value.ToString());
+                oDetalleCompra.PrecioVenta = decimal.Parse(dgvProductos.Rows[i].Cells["coPrecioVenta"].Value.ToString());
+                oDetalleCompra.Cantidad = int.Parse(dgvProductos.Rows[i].Cells["coCantidad"].Value.ToString());
+                oDetalleCompra.MontoTotal = decimal.Parse(dgvProductos.Rows[i].Cells["coMontoTotal"].Value.ToString());
                 oDetalleCompra.Insertar();
             }
+            tiempoMensaje = 10;
             lblMensaje.Text = oCompra.Mensaje;
             tMensaje.Start();
             CargarFormularioCombrobante();
@@ -98,7 +99,7 @@ namespace CapaPresentacion.Procesos
         }
         private void btnGenerarDocumento_Click(object sender, EventArgs e)
         {
-            string TipoDocumento = rbBoleta.Checked ? "BOLETA" : "FACTURA";
+            string TipoDocumento = "FACTURA";
             oCompra.TipoDocumento = TipoDocumento;
             txtNroDocumento.Text = oCompra.GenerarNroDocumento();
         }
@@ -114,6 +115,16 @@ namespace CapaPresentacion.Procesos
                     cProveedor auxProveedor = new cProveedor();
                     auxProveedor.IdProveedor = IdProveedorDialog;
                     auxProveedor.CargarInformacion();
+                    if(auxProveedor.Estado == "True")
+                    {
+                        txtIdProveedor.Text = auxProveedor.IdProveedor;
+                        txtDocumentoProveedor.Text = auxProveedor.Documento;
+                        txtRazonSocial.Text = auxProveedor.RazonSocial;
+                        txtCorreoProveedor.Text = auxProveedor.Correo;
+                        txtTelefonoProveedor.Text = auxProveedor.Telefono;
+                        txtEstadoProveedor.Text = auxProveedor.Estado;
+                    }
+                    
                 }
             }
         }
@@ -130,6 +141,65 @@ namespace CapaPresentacion.Procesos
         private void ReiniciarTiempoMensaje(int t = 10)
         {
             tiempoMensaje = t;
+        }
+
+        public string IdProductoDialog {  get; set; }
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            using (var formBuscarProducto = new sfrmBuscarProductoCompra(this))
+            {
+                DialogResult resultado = formBuscarProducto.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    cProducto auxProducto = new cProducto();
+                    auxProducto.IdProducto = IdProductoDialog;
+                    auxProducto.CargarInformacion();
+                    RellenarProductos(dgvProductos, auxProducto);
+                }
+                else if (resultado == DialogResult.Cancel)
+                {
+                    string mensaje = "Sin stock";
+                    lblMensaje.Text = mensaje;
+                }
+            }
+        }
+        private void RellenarProductos(DataGridView pdgvProductos, cProducto producto)
+        {
+            pdgvProductos.Rows.Add(producto.IdProducto, producto.Nombre, producto.PrecioCompra, producto.PrecioVenta,  1, producto.PrecioCompra);
+            CalcularTotal();
+            //pdgvProductos.Rows.Add(producto.IdProducto, producto.Codigo, producto.Nombre, producto.Descripcion, 
+            //                       producto.IdCategoria, producto.Stock, producto.PrecioCompra, producto.PrecioVenta, 
+            //                       producto.Estado, producto.FechaRegistro, producto.Imagen);
+
+        }
+        private void FC_ActualizarMontos(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow Fila = dgvProductos.CurrentRow;
+            if (Fila != null && dgvProductos.Rows.Count > 0)
+            {
+                Fila.Cells["coMontoTotal"].Value = decimal.Parse(Fila.Cells["coPrecioCompra"].Value.ToString()) * decimal.Parse(Fila.Cells["coCantidad"].Value.ToString());
+            }
+            CalcularTotal();
+        }
+        private void dgvProductos_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            CalcularTotal();
+        }
+        private void CalcularTotal()
+        {
+            decimal Subtotal = 0;
+            foreach (DataGridViewRow row in dgvProductos.Rows)
+            {
+                Subtotal += Convert.ToDecimal(row.Cells["coMontoTotal"].Value.ToString());
+            }
+            txtSubTotal.Text = Subtotal.ToString("0.00");
+            txtIGV.Text = (Subtotal * 18 / 100).ToString("0.00");
+            txtMontoTotal.Text = (Subtotal + Subtotal * 18 / 100).ToString("0.00");
+        }
+
+        private void btnQuitarProducto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

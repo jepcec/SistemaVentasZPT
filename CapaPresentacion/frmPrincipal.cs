@@ -11,6 +11,7 @@ using CapaLogica;
 using CapaPresentacion.Mantenimiento;
 using CapaPresentacion.Procesos;
 using CapaPresentacion.Reportes;
+using CapaPresentacion.Seguridad;
 
 namespace CapaPresentacion
 {
@@ -108,5 +109,15 @@ namespace CapaPresentacion
             Utilidades.VerificarFormulacionExistente<frmListarEmpleado>(this);
         }
         #endregion ToolMenuStrip
+
+        private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmCambiarContraseña>(this);
+        }
+
+        private void habilitarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilidades.VerificarFormulacionExistente<frmHabilitarInhabilitarUsuario>(this);
+        }
     }
 }

@@ -46,7 +46,11 @@ namespace CapaPresentacion.Reportes
             // Recuperando Valores
             DataTable Compra = oCompra.Buscar("IdCompra", idCompra);
             DataRow CompraValores = Compra.Rows[0];
-
+            //------------------------------------------
+            cProveedor auxProveedor = new cProveedor();
+            auxProveedor.IdProveedor = CompraValores["IdProveedor"].ToString();
+            auxProveedor.CargarInformacion();
+            //------------------------------------------
             // Mostrando Valores
             txtIdCompra.Text = CompraValores["IdCompra"].ToString();
             txtNroDocumento.Text = CompraValores["NumeroDocumento"].ToString();
@@ -54,9 +58,11 @@ namespace CapaPresentacion.Reportes
             txtIdEmpleado.Text = CompraValores["IdEmpleado"].ToString();
             txtNombreEmpleado.Text = CompraValores["NombreEmpleado"].ToString();
             txtMontoTotal.Text = CompraValores["MontoTotal"].ToString();
-            txtDocumentoCliente.Text = CompraValores["DocumentoProveedor"].ToString();
+            //txtDocumentoCliente.Text = CompraValores["DocumentoProveedor"].ToString();
+            txtDocumentoCliente.Text = auxProveedor.Documento;
             txtNombreCliente.Text = CompraValores["NombreProveedor"].ToString();
-            txtTelfProveedor.Text = CompraValores["TelfProveedor"].ToString();
+            //txtTelfProveedor.Text = CompraValores["TelfProveedor"].ToString();
+            txtTelfProveedor.Text = auxProveedor.Telefono;
 
             // Calcular los montos
             decimal SubTotal = decimal.Parse(CompraValores["MontoTotal"].ToString()) / (decimal)1.18;

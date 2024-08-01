@@ -1,4 +1,5 @@
 ﻿using CapaLogica;
+using CapaPresentacion.Procesos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +18,14 @@ namespace CapaPresentacion.Reportes
         frmFacturaCompra frmPadre;
         cCompra oCompra = new cCompra();
 
-        public sfrmBuscarCompra(frmFacturaCompra Padre, string Tipo)
+        Form padre2;
+        public sfrmBuscarCompra(Form Padre, string Tipo)
         {
             InitializeComponent();
             Comprobante = Tipo;
             lblTipo.Text = Tipo;
-            frmPadre = Padre;
-
+            padre2 = Padre;
+            frmPadre = padre2 is frmFacturaCompra ? (frmFacturaCompra)Padre : null;
             actualizarLista();
         }
 
@@ -58,10 +60,20 @@ namespace CapaPresentacion.Reportes
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Fila = dgvComprobantes.CurrentRow;
-            string Codigo = Fila.Cells["IdCompra"].Value.ToString();
-            frmPadre.actualizarMuestra(Codigo);
-            Close();
+            if(frmPadre != null)
+            {
+                DataGridViewRow Fila = dgvComprobantes.CurrentRow;
+                string Codigo = Fila.Cells["IdCompra"].Value.ToString();
+                frmPadre.actualizarMuestra(Codigo);
+                Close();
+            }
+            if(padre2 is frmAnularCompra anularCompra)
+            {
+                DataGridViewRow Fila = dgvComprobantes.CurrentRow;
+                string Codigo = Fila.Cells["IdCompra"].Value.ToString();
+                anularCompra.IdCompraDialog = Codigo;
+                DialogResult = DialogResult.OK;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

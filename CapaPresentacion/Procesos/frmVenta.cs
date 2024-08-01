@@ -83,11 +83,10 @@ namespace CapaPresentacion.Procesos
             for (int i = 0; i < dgvProductos.Rows.Count; i++)
             {
                 oDetalleVenta.IdVenta = oVenta.IdVenta; //maxIdVenta
-                oDetalleVenta.IdProducto = dgvProductos.Rows[i].Cells["coIdProducto"].ToString();
-                oDetalleVenta.PrecioUnitario = int.Parse(dgvProductos.Rows[i].Cells["coPrecio"].ToString());
-                oDetalleVenta.Cantidad = int.Parse(dgvProductos.Rows[i].Cells["coCantidad"].ToString());
-                oDetalleVenta.SubTotal = decimal.Parse(dgvProductos.Rows[i].Cells["coSubTotal"].ToString());
-                oDetalleVenta.FechaRegistro = DateTime.Now;
+                oDetalleVenta.IdProducto = dgvProductos.Rows[i].Cells["coIdProducto"].Value.ToString();
+                oDetalleVenta.PrecioUnitario = decimal.Parse(dgvProductos.Rows[i].Cells["coPrecioUnitario"].Value.ToString());
+                oDetalleVenta.Cantidad = int.Parse(dgvProductos.Rows[i].Cells["coCantidad"].Value.ToString());
+                oDetalleVenta.SubTotal = decimal.Parse(dgvProductos.Rows[i].Cells["coSubTotal"].Value.ToString());
                 oDetalleVenta.Insertar();
             }
             lblMensaje.Text = oVenta.Mensaje;
@@ -142,7 +141,7 @@ namespace CapaPresentacion.Procesos
         }
         private void RellenarProductos(DataGridView pdgvProductos, cProducto producto)
         {
-            pdgvProductos.Rows.Add(producto.IdProducto, producto.Nombre, producto.PrecioVenta,producto.Stock,1, producto.PrecioCompra);
+            pdgvProductos.Rows.Add(producto.IdProducto, producto.Nombre, producto.PrecioVenta,producto.Stock,1, producto.PrecioVenta);
             CalcularTotal();
             //pdgvProductos.Rows.Add(producto.IdProducto, producto.Codigo, producto.Nombre, producto.Descripcion, 
             //                       producto.IdCategoria, producto.Stock, producto.PrecioCompra, producto.PrecioVenta, 
@@ -181,6 +180,7 @@ namespace CapaPresentacion.Procesos
             txtNombreCliente.Text = "";
             txtCorreoCliente.Text = "";
             txtTelefonoCliente.Text = "";
+            txtNroDocumento.Text = "";
         }
         int tiempoMensaje = 10;
         private void tMensaje_Tick(object sender, EventArgs e)

@@ -36,17 +36,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
@@ -63,8 +55,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbFactura = new System.Windows.Forms.RadioButton();
-            this.rbBoleta = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEstadoProveedor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnBuscarProveedor = new System.Windows.Forms.Button();
             this.txtTelefonoProveedor = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,8 +70,12 @@
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.lblI = new System.Windows.Forms.Label();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
-            this.txtEstadoProveedor = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coMontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -145,22 +142,6 @@
             this.label11.TabIndex = 24;
             this.label11.Text = "SubTotal";
             // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(298, 463);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(126, 20);
-            this.textBox9.TabIndex = 23;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(234, 468);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "label10";
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,57 +171,17 @@
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.coIdProducto,
             this.coProducto,
-            this.coPrecio,
-            this.coStock,
+            this.coPrecioCompra,
+            this.coPrecioVenta,
             this.coCantidad,
-            this.coSubTotal});
+            this.coMontoTotal});
             this.dgvProductos.Location = new System.Drawing.Point(6, 19);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.Size = new System.Drawing.Size(728, 114);
             this.dgvProductos.TabIndex = 0;
-            // 
-            // coIdProducto
-            // 
-            this.coIdProducto.HeaderText = "IdProducto";
-            this.coIdProducto.MinimumWidth = 6;
-            this.coIdProducto.Name = "coIdProducto";
-            this.coIdProducto.Width = 125;
-            // 
-            // coProducto
-            // 
-            this.coProducto.HeaderText = "Producto";
-            this.coProducto.MinimumWidth = 6;
-            this.coProducto.Name = "coProducto";
-            this.coProducto.Width = 125;
-            // 
-            // coPrecio
-            // 
-            this.coPrecio.HeaderText = "Precio";
-            this.coPrecio.MinimumWidth = 6;
-            this.coPrecio.Name = "coPrecio";
-            this.coPrecio.Width = 125;
-            // 
-            // coStock
-            // 
-            this.coStock.HeaderText = "Stock";
-            this.coStock.MinimumWidth = 6;
-            this.coStock.Name = "coStock";
-            this.coStock.Width = 125;
-            // 
-            // coCantidad
-            // 
-            this.coCantidad.HeaderText = "Cantidad";
-            this.coCantidad.MinimumWidth = 6;
-            this.coCantidad.Name = "coCantidad";
-            this.coCantidad.Width = 125;
-            // 
-            // coSubTotal
-            // 
-            this.coSubTotal.HeaderText = "Sub Total";
-            this.coSubTotal.MinimumWidth = 6;
-            this.coSubTotal.Name = "coSubTotal";
-            this.coSubTotal.Width = 125;
+            this.dgvProductos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_ActualizarMontos);
+            this.dgvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProductos_RowsRemoved);
             // 
             // groupBox5
             // 
@@ -306,6 +247,7 @@
             this.btnQuitarProducto.TabIndex = 4;
             this.btnQuitarProducto.Text = "Quitar producto";
             this.btnQuitarProducto.UseVisualStyleBackColor = true;
+            this.btnQuitarProducto.Click += new System.EventHandler(this.btnQuitarProducto_Click);
             // 
             // btnAgregarProducto
             // 
@@ -315,6 +257,7 @@
             this.btnAgregarProducto.TabIndex = 3;
             this.btnAgregarProducto.Text = "Agregar producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // groupBox2
             // 
@@ -377,7 +320,6 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rbFactura);
-            this.groupBox3.Controls.Add(this.rbBoleta);
             this.groupBox3.Location = new System.Drawing.Point(37, 29);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(331, 51);
@@ -388,24 +330,14 @@
             // rbFactura
             // 
             this.rbFactura.AutoSize = true;
-            this.rbFactura.Location = new System.Drawing.Point(227, 19);
+            this.rbFactura.Checked = true;
+            this.rbFactura.Location = new System.Drawing.Point(134, 19);
             this.rbFactura.Name = "rbFactura";
             this.rbFactura.Size = new System.Drawing.Size(61, 17);
             this.rbFactura.TabIndex = 3;
             this.rbFactura.TabStop = true;
             this.rbFactura.Text = "Factura";
             this.rbFactura.UseVisualStyleBackColor = true;
-            // 
-            // rbBoleta
-            // 
-            this.rbBoleta.AutoSize = true;
-            this.rbBoleta.Location = new System.Drawing.Point(35, 19);
-            this.rbBoleta.Name = "rbBoleta";
-            this.rbBoleta.Size = new System.Drawing.Size(55, 17);
-            this.rbBoleta.TabIndex = 2;
-            this.rbBoleta.TabStop = true;
-            this.rbBoleta.Text = "Boleta";
-            this.rbBoleta.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -428,6 +360,22 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proveedor";
+            // 
+            // txtEstadoProveedor
+            // 
+            this.txtEstadoProveedor.Location = new System.Drawing.Point(97, 141);
+            this.txtEstadoProveedor.Name = "txtEstadoProveedor";
+            this.txtEstadoProveedor.Size = new System.Drawing.Size(204, 20);
+            this.txtEstadoProveedor.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Estado";
             // 
             // btnBuscarProveedor
             // 
@@ -523,21 +471,47 @@
             // 
             this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
-            // txtEstadoProveedor
+            // coIdProducto
             // 
-            this.txtEstadoProveedor.Location = new System.Drawing.Point(97, 141);
-            this.txtEstadoProveedor.Name = "txtEstadoProveedor";
-            this.txtEstadoProveedor.Size = new System.Drawing.Size(204, 20);
-            this.txtEstadoProveedor.TabIndex = 12;
+            this.coIdProducto.HeaderText = "IdProducto";
+            this.coIdProducto.MinimumWidth = 6;
+            this.coIdProducto.Name = "coIdProducto";
+            this.coIdProducto.Width = 125;
             // 
-            // label5
+            // coProducto
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Estado";
+            this.coProducto.HeaderText = "Producto";
+            this.coProducto.MinimumWidth = 6;
+            this.coProducto.Name = "coProducto";
+            this.coProducto.Width = 125;
+            // 
+            // coPrecioCompra
+            // 
+            this.coPrecioCompra.HeaderText = "Precio compra";
+            this.coPrecioCompra.MinimumWidth = 6;
+            this.coPrecioCompra.Name = "coPrecioCompra";
+            this.coPrecioCompra.Width = 125;
+            // 
+            // coPrecioVenta
+            // 
+            this.coPrecioVenta.HeaderText = "Precio venta";
+            this.coPrecioVenta.MinimumWidth = 6;
+            this.coPrecioVenta.Name = "coPrecioVenta";
+            this.coPrecioVenta.Width = 125;
+            // 
+            // coCantidad
+            // 
+            this.coCantidad.HeaderText = "Cantidad";
+            this.coCantidad.MinimumWidth = 6;
+            this.coCantidad.Name = "coCantidad";
+            this.coCantidad.Width = 125;
+            // 
+            // coMontoTotal
+            // 
+            this.coMontoTotal.HeaderText = "Monto total";
+            this.coMontoTotal.MinimumWidth = 6;
+            this.coMontoTotal.Name = "coMontoTotal";
+            this.coMontoTotal.Width = 125;
             // 
             // frmCompra
             // 
@@ -551,15 +525,13 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCompra";
             this.Text = "frmCompra";
             this.Load += new System.EventHandler(this.frmCompra_Load);
@@ -588,17 +560,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coIdProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coSubTotal;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtNombreEmpleado;
         private System.Windows.Forms.TextBox txtIDEmpleado;
@@ -615,7 +579,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rbFactura;
-        private System.Windows.Forms.RadioButton rbBoleta;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnBuscarProveedor;
         private System.Windows.Forms.TextBox txtTelefonoProveedor;
@@ -631,5 +594,11 @@
         private System.Windows.Forms.Timer tMensaje;
         private System.Windows.Forms.TextBox txtEstadoProveedor;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coPrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coPrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coMontoTotal;
     }
 }

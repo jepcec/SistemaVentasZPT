@@ -28,10 +28,17 @@ namespace CapaPresentacion.Mantenimiento
             txtID.Enabled = false;
             dtpFechaRegistro.Enabled = false;
             txtEstado.Enabled = false;
+
+            btnModificar.Enabled = false;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = true;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
             txtID.Text = oProducto.SiguienteID();
             txtCodigo.Text = "";
             txtNombre.Text = "";
@@ -59,6 +66,10 @@ namespace CapaPresentacion.Mantenimiento
             oProducto.Imagen = oUtilitarios.Image2Bytes(pbFoto.Image);
             oProducto.Insertar();
             lblMensaje.Text = oProducto.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -76,6 +87,10 @@ namespace CapaPresentacion.Mantenimiento
             oProducto.Imagen = oUtilitarios.Image2Bytes(pbFoto.Image);
             oProducto.Modificar();
             lblMensaje.Text = oProducto.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -88,10 +103,17 @@ namespace CapaPresentacion.Mantenimiento
             oProducto.IdProducto = txtID.Text;
             oProducto.Eliminar();
             lblMensaje.Text = oProducto.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
@@ -145,6 +167,9 @@ namespace CapaPresentacion.Mantenimiento
                 if (DateTime.TryParse(fechaRegistro, out fechaRegistroAux)) dtpFechaRegistro.Value = fechaRegistroAux;
                 if (foto != null) pbFoto.Image = oUtilitarios.Bytes2Image(foto);
                 else CargarFotoDefault();
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
             }
         }
 
@@ -156,6 +181,10 @@ namespace CapaPresentacion.Mantenimiento
                 oProducto.IdProducto = idProducto;
                 oProducto.Eliminar();
                 lblMensaje.Text = oProducto.Mensaje;
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                Listar();
             }
         }
 

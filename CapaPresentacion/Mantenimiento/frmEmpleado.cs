@@ -28,9 +28,16 @@ namespace CapaPresentacion.Mantenimiento
             txtID.Enabled = false;
             dtpFechaRegistro.Enabled = false;
             txtEstado.Enabled = false;
+
+            btnModificar.Enabled = false;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = true;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
             txtID.Text = oEmpleado.SiguienteID();
             txtDocumento.Text = "";
             txtNombre.Text = "";
@@ -54,6 +61,10 @@ namespace CapaPresentacion.Mantenimiento
             oEmpleado.Imagen = oUtilitarios.Image2Bytes(pbFoto.Image);
             oEmpleado.Insertar();
             lblMensaje.Text = oEmpleado.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -69,6 +80,10 @@ namespace CapaPresentacion.Mantenimiento
             oEmpleado.Imagen = oUtilitarios.Image2Bytes(pbFoto.Image);
             oEmpleado.Modificar();
             lblMensaje.Text = oEmpleado.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -81,10 +96,18 @@ namespace CapaPresentacion.Mantenimiento
             oEmpleado.IdEmpleado = txtID.Text;
             oEmpleado.Eliminar();
             lblMensaje.Text = oEmpleado.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+
+            btnInsertar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
             txtDocumento.Text = "";
             txtNombre.Text = "";
             txtCorreo.Text = "";
@@ -129,6 +152,9 @@ namespace CapaPresentacion.Mantenimiento
                 if (DateTime.TryParse(fechaRegistro, out fechaRegistroAux)) dtpFechaRegistro.Value = fechaRegistroAux;
                 if (foto != null) pbFoto.Image = oUtilitarios.Bytes2Image(foto);
                 else CargarFotoDefault();
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
 
             }
         }
@@ -140,6 +166,10 @@ namespace CapaPresentacion.Mantenimiento
                 oEmpleado.IdEmpleado = idEmpleado;
                 oEmpleado.Eliminar();
                 lblMensaje.Text = oEmpleado.Mensaje;
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                Listar();
             }
         }
         private void Listar()

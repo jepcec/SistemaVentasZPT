@@ -1,6 +1,7 @@
 ﻿﻿using CapaDatos;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Security.Claims;
@@ -58,7 +59,7 @@ namespace CapaLogica
                     RazonSocial = ofila["RazonSocial"].ToString();
                     Correo = ofila["Correo"].ToString();
                     Telefono = ofila["Telefono"].ToString();
-                    Estado = ofila["IdRol"].ToString();
+                    Estado = ofila["Estado"].ToString(); ;
                     FechaRegistro = Convert.ToDateTime(ofila["FechaRegistro"]);
 
 

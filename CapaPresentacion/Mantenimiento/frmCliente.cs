@@ -25,9 +25,16 @@ namespace CapaPresentacion.Mantenimiento
             dtpFechaRegistro.Enabled = false;
             txtEstado.Enabled = false;
             txtID.Enabled = false;
+
+            btnModificar.Enabled = false;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = true;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
             txtID.Text = oCliente.SiguienteID();
             txtDocumento.Text = "";
             txtNombre.Text = "";
@@ -47,6 +54,10 @@ namespace CapaPresentacion.Mantenimiento
             oCliente.FechaRegistro = dtpFechaRegistro.Value;
             oCliente.Insertar();
             lblMensaje.Text = oCliente.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -60,6 +71,10 @@ namespace CapaPresentacion.Mantenimiento
             oCliente.FechaRegistro = dtpFechaRegistro.Value;
             oCliente.Modificar();
             lblMensaje.Text = oCliente.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -72,10 +87,17 @@ namespace CapaPresentacion.Mantenimiento
             oCliente.IdCliente = txtID.Text;
             oCliente.Eliminar();
             lblMensaje.Text = oCliente.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
             txtID.Text = "";
             txtDocumento.Text = "";
             txtNombre.Text = "";
@@ -109,7 +131,9 @@ namespace CapaPresentacion.Mantenimiento
                 txtEstado.Text = estado;
                 DateTime fechaRegistroAux = DateTime.Now;
                 if(DateTime.TryParse(fechaRegistro, out fechaRegistroAux)) dtpFechaRegistro.Value = fechaRegistroAux;
-
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
             }
         }
         private void FC_DoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -120,6 +144,10 @@ namespace CapaPresentacion.Mantenimiento
                 oCliente.IdCliente = idCliente;
                 oCliente.Eliminar();
                 lblMensaje.Text = oCliente.Mensaje;
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                Listar();
             }
         }
         private void Listar()

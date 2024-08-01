@@ -20,6 +20,7 @@ namespace CapaPresentacion.Mantenimiento
         {
             InitializeComponent();
             this.frmCompra = padre;
+            dgvProveedor.DataSource = oProveedor.Listar();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -27,7 +28,7 @@ namespace CapaPresentacion.Mantenimiento
             DataGridViewRow Fila = dgvProveedor.CurrentRow;
             if (Fila != null)
             {
-                frmCompra.IdProveedorDialog = Fila.Cells["IdProducto"].Value.ToString();
+                frmCompra.IdProveedorDialog = Fila.Cells["IdProveedor"].Value.ToString();
                 DialogResult = DialogResult.OK;
             }
             else DialogResult = DialogResult.Cancel;
@@ -40,7 +41,7 @@ namespace CapaPresentacion.Mantenimiento
         public void FC_DoubleClick(object sender, EventArgs e)
         {
             DataGridViewRow Fila = dgvProveedor.CurrentRow;
-            if (Fila != null) frmCompra.IdProveedorDialog = Fila.Cells["IdProducto"].Value.ToString();
+            if (Fila != null) frmCompra.IdProveedorDialog = Fila.Cells["IdProveedor"].Value.ToString();
             else DialogResult = DialogResult.Cancel;
             DialogResult = DialogResult.OK;
         }

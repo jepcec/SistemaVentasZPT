@@ -26,10 +26,17 @@ namespace CapaPresentacion.Mantenimiento
             txtID.Enabled = false;
             dtpFechaRegistro.Enabled = false;
             txtEstado.Enabled = false;
+
+            btnModificar.Enabled = false;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = true;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
             txtID.Text = oProveedor.SiguienteID();
             txtDocumento.Text = "";
             txtRazonSocial.Text = "";
@@ -49,6 +56,10 @@ namespace CapaPresentacion.Mantenimiento
             oProveedor.FechaRegistro = dtpFechaRegistro.Value;
             oProveedor.Insertar();
             lblMensaje.Text = oProveedor.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -62,6 +73,10 @@ namespace CapaPresentacion.Mantenimiento
             oProveedor.FechaRegistro = dtpFechaRegistro.Value;
             oProveedor.Modificar();
             lblMensaje.Text = oProveedor.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -74,10 +89,17 @@ namespace CapaPresentacion.Mantenimiento
             oProveedor.IdProveedor = txtID.Text;
             oProveedor.Eliminar();
             lblMensaje.Text = oProveedor.Mensaje;
+            btnInsertar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
+            Listar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            btnInsertar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
             txtID.Text = "";
             txtDocumento.Text = "";
             txtRazonSocial.Text = "";
@@ -112,6 +134,9 @@ namespace CapaPresentacion.Mantenimiento
                 txtEstado.Text = estado;
                 DateTime fechaRegistroAux = DateTime.Now;
                 if (DateTime.TryParse(fechaRegistro, out fechaRegistroAux)) dtpFechaRegistro.Value = fechaRegistroAux;
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
             }
         }
 
@@ -123,6 +148,10 @@ namespace CapaPresentacion.Mantenimiento
                 oProveedor.IdProveedor = idProveedor;
                 oProveedor.Eliminar();
                 lblMensaje.Text = oProveedor.Mensaje;
+                btnInsertar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                Listar();
             }
         }
 

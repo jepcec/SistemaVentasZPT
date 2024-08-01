@@ -17,6 +17,7 @@ namespace CapaLogica
         public string NumeroDocumento { get; set; }
         public decimal MontoTotal { get; set; }
         public DateTime FechaRegistro { get; set; }
+        public bool Estado {  get; set; }   
 
         private cDatos odatos = new cDatosSQL();
         public string Mensaje;
@@ -45,7 +46,29 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
-        public string SiguienteID() => odatos.TraerValor("ObtenerSiguienteID", "COMPRA");
+        public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "COMPRA");
         public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarNumeroComprobante", TipoDocumento);
+        public void CargarInformacion()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspBuscarCompra", "IdCompra", IdCompra);
+            if (ofila != null)
+            {
+                try
+                {
+                    IdCompra = ofila["IdCompra"].ToString();
+                    IdEmpleado = ofila["IdEmpleado"].ToString();
+                    IdProveedor = ofila["IdProveedor"].ToString();
+                    NumeroDocumento = ofila["NumeroDocumento"].ToString();
+                    TipoDocumento = ofila["TipoDocumento"].ToString();
+                    NumeroDocumento = ofila["NumeroDocumento"].ToString();
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+        }
     }
 }
