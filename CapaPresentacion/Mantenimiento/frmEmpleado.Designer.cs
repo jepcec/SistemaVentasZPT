@@ -306,10 +306,12 @@
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleado.Location = new System.Drawing.Point(6, 59);
             this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.RowHeadersWidth = 51;
             this.dgvEmpleado.RowTemplate.Height = 24;
             this.dgvEmpleado.Size = new System.Drawing.Size(761, 150);
             this.dgvEmpleado.TabIndex = 14;
-            this.dgvEmpleado.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvEmpleado_MouseDoubleClick);
+            this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_ClickRellenar);
+            this.dgvEmpleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_DoubleClick);
             // 
             // txtContenido
             // 

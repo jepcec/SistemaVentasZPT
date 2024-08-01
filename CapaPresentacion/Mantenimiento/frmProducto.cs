@@ -25,6 +25,9 @@ namespace CapaPresentacion.Mantenimiento
         {
             Listar();
             CargarFotoDefault();
+            txtID.Enabled = false;
+            dtpFechaRegistro.Enabled = false;
+            txtEstado.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -60,6 +63,7 @@ namespace CapaPresentacion.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            oProducto.IdProducto = txtID.Text;
             oProducto.Codigo = txtCodigo.Text;
             oProducto.Nombre = txtNombre.Text;
             oProducto.Descripcion = txtDescripcion.Text;
@@ -128,7 +132,7 @@ namespace CapaPresentacion.Mantenimiento
                 string estado = dgvProducto.SelectedRows[0].Cells[8].Value.ToString();
                 var fechaRegistro = dgvProducto.SelectedRows[0].Cells[9].Value.ToString();
                 var foto = dgvProducto.SelectedRows[0].Cells[10].Value as byte[];
-
+                txtID.Text = idProducto;
                 txtCodigo.Text = codigo;
                 txtNombre.Text = nombre;
                 txtDescripcion.Text = descripcion;

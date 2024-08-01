@@ -31,8 +31,12 @@ namespace CapaPresentacion.Mantenimiento
             DataGridViewRow Fila = dgvProducto.CurrentRow;
             if (Fila != null)
             {
-                formPadre.IdProductoDialog = Fila.Cells["IdProducto"].Value.ToString();
-                DialogResult = DialogResult.OK;
+                if (int.Parse(Fila.Cells["Stock"].Value.ToString()) > 0)
+                {
+                    formPadre.IdProductoDialog = Fila.Cells["IdProducto"].Value.ToString();
+                    DialogResult = DialogResult.OK;
+                }
+                else DialogResult = DialogResult.Cancel;
             }
             else DialogResult = DialogResult.Cancel;
         }

@@ -23,6 +23,9 @@ namespace CapaPresentacion.Mantenimiento
         private void frmProveedor_Load(object sender, EventArgs e)
         {
             Listar();
+            txtID.Enabled = false;
+            dtpFechaRegistro.Enabled = false;
+            txtEstado.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -50,6 +53,7 @@ namespace CapaPresentacion.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            oProveedor.IdProveedor = txtID.Text;
             oProveedor.Documento = txtDocumento.Text;
             oProveedor.RazonSocial = txtRazonSocial.Text;
             oProveedor.Correo = txtCorreo.Text;
@@ -126,5 +130,6 @@ namespace CapaPresentacion.Mantenimiento
         {
             dgvProveedor.DataSource = oProveedor.Listar();
         }
+
     }
 }

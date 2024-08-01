@@ -36,8 +36,27 @@ namespace CapaPresentacion.Procesos
             oEmpleado.CargarInformacion();
             txtIDEmpleado.Text = oEmpleado.IdEmpleado;
             txtNombreEmpleado.Text = oEmpleado.NombreCompleto;
-
+            unableControls();
             Start();
+        }
+
+        private void unableControls()
+        {
+            txtIDEmpleado.Enabled = false;
+            txtNombreEmpleado.Enabled = false;
+
+            txtIdCliente.Enabled = false;
+            txtDocumentoCliente.Enabled = false;
+            txtNombreCliente.Enabled = false;
+            txtCorreoCliente.Enabled = false;
+            txtTelefonoCliente.Enabled = false;
+
+            txtSubTotal.Enabled = false;
+            txtIGV.Enabled = false;
+            txtMontoTotal.Enabled = false;
+
+            txtNroDocumento.Enabled = false;
+            dtpFechaRegistro.Enabled = false;
         }
         private void Start()
         {
@@ -46,9 +65,10 @@ namespace CapaPresentacion.Procesos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            oVenta.IdVenta = oVenta.SiguienteID();
             oVenta.IdEmpleado = txtIDEmpleado.Text;
-            if (rbBoleta.Checked) oVenta.TipoDocumento = "Boleta";
-            else oVenta.TipoDocumento = "Factura";
+            if (rbBoleta.Checked) oVenta.TipoDocumento = "BOLETA";
+            else oVenta.TipoDocumento = "FACTURA";
             oVenta.NumeroDocumento = txtNroDocumento.Text;
             oVenta.DocumentoCliente = txtDocumentoCliente.Text;
             oVenta.NombreCliente = txtNombreCliente.Text;
@@ -112,7 +132,11 @@ namespace CapaPresentacion.Procesos
                     auxProducto.IdProducto = IdProductoDialog;
                     auxProducto.CargarInformacion();
                     RellenarProductos(dgvProductos, auxProducto);
-
+                }
+                else if(resultado == DialogResult.Cancel)
+                {
+                    string mensaje = "Sin stock";
+                    lblMensaje.Text = mensaje;
                 }
             }
         }
@@ -186,7 +210,10 @@ namespace CapaPresentacion.Procesos
 
         private void btnGenerarDocumento_Click(object sender, EventArgs e)
         {
+            string TipoDocumento = rbBoleta.Checked ? "BOLETA" : "FACTURA";
+            oVenta.TipoDocumento = TipoDocumento;
             txtNroDocumento.Text = oVenta.GenerarNroDocumento();
         }
+
     }
 }
