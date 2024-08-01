@@ -157,7 +157,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(11, 190);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 16);
+            this.label12.Size = new System.Drawing.Size(52, 17);
             this.label12.TabIndex = 22;
             this.label12.Text = "Estado";
             // 
@@ -174,7 +174,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(11, 162);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 16);
+            this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 20;
             this.label11.Text = "Id Rol";
             // 
@@ -191,7 +191,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 18;
             this.label6.Text = "Clave";
             // 
@@ -215,7 +215,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(9, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 16);
+            this.label10.Size = new System.Drawing.Size(72, 17);
             this.label10.TabIndex = 14;
             this.label10.Text = "Documeto";
             // 
@@ -224,7 +224,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(11, 106);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.Size = new System.Drawing.Size(51, 17);
             this.label9.TabIndex = 12;
             this.label9.Text = "Correo";
             // 
@@ -240,7 +240,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
+            this.label1.Size = new System.Drawing.Size(21, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
@@ -267,7 +267,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre";
             // 
@@ -283,7 +283,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 16);
+            this.label5.Size = new System.Drawing.Size(104, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Fecha Registro";
             // 
@@ -325,7 +325,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(508, 32);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 16);
+            this.label8.Size = new System.Drawing.Size(72, 17);
             this.label8.TabIndex = 12;
             this.label8.Text = "Contenido";
             // 
@@ -352,7 +352,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(63, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 16);
+            this.label7.Size = new System.Drawing.Size(52, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Campo";
             // 
@@ -379,7 +379,7 @@
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Location = new System.Drawing.Point(543, 275);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 16);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 17);
             this.lblMensaje.TabIndex = 38;
             // 
             // ofdFoto
