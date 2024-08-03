@@ -17,6 +17,12 @@ public static class Utilidades
     }
     public static void VerificarFormulacionExistente<T>(Form formulariosPadre) where T : Form, new()
     {
+        // Cerrar todos los formularios hijos existentes
+        foreach (Form childForm in formulariosPadre.MdiChildren)
+        {
+            childForm.Close();
+        }
+
         T t = Application.OpenForms.OfType<T>().FirstOrDefault();
         if (t != null)
         {
@@ -28,7 +34,9 @@ public static class Utilidades
             // crear nuevo formulario de tipo T
             T nuevoFormulario = new T();
             nuevoFormulario.MdiParent = formulariosPadre;
+            nuevoFormulario.WindowState = FormWindowState.Maximized;
             nuevoFormulario.Show();
+            nuevoFormulario.Focus();
 
         }
     }
@@ -37,23 +45,22 @@ public static class Utilidades
         T nuevoFormulario = new T();
         nuevoFormulario.Show();
     }
-    public static void VerificarFormulacionExistente<T>(Form formulariosPadre, params object[] args) where T : Form
+    public static void VerificarFormulacionExistente<T>(Form formularioPadre, params object[] args) where T : Form
     {
-        T t = Application.OpenForms.OfType<T>().FirstOrDefault();
-        if (t != null)
+        // Cerrar todos los formularios hijos existentes
+        foreach (Form childForm in formularioPadre.MdiChildren)
         {
-            // Enfocar ventana existente
-            t.Focus();
+            childForm.Close();
         }
-        else
-        {
-            // Crear nuevo formulario de tipo T con parámetros
-            T nuevoFormulario = (T)Activator.CreateInstance(typeof(T), args);
-            nuevoFormulario.MdiParent = formulariosPadre;
-            nuevoFormulario.Show();
-            nuevoFormulario.Focus();
-        }
+
+        // Crear nuevo formulario de tipo T con parámetros
+        T nuevoFormulario = (args == null || args.Length == 0)
+            ? (T)Activator.CreateInstance(typeof(T))
+            : (T)Activator.CreateInstance(typeof(T), args);
+
+        nuevoFormulario.MdiParent = formularioPadre;
+        nuevoFormulario.WindowState = FormWindowState.Maximized;
+        nuevoFormulario.Show();
+        nuevoFormulario.Focus();
     }
-
-
 }
