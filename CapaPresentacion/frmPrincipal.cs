@@ -20,6 +20,7 @@ namespace CapaPresentacion
         public frmPrincipal()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
