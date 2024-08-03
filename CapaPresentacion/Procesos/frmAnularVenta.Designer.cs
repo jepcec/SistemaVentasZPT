@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbFactura = new System.Windows.Forms.RadioButton();
             this.rbBoleta = new System.Windows.Forms.RadioButton();
@@ -36,6 +37,7 @@
             this.btnAnular = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnBuscarVenta = new System.Windows.Forms.Button();
+            this.tMensaje = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,9 +45,11 @@
             // 
             this.groupBox1.Controls.Add(this.rbFactura);
             this.groupBox1.Controls.Add(this.rbBoleta);
-            this.groupBox1.Location = new System.Drawing.Point(25, 12);
+            this.groupBox1.Location = new System.Drawing.Point(19, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 68);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(363, 55);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Comprobante";
@@ -53,9 +57,10 @@
             // rbFactura
             // 
             this.rbFactura.AutoSize = true;
-            this.rbFactura.Location = new System.Drawing.Point(345, 35);
+            this.rbFactura.Location = new System.Drawing.Point(259, 28);
+            this.rbFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbFactura.Name = "rbFactura";
-            this.rbFactura.Size = new System.Drawing.Size(73, 20);
+            this.rbFactura.Size = new System.Drawing.Size(61, 17);
             this.rbFactura.TabIndex = 1;
             this.rbFactura.TabStop = true;
             this.rbFactura.Text = "Factura";
@@ -64,9 +69,10 @@
             // rbBoleta
             // 
             this.rbBoleta.AutoSize = true;
-            this.rbBoleta.Location = new System.Drawing.Point(29, 35);
+            this.rbBoleta.Location = new System.Drawing.Point(22, 28);
+            this.rbBoleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbBoleta.Name = "rbBoleta";
-            this.rbBoleta.Size = new System.Drawing.Size(67, 20);
+            this.rbBoleta.Size = new System.Drawing.Size(55, 17);
             this.rbBoleta.TabIndex = 1;
             this.rbBoleta.TabStop = true;
             this.rbBoleta.Text = "Boleta";
@@ -74,25 +80,28 @@
             // 
             // txtNroDocumento
             // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(144, 132);
+            this.txtNroDocumento.Location = new System.Drawing.Point(108, 107);
+            this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNroDocumento.Name = "txtNroDocumento";
-            this.txtNroDocumento.Size = new System.Drawing.Size(190, 22);
+            this.txtNroDocumento.Size = new System.Drawing.Size(144, 20);
             this.txtNroDocumento.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 135);
+            this.label1.Location = new System.Drawing.Point(15, 110);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nro Documento";
             // 
             // btnAnular
             // 
-            this.btnAnular.Location = new System.Drawing.Point(190, 212);
+            this.btnAnular.Location = new System.Drawing.Point(142, 172);
+            this.btnAnular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(92, 34);
+            this.btnAnular.Size = new System.Drawing.Size(69, 28);
             this.btnAnular.TabIndex = 3;
             this.btnAnular.Text = "Anular";
             this.btnAnular.UseVisualStyleBackColor = true;
@@ -101,32 +110,39 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(166, 312);
+            this.lblMensaje.Location = new System.Drawing.Point(124, 254);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 16);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 4;
             // 
             // btnBuscarVenta
             // 
-            this.btnBuscarVenta.Location = new System.Drawing.Point(354, 131);
+            this.btnBuscarVenta.Location = new System.Drawing.Point(266, 106);
+            this.btnBuscarVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarVenta.Name = "btnBuscarVenta";
-            this.btnBuscarVenta.Size = new System.Drawing.Size(135, 23);
+            this.btnBuscarVenta.Size = new System.Drawing.Size(101, 19);
             this.btnBuscarVenta.TabIndex = 5;
             this.btnBuscarVenta.Text = "Buscar Venta";
             this.btnBuscarVenta.UseVisualStyleBackColor = true;
             this.btnBuscarVenta.Click += new System.EventHandler(this.btnBuscarVenta_Click);
             // 
+            // tMensaje
+            // 
+            this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
+            // 
             // frmAnularVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 337);
+            this.ClientSize = new System.Drawing.Size(391, 274);
             this.Controls.Add(this.btnBuscarVenta);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNroDocumento);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAnularVenta";
             this.Text = "frmAnularVenta";
             this.groupBox1.ResumeLayout(false);
@@ -146,5 +162,6 @@
         private System.Windows.Forms.Button btnAnular;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Button btnBuscarVenta;
+        private System.Windows.Forms.Timer tMensaje;
     }
 }

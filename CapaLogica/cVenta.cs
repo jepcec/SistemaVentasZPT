@@ -55,6 +55,13 @@ namespace CapaLogica
         }
         public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "VENTA");
         public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarNumeroComprobante", TipoDocumento);
+        public bool AnularVenta()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspAnularVenta", IdVenta);
+            Mensaje = ofila[1].ToString();
+            byte CodigoError = Convert.ToByte(ofila[0]);
+            return CodigoError == 0;
+        }
         public void CargarInformacion()
         {
             DataRow ofila = odatos.TraerDataRow("uspBuscarVenta", "IdVenta", IdVenta);

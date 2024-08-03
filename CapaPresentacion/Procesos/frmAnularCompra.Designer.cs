@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbFactura = new System.Windows.Forms.RadioButton();
             this.rbBoleta = new System.Windows.Forms.RadioButton();
@@ -36,6 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNroDocumento = new System.Windows.Forms.TextBox();
             this.btnBuscarCompra = new System.Windows.Forms.Button();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.tMensaje = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@
             // rbFactura
             // 
             this.rbFactura.AutoSize = true;
-            this.rbFactura.Location = new System.Drawing.Point(189, 28);
+            this.rbFactura.Location = new System.Drawing.Point(263, 28);
             this.rbFactura.Margin = new System.Windows.Forms.Padding(2);
             this.rbFactura.Name = "rbFactura";
             this.rbFactura.Size = new System.Drawing.Size(61, 17);
@@ -87,7 +90,7 @@
             // 
             // txtAnular
             // 
-            this.txtAnular.Location = new System.Drawing.Point(84, 168);
+            this.txtAnular.Location = new System.Drawing.Point(158, 182);
             this.txtAnular.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnular.Name = "txtAnular";
             this.txtAnular.Size = new System.Drawing.Size(69, 28);
@@ -116,7 +119,7 @@
             // 
             // btnBuscarCompra
             // 
-            this.btnBuscarCompra.Location = new System.Drawing.Point(317, 106);
+            this.btnBuscarCompra.Location = new System.Drawing.Point(306, 106);
             this.btnBuscarCompra.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCompra.Name = "btnBuscarCompra";
             this.btnBuscarCompra.Size = new System.Drawing.Size(101, 19);
@@ -125,11 +128,24 @@
             this.btnBuscarCompra.UseVisualStyleBackColor = true;
             this.btnBuscarCompra.Click += new System.EventHandler(this.btnBuscarCompra_Click);
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(173, 146);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 11;
+            // 
+            // tMensaje
+            // 
+            this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
+            // 
             // frmAnularCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 265);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnBuscarCompra);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblResultado);
@@ -156,5 +172,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNroDocumento;
         private System.Windows.Forms.Button btnBuscarCompra;
+        private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Timer tMensaje;
     }
 }

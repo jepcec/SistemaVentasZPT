@@ -46,6 +46,13 @@ namespace CapaLogica
             byte CodigoError = Convert.ToByte(ofila[0]);
             return CodigoError == 0;
         }
+        public bool AnularCompra()
+        {
+            DataRow ofila = odatos.TraerDataRow("uspAnularCompra", IdCompra);
+            Mensaje = ofila[1].ToString();
+            byte CodigoError = Convert.ToByte(ofila[0]);
+            return CodigoError == 0;
+        }
         public string SiguienteID() => odatos.TraerValor("uspGenerarCodigo", "COMPRA");
         public string GenerarNroDocumento() => odatos.TraerValor("uspGenerarNumeroComprobante", TipoDocumento);
         public void CargarInformacion()

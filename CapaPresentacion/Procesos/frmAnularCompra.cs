@@ -38,9 +38,21 @@ namespace CapaPresentacion.Procesos
 
         private void txtAnular_Click(object sender, EventArgs e)
         {
-            oCompra.Estado = false;
-            oCompra.Modificar();
-           
+            oCompra.AnularCompra();
+            lblMensaje.Text = oCompra.Mensaje;
+            tMensaje.Start();
+        }
+
+        int tiempoMensaje = 5;
+        private void tMensaje_Tick(object sender, EventArgs e)
+        {
+            tiempoMensaje--;
+            if (tiempoMensaje == 0)
+            {
+                tiempoMensaje = 5;
+                lblMensaje.Text = "";
+                txtNroDocumento.Text = "";
+            }
         }
     }
 }

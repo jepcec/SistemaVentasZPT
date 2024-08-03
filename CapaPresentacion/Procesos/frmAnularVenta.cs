@@ -24,7 +24,7 @@ namespace CapaPresentacion.Procesos
         public string IdVentaDialog { get; set; }
         private void btnBuscarVenta_Click(object sender, EventArgs e)
         {
-            string tipoComprobante = rbBoleta.Checked ? "Boleta" : "Factura";
+            string tipoComprobante = rbBoleta.Checked ? "BOLETA" : "FACTURA";
             using(sfrmBuscarVenta venta = new sfrmBuscarVenta(this,tipoComprobante))
             {
                 DialogResult resultado = venta.ShowDialog();
@@ -39,9 +39,21 @@ namespace CapaPresentacion.Procesos
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
-            oventa.Estado = 0;
-            oventa.Modificar();
-            MessageBox.Show(oventa.Mensaje);
+            oventa.AnularVenta();
+            lblMensaje.Text = oventa.Mensaje;
+            tMensaje.Start();
+            
+        }
+        int tiempoMensaje = 5;
+        private void tMensaje_Tick(object sender, EventArgs e)
+        {
+            tiempoMensaje--;
+            if(tiempoMensaje == 0)
+            {
+                tiempoMensaje = 5;
+                lblMensaje.Text = "";
+                txtNroDocumento.Text = "";
+            }
         }
     }
 }
