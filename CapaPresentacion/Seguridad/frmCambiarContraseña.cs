@@ -43,7 +43,6 @@ namespace CapaPresentacion.Seguridad
                 {
                     mensaje = oEmpleado.Mensaje;
                     oEmpleado.CargarInformacion();
-                    ConfiguracionUsuario.CargarInformacion(oEmpleado);
 
                     // Habil para cambiar
                     AbilitarCambio();
@@ -115,6 +114,18 @@ namespace CapaPresentacion.Seguridad
                 oEmpleado.Clave = Clave1;
                 oEmpleado.CambiarClave();
                 lblCambio.Text = oEmpleado.Mensaje;
+                tMensaje.Start();
+            }
+        }
+        int tiempoMensajeFinal = 5;
+        private void tMensaje_Tick(object sender, EventArgs e)
+        {
+            tiempoMensajeFinal--;
+            if(tiempoMensajeFinal == 0)
+            {
+                tiempoMensajeFinal = 10;
+                Close();
+
             }
         }
     }

@@ -57,12 +57,11 @@ namespace CapaPresentacion
                     mensaje = oEmpleado.Mensaje;
                     oEmpleado.CargarInformacion();
                     ConfiguracionUsuario.CargarInformacion(oEmpleado);
-                    if(ConfiguracionUsuario.RolUsuario == ConfiguracionUsuario.Rol.Administrado)
-                    {
-                        ReniciarTiempos();
-                        tCloseFrm.Start();
-
-                    }
+                    ReniciarTiempos();
+                    tCloseFrm.Start();
+                    //if (ConfiguracionUsuario.RolUsuario == ConfiguracionUsuario.Rol.Administrado)
+                    //{
+                    //}
                 }
                 else
                 {

@@ -1,6 +1,7 @@
 ﻿using CapaPresentacion.Mantenimiento;
 using CapaPresentacion.Procesos;
 using CapaPresentacion.Reportes;
+using CapaPresentacion.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmCambiarContraseña());
             //Application.Run(new frmCliente());
             //Application.Run(new frmEmpleado());
 
