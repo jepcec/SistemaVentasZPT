@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,11 +47,12 @@
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(12, 111);
+            this.dgvProductos.Location = new System.Drawing.Point(12, 139);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(1185, 313);
+            this.dgvProductos.Size = new System.Drawing.Size(889, 254);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductos_CellMouseClick);
             // 
@@ -61,26 +63,29 @@
             "IdProducto",
             "Codigo",
             "Nombre"});
-            this.cmbCampo.Location = new System.Drawing.Point(163, 81);
+            this.cmbCampo.Location = new System.Drawing.Point(125, 115);
+            this.cmbCampo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCampo.Name = "cmbCampo";
-            this.cmbCampo.Size = new System.Drawing.Size(188, 24);
+            this.cmbCampo.Size = new System.Drawing.Size(142, 21);
             this.cmbCampo.TabIndex = 1;
             this.cmbCampo.SelectedIndexChanged += new System.EventHandler(this.cmbCampo_SelectedIndexChanged);
             // 
             // txtContenido
             // 
-            this.txtContenido.Location = new System.Drawing.Point(561, 81);
+            this.txtContenido.Location = new System.Drawing.Point(424, 115);
+            this.txtContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContenido.Name = "txtContenido";
-            this.txtContenido.Size = new System.Drawing.Size(171, 22);
+            this.txtContenido.Size = new System.Drawing.Size(129, 20);
             this.txtContenido.TabIndex = 2;
             this.txtContenido.TextChanged += new System.EventHandler(this.txtContenido_TextChanged);
             // 
             // btnImprimir
             // 
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(1099, 430);
+            this.btnImprimir.Location = new System.Drawing.Point(827, 398);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(98, 40);
+            this.btnImprimir.Size = new System.Drawing.Size(74, 32);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -90,9 +95,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 28);
+            this.label1.Location = new System.Drawing.Point(51, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 18);
+            this.label1.Size = new System.Drawing.Size(333, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "NOTA: Selecionar el articulo del cual quiere sacar su kardex";
             // 
@@ -100,9 +106,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 82);
+            this.label2.Location = new System.Drawing.Point(70, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 18);
+            this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Campo";
             // 
@@ -110,9 +117,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(470, 82);
+            this.label3.Location = new System.Drawing.Point(355, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 18);
+            this.label3.Size = new System.Drawing.Size(63, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "Contenido";
             // 
@@ -120,11 +128,24 @@
             // 
             this.sfdGuardar.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(13, 31);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 24);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Cardex";
+            // 
             // frmKardex
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 482);
+            this.ClientSize = new System.Drawing.Size(916, 452);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,6 +153,7 @@
             this.Controls.Add(this.txtContenido);
             this.Controls.Add(this.cmbCampo);
             this.Controls.Add(this.dgvProductos);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmKardex";
             this.Text = "frmCardex";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
@@ -150,5 +172,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.SaveFileDialog sfdGuardar;
+        private System.Windows.Forms.Label label5;
     }
 }

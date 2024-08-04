@@ -39,6 +39,7 @@
             this.btnBuscarCompra = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             this.groupBox1.Controls.Add(this.rbFactura);
             this.groupBox1.Controls.Add(this.rbBoleta);
-            this.groupBox1.Location = new System.Drawing.Point(22, 20);
+            this.groupBox1.Location = new System.Drawing.Point(26, 68);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -82,7 +83,7 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(208, 226);
+            this.lblResultado.Location = new System.Drawing.Point(212, 274);
             this.lblResultado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(0, 13);
@@ -90,7 +91,7 @@
             // 
             // txtAnular
             // 
-            this.txtAnular.Location = new System.Drawing.Point(158, 182);
+            this.txtAnular.Location = new System.Drawing.Point(162, 230);
             this.txtAnular.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnular.Name = "txtAnular";
             this.txtAnular.Size = new System.Drawing.Size(69, 28);
@@ -102,7 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 109);
+            this.label1.Location = new System.Drawing.Point(17, 157);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
@@ -111,7 +112,7 @@
             // 
             // txtNroDocumento
             // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(112, 106);
+            this.txtNroDocumento.Location = new System.Drawing.Point(116, 154);
             this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(177, 20);
@@ -119,7 +120,7 @@
             // 
             // btnBuscarCompra
             // 
-            this.btnBuscarCompra.Location = new System.Drawing.Point(306, 106);
+            this.btnBuscarCompra.Location = new System.Drawing.Point(310, 154);
             this.btnBuscarCompra.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCompra.Name = "btnBuscarCompra";
             this.btnBuscarCompra.Size = new System.Drawing.Size(101, 19);
@@ -131,7 +132,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(173, 146);
+            this.lblMensaje.Location = new System.Drawing.Point(177, 194);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 11;
@@ -140,11 +141,24 @@
             // 
             this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(16, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 24);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Anular Compra";
+            // 
             // frmAnularCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 265);
+            this.ClientSize = new System.Drawing.Size(475, 302);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnBuscarCompra);
             this.Controls.Add(this.groupBox1);
@@ -174,5 +188,6 @@
         private System.Windows.Forms.Button btnBuscarCompra;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Timer tMensaje;
+        private System.Windows.Forms.Label label5;
     }
 }
