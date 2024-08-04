@@ -60,6 +60,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -69,12 +75,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
-            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coSubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -97,7 +98,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtIdCliente);
             this.groupBox1.Controls.Add(this.lblI);
-            this.groupBox1.Location = new System.Drawing.Point(12, 23);
+            this.groupBox1.Location = new System.Drawing.Point(22, 68);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 168);
             this.groupBox1.TabIndex = 0;
@@ -202,7 +203,7 @@
             this.groupBox2.Controls.Add(this.txtNroDocumento);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(349, 23);
+            this.groupBox2.Location = new System.Drawing.Point(359, 68);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(419, 168);
             this.groupBox2.TabIndex = 1;
@@ -212,7 +213,7 @@
             // btnGenerarDocumento
             // 
             this.btnGenerarDocumento.Location = new System.Drawing.Point(295, 86);
-            this.btnGenerarDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerarDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerarDocumento.Name = "btnGenerarDocumento";
             this.btnGenerarDocumento.Size = new System.Drawing.Size(103, 19);
             this.btnGenerarDocumento.TabIndex = 11;
@@ -289,7 +290,7 @@
             // 
             this.groupBox4.Controls.Add(this.btnQuitarProducto);
             this.groupBox4.Controls.Add(this.btnAgregarProducto);
-            this.groupBox4.Location = new System.Drawing.Point(12, 197);
+            this.groupBox4.Location = new System.Drawing.Point(22, 242);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(150, 83);
             this.groupBox4.TabIndex = 2;
@@ -322,7 +323,7 @@
             this.groupBox5.Controls.Add(this.txtIDEmpleado);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Location = new System.Drawing.Point(349, 197);
+            this.groupBox5.Location = new System.Drawing.Point(359, 242);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(419, 83);
             this.groupBox5.TabIndex = 4;
@@ -364,7 +365,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dgvProductos);
-            this.groupBox6.Location = new System.Drawing.Point(12, 286);
+            this.groupBox6.Location = new System.Drawing.Point(22, 331);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(756, 150);
             this.groupBox6.TabIndex = 5;
@@ -390,78 +391,6 @@
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_ActualizarMontos);
             this.dgvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProductos_RowsRemoved);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(41, 460);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(79, 32);
-            this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.Location = new System.Drawing.Point(581, 442);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(126, 20);
-            this.txtSubTotal.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 448);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "SubTotal";
-            // 
-            // txtIGV
-            // 
-            this.txtIGV.Location = new System.Drawing.Point(581, 468);
-            this.txtIGV.Name = "txtIGV";
-            this.txtIGV.Size = new System.Drawing.Size(126, 20);
-            this.txtIGV.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(517, 474);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "IGV";
-            // 
-            // txtMontoTotal
-            // 
-            this.txtMontoTotal.Location = new System.Drawing.Point(581, 494);
-            this.txtMontoTotal.Name = "txtMontoTotal";
-            this.txtMontoTotal.Size = new System.Drawing.Size(126, 20);
-            this.txtMontoTotal.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(517, 500);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Total";
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(93, 441);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
-            this.lblMensaje.TabIndex = 15;
-            // 
-            // tMensaje
-            // 
-            this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
             // coIdProducto
             // 
@@ -505,11 +434,96 @@
             this.coSubTotal.Name = "coSubTotal";
             this.coSubTotal.Width = 125;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(51, 505);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(79, 32);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.Location = new System.Drawing.Point(591, 487);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Size = new System.Drawing.Size(126, 20);
+            this.txtSubTotal.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(527, 493);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "SubTotal";
+            // 
+            // txtIGV
+            // 
+            this.txtIGV.Location = new System.Drawing.Point(591, 513);
+            this.txtIGV.Name = "txtIGV";
+            this.txtIGV.Size = new System.Drawing.Size(126, 20);
+            this.txtIGV.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(527, 519);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "IGV";
+            // 
+            // txtMontoTotal
+            // 
+            this.txtMontoTotal.Location = new System.Drawing.Point(591, 539);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(126, 20);
+            this.txtMontoTotal.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(527, 545);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Total";
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(103, 486);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 15;
+            // 
+            // tMensaje
+            // 
+            this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(24, 23);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 24);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Venta";
+            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 520);
+            this.ClientSize = new System.Drawing.Size(829, 579);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.label13);
@@ -590,5 +604,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn coStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn coCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn coSubTotal;
+        private System.Windows.Forms.Label label5;
     }
 }

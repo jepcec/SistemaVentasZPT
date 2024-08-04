@@ -56,6 +56,7 @@
             this.cbCampo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.Clientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
@@ -63,7 +64,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(495, 398);
+            this.btnSalir.Location = new System.Drawing.Point(506, 448);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(56, 19);
@@ -74,7 +75,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(406, 398);
+            this.btnCancelar.Location = new System.Drawing.Point(417, 448);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(56, 19);
@@ -85,7 +86,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(314, 398);
+            this.btnEliminar.Location = new System.Drawing.Point(325, 448);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(56, 19);
@@ -96,7 +97,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(226, 398);
+            this.btnModificar.Location = new System.Drawing.Point(237, 448);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(56, 19);
@@ -107,7 +108,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(130, 398);
+            this.btnInsertar.Location = new System.Drawing.Point(141, 448);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(56, 19);
@@ -118,7 +119,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(34, 398);
+            this.btnNuevo.Location = new System.Drawing.Point(45, 448);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(56, 19);
@@ -143,7 +144,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtTelefono);
-            this.groupBox2.Location = new System.Drawing.Point(12, 9);
+            this.groupBox2.Location = new System.Drawing.Point(23, 59);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -289,7 +290,7 @@
             this.Clientes.Controls.Add(this.label8);
             this.Clientes.Controls.Add(this.cbCampo);
             this.Clientes.Controls.Add(this.label7);
-            this.Clientes.Location = new System.Drawing.Point(10, 218);
+            this.Clientes.Location = new System.Drawing.Point(21, 268);
             this.Clientes.Margin = new System.Windows.Forms.Padding(2);
             this.Clientes.Name = "Clientes";
             this.Clientes.Padding = new System.Windows.Forms.Padding(2);
@@ -361,16 +362,29 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(419, 197);
+            this.lblMensaje.Location = new System.Drawing.Point(430, 247);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(17, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 24);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Proveedor";
             // 
             // frmProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 427);
+            this.ClientSize = new System.Drawing.Size(628, 477);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
@@ -424,5 +438,6 @@
         private System.Windows.Forms.ComboBox cbCampo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Label label6;
     }
 }

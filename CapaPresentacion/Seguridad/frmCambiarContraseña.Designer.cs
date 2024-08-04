@@ -43,13 +43,14 @@
             this.lblCambio = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblMensaje.Location = new System.Drawing.Point(84, 323);
+            this.lblMensaje.Location = new System.Drawing.Point(84, 371);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(16, 13);
@@ -61,7 +62,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(115, 32);
+            this.label2.Location = new System.Drawing.Point(115, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 18);
@@ -73,7 +74,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(95, 162);
+            this.label3.Location = new System.Drawing.Point(95, 210);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 20);
@@ -84,8 +85,8 @@
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(22, 68);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Location = new System.Drawing.Point(22, 116);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(252, 19);
             this.txtUsuario.TabIndex = 15;
@@ -94,8 +95,8 @@
             // 
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(22, 194);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Location = new System.Drawing.Point(22, 242);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(252, 19);
@@ -105,8 +106,8 @@
             // 
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnIniciarSesion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(99, 265);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(99, 313);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(94, 28);
             this.btnIniciarSesion.TabIndex = 17;
@@ -118,8 +119,8 @@
             // 
             this.txtNuevaContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNuevaContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaContrasenia.Location = new System.Drawing.Point(338, 106);
-            this.txtNuevaContrasenia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNuevaContrasenia.Location = new System.Drawing.Point(338, 154);
+            this.txtNuevaContrasenia.Margin = new System.Windows.Forms.Padding(4);
             this.txtNuevaContrasenia.Name = "txtNuevaContrasenia";
             this.txtNuevaContrasenia.PasswordChar = '*';
             this.txtNuevaContrasenia.Size = new System.Drawing.Size(252, 19);
@@ -130,7 +131,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(399, 82);
+            this.label1.Location = new System.Drawing.Point(399, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 20);
@@ -141,8 +142,8 @@
             // 
             this.txtRepetirContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRepetirContrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepetirContrasenia.Location = new System.Drawing.Point(338, 214);
-            this.txtRepetirContrasenia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRepetirContrasenia.Location = new System.Drawing.Point(338, 262);
+            this.txtRepetirContrasenia.Margin = new System.Windows.Forms.Padding(4);
             this.txtRepetirContrasenia.Name = "txtRepetirContrasenia";
             this.txtRepetirContrasenia.PasswordChar = '*';
             this.txtRepetirContrasenia.Size = new System.Drawing.Size(252, 19);
@@ -153,7 +154,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(440, 183);
+            this.label4.Location = new System.Drawing.Point(440, 231);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
@@ -164,8 +165,8 @@
             // 
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAceptar.Location = new System.Drawing.Point(478, 265);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Location = new System.Drawing.Point(478, 313);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(94, 28);
             this.btnAceptar.TabIndex = 25;
@@ -177,7 +178,7 @@
             // 
             this.lblCambio.AutoSize = true;
             this.lblCambio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblCambio.Location = new System.Drawing.Point(421, 323);
+            this.lblCambio.Location = new System.Drawing.Point(421, 371);
             this.lblCambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(16, 13);
@@ -188,8 +189,8 @@
             // 
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRegresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRegresar.Location = new System.Drawing.Point(356, 265);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegresar.Location = new System.Drawing.Point(356, 313);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(94, 28);
             this.btnRegresar.TabIndex = 27;
@@ -201,11 +202,24 @@
             // 
             this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(216, 21);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(199, 24);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Cambiar Contraseña";
+            // 
             // frmCambiarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(647, 400);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblCambio);
             this.Controls.Add(this.btnAceptar);
@@ -219,7 +233,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblMensaje);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCambiarContraseña";
             this.Text = "frmCambiarContraseña";
             this.ResumeLayout(false);
@@ -243,5 +257,6 @@
         private System.Windows.Forms.Label lblCambio;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Timer tMensaje;
+        private System.Windows.Forms.Label label5;
     }
 }

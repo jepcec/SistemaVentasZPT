@@ -38,6 +38,7 @@
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnBuscarVenta = new System.Windows.Forms.Button();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,10 +46,10 @@
             // 
             this.groupBox1.Controls.Add(this.rbFactura);
             this.groupBox1.Controls.Add(this.rbBoleta);
-            this.groupBox1.Location = new System.Drawing.Point(19, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(22, 72);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(363, 55);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -58,7 +59,7 @@
             // 
             this.rbFactura.AutoSize = true;
             this.rbFactura.Location = new System.Drawing.Point(259, 28);
-            this.rbFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbFactura.Margin = new System.Windows.Forms.Padding(2);
             this.rbFactura.Name = "rbFactura";
             this.rbFactura.Size = new System.Drawing.Size(61, 17);
             this.rbFactura.TabIndex = 1;
@@ -70,7 +71,7 @@
             // 
             this.rbBoleta.AutoSize = true;
             this.rbBoleta.Location = new System.Drawing.Point(22, 28);
-            this.rbBoleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbBoleta.Margin = new System.Windows.Forms.Padding(2);
             this.rbBoleta.Name = "rbBoleta";
             this.rbBoleta.Size = new System.Drawing.Size(55, 17);
             this.rbBoleta.TabIndex = 1;
@@ -80,8 +81,8 @@
             // 
             // txtNroDocumento
             // 
-            this.txtNroDocumento.Location = new System.Drawing.Point(108, 107);
-            this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNroDocumento.Location = new System.Drawing.Point(111, 169);
+            this.txtNroDocumento.Margin = new System.Windows.Forms.Padding(2);
             this.txtNroDocumento.Name = "txtNroDocumento";
             this.txtNroDocumento.Size = new System.Drawing.Size(144, 20);
             this.txtNroDocumento.TabIndex = 1;
@@ -89,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 110);
+            this.label1.Location = new System.Drawing.Point(18, 172);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
@@ -98,8 +99,8 @@
             // 
             // btnAnular
             // 
-            this.btnAnular.Location = new System.Drawing.Point(142, 172);
-            this.btnAnular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnular.Location = new System.Drawing.Point(145, 234);
+            this.btnAnular.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(69, 28);
             this.btnAnular.TabIndex = 3;
@@ -118,8 +119,8 @@
             // 
             // btnBuscarVenta
             // 
-            this.btnBuscarVenta.Location = new System.Drawing.Point(266, 106);
-            this.btnBuscarVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarVenta.Location = new System.Drawing.Point(269, 168);
+            this.btnBuscarVenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarVenta.Name = "btnBuscarVenta";
             this.btnBuscarVenta.Size = new System.Drawing.Size(101, 19);
             this.btnBuscarVenta.TabIndex = 5;
@@ -131,18 +132,31 @@
             // 
             this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(13, 21);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 24);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Anular Venta";
+            // 
             // frmAnularVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 274);
+            this.ClientSize = new System.Drawing.Size(410, 288);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBuscarVenta);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNroDocumento);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAnularVenta";
             this.Text = "frmAnularVenta";
             this.groupBox1.ResumeLayout(false);
@@ -163,5 +177,6 @@
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Button btnBuscarVenta;
         private System.Windows.Forms.Timer tMensaje;
+        private System.Windows.Forms.Label label5;
     }
 }
