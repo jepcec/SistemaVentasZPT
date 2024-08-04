@@ -39,6 +39,12 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coMontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
@@ -70,12 +76,7 @@
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.lblI = new System.Windows.Forms.Label();
             this.tMensaje = new System.Windows.Forms.Timer(this.components);
-            this.coIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coPrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coMontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -88,7 +89,7 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(90, 432);
+            this.lblMensaje.Location = new System.Drawing.Point(104, 491);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
@@ -96,7 +97,7 @@
             // 
             // txtMontoTotal
             // 
-            this.txtMontoTotal.Location = new System.Drawing.Point(578, 485);
+            this.txtMontoTotal.Location = new System.Drawing.Point(592, 544);
             this.txtMontoTotal.Name = "txtMontoTotal";
             this.txtMontoTotal.Size = new System.Drawing.Size(126, 20);
             this.txtMontoTotal.TabIndex = 29;
@@ -104,7 +105,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(514, 491);
+            this.label13.Location = new System.Drawing.Point(528, 550);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(31, 13);
             this.label13.TabIndex = 28;
@@ -112,7 +113,7 @@
             // 
             // txtIGV
             // 
-            this.txtIGV.Location = new System.Drawing.Point(578, 459);
+            this.txtIGV.Location = new System.Drawing.Point(592, 518);
             this.txtIGV.Name = "txtIGV";
             this.txtIGV.Size = new System.Drawing.Size(126, 20);
             this.txtIGV.TabIndex = 27;
@@ -120,7 +121,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(514, 465);
+            this.label12.Location = new System.Drawing.Point(528, 524);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(25, 13);
             this.label12.TabIndex = 26;
@@ -128,7 +129,7 @@
             // 
             // txtSubTotal
             // 
-            this.txtSubTotal.Location = new System.Drawing.Point(578, 433);
+            this.txtSubTotal.Location = new System.Drawing.Point(592, 492);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Size = new System.Drawing.Size(126, 20);
             this.txtSubTotal.TabIndex = 25;
@@ -136,7 +137,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(514, 439);
+            this.label11.Location = new System.Drawing.Point(528, 498);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 13);
             this.label11.TabIndex = 24;
@@ -145,7 +146,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(38, 451);
+            this.btnGuardar.Location = new System.Drawing.Point(52, 510);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(79, 32);
             this.btnGuardar.TabIndex = 21;
@@ -156,7 +157,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dgvProductos);
-            this.groupBox6.Location = new System.Drawing.Point(9, 277);
+            this.groupBox6.Location = new System.Drawing.Point(23, 336);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(756, 150);
             this.groupBox6.TabIndex = 20;
@@ -183,13 +184,55 @@
             this.dgvProductos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.FC_ActualizarMontos);
             this.dgvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProductos_RowsRemoved);
             // 
+            // coIdProducto
+            // 
+            this.coIdProducto.HeaderText = "IdProducto";
+            this.coIdProducto.MinimumWidth = 6;
+            this.coIdProducto.Name = "coIdProducto";
+            this.coIdProducto.Width = 125;
+            // 
+            // coProducto
+            // 
+            this.coProducto.HeaderText = "Producto";
+            this.coProducto.MinimumWidth = 6;
+            this.coProducto.Name = "coProducto";
+            this.coProducto.Width = 125;
+            // 
+            // coPrecioCompra
+            // 
+            this.coPrecioCompra.HeaderText = "Precio compra";
+            this.coPrecioCompra.MinimumWidth = 6;
+            this.coPrecioCompra.Name = "coPrecioCompra";
+            this.coPrecioCompra.Width = 125;
+            // 
+            // coPrecioVenta
+            // 
+            this.coPrecioVenta.HeaderText = "Precio venta";
+            this.coPrecioVenta.MinimumWidth = 6;
+            this.coPrecioVenta.Name = "coPrecioVenta";
+            this.coPrecioVenta.Width = 125;
+            // 
+            // coCantidad
+            // 
+            this.coCantidad.HeaderText = "Cantidad";
+            this.coCantidad.MinimumWidth = 6;
+            this.coCantidad.Name = "coCantidad";
+            this.coCantidad.Width = 125;
+            // 
+            // coMontoTotal
+            // 
+            this.coMontoTotal.HeaderText = "Monto total";
+            this.coMontoTotal.MinimumWidth = 6;
+            this.coMontoTotal.Name = "coMontoTotal";
+            this.coMontoTotal.Width = 125;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtNombreEmpleado);
             this.groupBox5.Controls.Add(this.txtIDEmpleado);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Location = new System.Drawing.Point(346, 188);
+            this.groupBox5.Location = new System.Drawing.Point(360, 247);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(419, 83);
             this.groupBox5.TabIndex = 19;
@@ -232,7 +275,7 @@
             // 
             this.groupBox4.Controls.Add(this.btnQuitarProducto);
             this.groupBox4.Controls.Add(this.btnAgregarProducto);
-            this.groupBox4.Location = new System.Drawing.Point(9, 188);
+            this.groupBox4.Location = new System.Drawing.Point(23, 247);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(150, 83);
             this.groupBox4.TabIndex = 18;
@@ -267,7 +310,7 @@
             this.groupBox2.Controls.Add(this.txtNroDocumento);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(346, 14);
+            this.groupBox2.Location = new System.Drawing.Point(360, 73);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(419, 168);
             this.groupBox2.TabIndex = 17;
@@ -354,7 +397,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtIdProveedor);
             this.groupBox1.Controls.Add(this.lblI);
-            this.groupBox1.Location = new System.Drawing.Point(9, 14);
+            this.groupBox1.Location = new System.Drawing.Point(23, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 168);
             this.groupBox1.TabIndex = 16;
@@ -471,53 +514,24 @@
             // 
             this.tMensaje.Tick += new System.EventHandler(this.tMensaje_Tick);
             // 
-            // coIdProducto
+            // label10
             // 
-            this.coIdProducto.HeaderText = "IdProducto";
-            this.coIdProducto.MinimumWidth = 6;
-            this.coIdProducto.Name = "coIdProducto";
-            this.coIdProducto.Width = 125;
-            // 
-            // coProducto
-            // 
-            this.coProducto.HeaderText = "Producto";
-            this.coProducto.MinimumWidth = 6;
-            this.coProducto.Name = "coProducto";
-            this.coProducto.Width = 125;
-            // 
-            // coPrecioCompra
-            // 
-            this.coPrecioCompra.HeaderText = "Precio compra";
-            this.coPrecioCompra.MinimumWidth = 6;
-            this.coPrecioCompra.Name = "coPrecioCompra";
-            this.coPrecioCompra.Width = 125;
-            // 
-            // coPrecioVenta
-            // 
-            this.coPrecioVenta.HeaderText = "Precio venta";
-            this.coPrecioVenta.MinimumWidth = 6;
-            this.coPrecioVenta.Name = "coPrecioVenta";
-            this.coPrecioVenta.Width = 125;
-            // 
-            // coCantidad
-            // 
-            this.coCantidad.HeaderText = "Cantidad";
-            this.coCantidad.MinimumWidth = 6;
-            this.coCantidad.Name = "coCantidad";
-            this.coCantidad.Width = 125;
-            // 
-            // coMontoTotal
-            // 
-            this.coMontoTotal.HeaderText = "Monto total";
-            this.coMontoTotal.MinimumWidth = 6;
-            this.coMontoTotal.Name = "coMontoTotal";
-            this.coMontoTotal.Width = 125;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(19, 27);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 24);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Compra";
             // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 519);
+            this.ClientSize = new System.Drawing.Size(822, 577);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.txtMontoTotal);
             this.Controls.Add(this.label13);
@@ -600,5 +614,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn coPrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn coCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn coMontoTotal;
+        private System.Windows.Forms.Label label10;
     }
 }

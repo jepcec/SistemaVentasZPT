@@ -223,6 +223,9 @@
     <EmbeddedResource Include="Mantenimiento\frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\sfrmBuscarCliente.resx">
+      <DependentUpon>sfrmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\sfrmBuscarProductoCompra.resx">
       <DependentUpon>sfrmBuscarProductoCompra.cs</DependentUpon>
     </EmbeddedResource>
